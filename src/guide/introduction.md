@@ -199,7 +199,7 @@ Beide API-Stile sind voll und ganz in der Lage, gängige Anwendungsfälle abzude
 
 Die Options-API basiert auf dem Konzept einer "Komponenteninstanz" (`this`, wie im Beispiel zu sehen), was für Benutzer, die aus einer OOP-Sprache kommen, in der Regel besser zu einem klassenbasierten Denkmodell passt. Sie ist auch anfängerfreundlicher, da sie von den Details der Reaktivität abstrahiert und die Organisation des Codes über Optionsgruppen erzwingt.
 
-The Composition API is centered around declaring reactive state variables directly in a function scope and composing state from multiple functions together to handle complexity. It is more free-form and requires an understanding of how reactivity works in Vue to be used effectively. In return, its flexibility enables more powerful patterns for organizing and reusing logic.
+Die Composition API konzentriert sich darauf, reaktive Zustandsvariablen direkt in einem Funktionsbereich zu deklarieren und den Zustand von mehreren Funktionen zusammenzusetzen, um die Komplexität zu handhaben. Sie ist freier und erfordert ein Verständnis dafür, wie Reaktivität in Vue funktioniert, um effektiv genutzt werden zu können. Im Gegenzug ermöglicht seine Flexibilität leistungsfähigere Muster für die Organisation und Wiederverwendung von Logik.
 
 You can learn more about the comparison between the two styles and the potential benefits of Composition API in the [Composition API FAQ](/guide/extras/composition-api-faq).
 
