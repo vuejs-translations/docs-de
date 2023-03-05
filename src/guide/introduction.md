@@ -197,7 +197,7 @@ onMounted(() => {
 
 Beide API-Stile sind voll und ganz in der Lage, gängige Anwendungsfälle abzudecken. Es handelt sich um unterschiedliche Schnittstellen, die auf demselben System basieren. Tatsächlich ist die Options API auf der Composition API implementiert! Die grundlegenden Konzepte und das Wissen über Vue sind in beiden Stilen gleich.
 
-The Options API is centered around the concept of a "component instance" (`this` as seen in the example), which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
+Die Options-API basiert auf dem Konzept einer "Komponenteninstanz" (`this`, wie im Beispiel zu sehen), was für Benutzer, die aus einer OOP-Sprache kommen, in der Regel besser zu einem klassenbasierten Denkmodell passt. Sie ist auch anfängerfreundlicher, da sie von den Details der Reaktivität abstrahiert und die Organisation des Codes über Optionsgruppen erzwingt.
 
 The Composition API is centered around declaring reactive state variables directly in a function scope and composing state from multiple functions together to handle complexity. It is more free-form and requires an understanding of how reactivity works in Vue to be used effectively. In return, its flexibility enables more powerful patterns for organizing and reusing logic.
 
