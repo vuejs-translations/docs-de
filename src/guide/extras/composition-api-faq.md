@@ -14,7 +14,7 @@ Die Composition API ist eine Gruppe von APIs, die es uns ermöglicht, Vue-Kompon
 
 - [Reactivity API](/api/reactivity-core.html), z.B. `ref()` und `reactive()`, die es uns ermöglichen, reaktive Zustände, berechnete Zustände und Watcher direkt zu erzeugen.
 
-- [Lifecycle Hooks](/api/composition-api-lifecycle.html), e.g. `onMounted()` and `onUnmounted()`, that allow us to programmatically hook into the component lifecycle.
+- [Lifecycle Hooks](/api/composition-api-lifecycle.html), z.B. `onMounted()` und `onUnmounted()`, die es uns ermöglichen, programmatisch in den Lebenszyklus der Komponente einzugreifen.
 
 - [Dependency Injection](/api/composition-api-dependency-injection.html), i.e. `provide()` and `inject()`, that allow us to leverage Vue's dependency injection system while using Reactivity APIs.
 
