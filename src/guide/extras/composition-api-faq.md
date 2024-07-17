@@ -16,7 +16,7 @@ Die Composition API ist eine Gruppe von APIs, die es uns ermöglicht, Vue-Kompon
 
 - [Lifecycle Hooks](/api/composition-api-lifecycle.html), z.B. `onMounted()` und `onUnmounted()`, die es uns ermöglichen, programmatisch in den Lebenszyklus der Komponente einzugreifen.
 
-- [Dependency Injection](/api/composition-api-dependency-injection.html), i.e. `provide()` and `inject()`, that allow us to leverage Vue's dependency injection system while using Reactivity APIs.
+- [Dependency Injection](/api/composition-api-dependency-injection.html), d.h. `provide()` und `inject()`, die es uns ermöglichen, das Dependency Injection System von Vue zu nutzen, während wir Reactivity APIs verwenden.
 
 Composition API is a built-in feature of Vue 3 and [Vue 2.7](https://blog.vuejs.org/posts/vue-2-7-naruto.html). For older Vue 2 versions, use the officially maintained [`@vue/composition-api`](https://github.com/vuejs/composition-api) plugin. In Vue 3, it is also primarily used together with the [`<script setup>`](/api/sfc-script-setup.html) syntax in Single-File Components. Here's a basic example of a component using Composition API:
 
