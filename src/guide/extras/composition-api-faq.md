@@ -24,10 +24,10 @@ Composition API ist ein eingebautes Feature von Vue 3 und [Vue 2.7](https://blog
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// reactive state
+// reaktiver Zustand
 const count = ref(0)
 
-// functions that mutate state and trigger updates
+// Funktionen, die den Zustand verändern und Aktualisierungen auslösen
 function increment() {
   count.value++
 }
