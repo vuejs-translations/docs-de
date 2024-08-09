@@ -32,7 +32,7 @@ function increment() {
   count.value++
 }
 
-// lifecycle hooks
+// Lebenszyklus-Haken
 onMounted(() => {
   console.log(`The initial count is ${count.value}.`)
 })
@@ -43,7 +43,7 @@ onMounted(() => {
 </template>
 ```
 
-Despite an API style based on function composition, **Composition API is NOT functional programming**. Composition API is based on Vue's mutable, fine-grained reactivity paradigm, whereas functional programming emphasizes immutability.
+Trotz eines API-Stils, der auf Funktionskomposition basiert, ist **Composition API KEINE funktionale Programmierung**. Composition API basiert auf dem veränderbaren, feinkörnigen Reaktivitätsparadigma von Vue, während funktionale Programmierung die Unveränderlichkeit betont.
 
 If you are interested in learning how to use Vue with Composition API, you can set the site-wide API preference to Composition API using the toggle at the top of the left sidebar, and then go through the guide from the beginning.
 
