@@ -45,7 +45,7 @@ onMounted(() => {
 
 Trotz eines API-Stils, der auf Funktionskomposition basiert, ist **Composition API KEINE funktionale Programmierung**. Composition API basiert auf dem veränderbaren, feinkörnigen Reaktivitätsparadigma von Vue, während funktionale Programmierung die Unveränderlichkeit betont.
 
-If you are interested in learning how to use Vue with Composition API, you can set the site-wide API preference to Composition API using the toggle at the top of the left sidebar, and then go through the guide from the beginning.
+Wenn Sie daran interessiert sind, zu lernen, wie man Vue mit Composition API verwendet, können Sie die site-weite API-Präferenz auf Composition API setzen, indem Sie den Toggle oben in der linken Seitenleiste benutzen und dann die Anleitung von Anfang an durchgehen.
 
 ## Why Composition API? {#why-composition-api}
 
