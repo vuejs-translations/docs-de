@@ -47,7 +47,7 @@ Trotz eines API-Stils, der auf Funktionskomposition basiert, ist **Composition A
 
 Wenn Sie daran interessiert sind, zu lernen, wie man Vue mit Composition API verwendet, können Sie die site-weite API-Präferenz auf Composition API setzen, indem Sie den Toggle oben in der linken Seitenleiste benutzen und dann die Anleitung von Anfang an durchgehen.
 
-## Why Composition API? {#why-composition-api}
+## Warum Kompositions-API? {#why-composition-api}
 
 ### Better Logic Reuse {#better-logic-reuse}
 
