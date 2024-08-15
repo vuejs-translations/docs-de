@@ -49,7 +49,7 @@ Wenn Sie daran interessiert sind, zu lernen, wie man Vue mit Composition API ver
 
 ## Warum Kompositions-API? {#why-composition-api}
 
-### Better Logic Reuse {#better-logic-reuse}
+### Bessere Wiederverwendung von Logik {#better-logic-reuse}
 
 The primary advantage of Composition API is that it enables clean, efficient logic reuse in the form of [Composable functions](/guide/reusability/composables.html). It solves [all the drawbacks of mixins](/guide/reusability/composables.html#vs-mixins), the primary logic reuse mechanism for Options API.
 
