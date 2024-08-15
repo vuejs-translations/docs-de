@@ -51,7 +51,7 @@ Wenn Sie daran interessiert sind, zu lernen, wie man Vue mit Composition API ver
 
 ### Bessere Wiederverwendung von Logik {#better-logic-reuse}
 
-The primary advantage of Composition API is that it enables clean, efficient logic reuse in the form of [Composable functions](/guide/reusability/composables.html). It solves [all the drawbacks of mixins](/guide/reusability/composables.html#vs-mixins), the primary logic reuse mechanism for Options API.
+Der Hauptvorteil der Composition API ist, dass sie eine saubere, effiziente Wiederverwendung von Logik in Form von [Composable functions](/guide/reusability/composables.html) ermöglicht. Sie löst [alle Nachteile von Mixins](/guide/reusability/composables.html#vs-mixins), den primären Mechanismus zur Wiederverwendung von Logik für die Options-API.
 
 Composition API's logic reuse capability has given rise to impressive community projects such as [VueUse](https://vueuse.org/), an ever-growing collection of composable utilities. It also serves as a clean mechanism for easily integrating stateful third-party services or libraries into Vue's reactivity system, for example [immutable data](/guide/extras/reactivity-in-depth.html#immutable-data), [state machines](/guide/extras/reactivity-in-depth.html#state-machines), and [RxJS](https://vueuse.org/rxjs/readme.html#vueuse-rxjs).
 
