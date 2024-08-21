@@ -55,9 +55,9 @@ Der Hauptvorteil der Composition API ist, dass sie eine saubere, effiziente Wied
 
 Die Fähigkeit der Composition API zur Wiederverwendung von Logik hat zu beeindruckenden Community-Projekten geführt, wie z.B. [VueUse](https://vueuse.org/), eine ständig wachsende Sammlung von Composition-Utilities. Es dient auch als sauberer Mechanismus für die einfache Integration von zustandsbehafteten Diensten oder Bibliotheken von Drittanbietern in das Reaktivitätssystem von Vue, zum Beispiel [immutable data](/guide/extras/reactivity-in-depth.html#immutable-data), [state machines](/guide/extras/reactivity-in-depth.html#state-machines) und [RxJS](https://vueuse.org/rxjs/readme.html#vueuse-rxjs).
 
-### More Flexible Code Organization {#more-flexible-code-organization}
+### Flexiblere Code-Organisation {#more-flexible-code-organization}
 
-Many users love that we write organized code by default with Options API: everything has its place based on the option it falls under. However, Options API poses serious limitations when a single component's logic grows beyond a certain complexity threshold. This limitation is particularly prominent in components that need to deal with multiple **logical concerns**, which we have witnessed first hand in many production Vue 2 apps.
+Viele Benutzer lieben es, dass wir mit der Options-API standardmäßig organisierten Code schreiben: Alles hat seinen Platz, je nachdem, unter welche Option es fällt. Allerdings stößt die Options-API an ihre Grenzen, wenn die Logik einer einzelnen Komponente eine bestimmte Komplexitätsschwelle überschreitet. Diese Einschränkung ist besonders ausgeprägt bei Komponenten, die mit mehreren **logischen Belangen** umgehen müssen, was wir aus erster Hand in vielen produktiven Vue 2 Anwendungen erlebt haben.
 
 Take the folder explorer component from Vue CLI's GUI as an example: this component is responsible for the following logical concerns:
 
