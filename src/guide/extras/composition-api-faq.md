@@ -59,7 +59,7 @@ Die Fähigkeit der Composition API zur Wiederverwendung von Logik hat zu beeindr
 
 Viele Benutzer lieben es, dass wir mit der Options-API standardmäßig organisierten Code schreiben: Alles hat seinen Platz, je nachdem, unter welche Option es fällt. Allerdings stößt die Options-API an ihre Grenzen, wenn die Logik einer einzelnen Komponente eine bestimmte Komplexitätsschwelle überschreitet. Diese Einschränkung ist besonders ausgeprägt bei Komponenten, die mit mehreren **logischen Belangen** umgehen müssen, was wir aus erster Hand in vielen produktiven Vue 2 Anwendungen erlebt haben.
 
-Take the folder explorer component from Vue CLI's GUI as an example: this component is responsible for the following logical concerns:
+Nehmen Sie die Ordner-Explorer-Komponente aus der GUI von Vue CLI als Beispiel: Diese Komponente ist für die folgenden logischen Belange zuständig:
 
 - Tracking current folder state and displaying its content
 - Handling folder navigation (opening, closing, refreshing...)
