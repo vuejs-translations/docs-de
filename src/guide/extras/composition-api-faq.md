@@ -61,12 +61,12 @@ Viele Benutzer lieben es, dass wir mit der Options-API standardmäßig organisie
 
 Nehmen Sie die Ordner-Explorer-Komponente aus der GUI von Vue CLI als Beispiel: Diese Komponente ist für die folgenden logischen Belange zuständig:
 
-- Tracking current folder state and displaying its content
-- Handling folder navigation (opening, closing, refreshing...)
-- Handling new folder creation
-- Toggling show favorite folders only
-- Toggling show hidden folders
-- Handling current working directory changes
+- Verfolgung des aktuellen Ordnerstatus und Anzeige seines Inhalts
+- Handhabung der Ordnernavigation (Öffnen, Schließen, Aktualisieren...)
+- Handhabung der Erstellung neuer Ordner
+- Umschalten auf die Anzeige nur der Lieblingsordner
+- Anzeigen versteckter Ordner umschalten
+- Behandlung von Änderungen des aktuellen Arbeitsverzeichnisses
 
 The [original version](https://github.com/vuejs/vue-cli/blob/a09407dd5b9f18ace7501ddb603b95e31d6d93c0/packages/@vue/cli-ui/src/components/folder/FolderExplorer.vue#L198-L404) of the component was written in Options API. If we give each line of code a color based on the logical concern it is dealing with, this is how it looks:
 
