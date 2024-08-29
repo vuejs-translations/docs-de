@@ -72,7 +72,7 @@ Die [ursprüngliche Version](https://github.com/vuejs/vue-cli/blob/a09407dd5b9f1
 
 <img alt="folder component before" src="./images/options-api.png" width="129" height="500" style="margin: 1.2em auto">
 
-Notice how code dealing with the same logical concern is forced to be split under different options, located in different parts of the file. In a component that is several hundred lines long, understanding and navigating a single logical concern requires constantly scrolling up and down the file, making it much more difficult than it should be. In addition, if we ever intend to extract a logical concern into a reusable utility, it takes quite a bit of work to find and extract the right pieces of code from different parts of the file.
+Beachten Sie, dass Code, der sich mit demselben logischen Problem befasst, unter verschiedenen Optionen aufgeteilt werden muss, die sich in verschiedenen Teilen der Datei befinden. In einer Komponente, die mehrere hundert Zeilen lang ist, erfordert das Verstehen und Navigieren in einem einzelnen logischen Bereich ein ständiges Auf- und Abwärtsblättern in der Datei, was die Sache viel schwieriger macht, als sie sein sollte. Wenn wir ein logisches Anliegen in ein wiederverwendbares Dienstprogramm extrahieren wollen, ist es außerdem ziemlich mühsam, die richtigen Codeteile aus verschiedenen Teilen der Datei zu finden und zu extrahieren.
 
 Here's the same component, before and after the [refactor into Composition API](https://gist.github.com/yyx990803/8854f8f6a97631576c14b63c8acd8f2e):
 
