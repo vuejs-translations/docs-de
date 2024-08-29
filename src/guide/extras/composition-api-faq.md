@@ -68,7 +68,7 @@ Nehmen Sie die Ordner-Explorer-Komponente aus der GUI von Vue CLI als Beispiel: 
 - Anzeigen versteckter Ordner umschalten
 - Behandlung von Änderungen des aktuellen Arbeitsverzeichnisses
 
-The [original version](https://github.com/vuejs/vue-cli/blob/a09407dd5b9f18ace7501ddb603b95e31d6d93c0/packages/@vue/cli-ui/src/components/folder/FolderExplorer.vue#L198-L404) of the component was written in Options API. If we give each line of code a color based on the logical concern it is dealing with, this is how it looks:
+Die [ursprüngliche Version](https://github.com/vuejs/vue-cli/blob/a09407dd5b9f18ace7501ddb603b95e31d6d93c0/packages/@vue/cli-ui/src/components/folder/FolderExplorer.vue#L198-L404) der Komponente wurde in Options API geschrieben. Wenn wir jeder Codezeile eine Farbe geben, die auf dem logischen Anliegen basiert, mit dem sie sich befasst, sieht es so aus:
 
 <img alt="folder component before" src="./images/options-api.png" width="129" height="500" style="margin: 1.2em auto">
 
