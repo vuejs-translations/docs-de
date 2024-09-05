@@ -74,7 +74,7 @@ Die [ursprüngliche Version](https://github.com/vuejs/vue-cli/blob/a09407dd5b9f1
 
 Beachten Sie, dass Code, der sich mit demselben logischen Problem befasst, unter verschiedenen Optionen aufgeteilt werden muss, die sich in verschiedenen Teilen der Datei befinden. In einer Komponente, die mehrere hundert Zeilen lang ist, erfordert das Verstehen und Navigieren in einem einzelnen logischen Bereich ein ständiges Auf- und Abwärtsblättern in der Datei, was die Sache viel schwieriger macht, als sie sein sollte. Wenn wir ein logisches Anliegen in ein wiederverwendbares Dienstprogramm extrahieren wollen, ist es außerdem ziemlich mühsam, die richtigen Codeteile aus verschiedenen Teilen der Datei zu finden und zu extrahieren.
 
-Here's the same component, before and after the [refactor into Composition API](https://gist.github.com/yyx990803/8854f8f6a97631576c14b63c8acd8f2e):
+Hier ist dieselbe Komponente vor und nach der [Umstrukturierung zur Composition API](https://gist.github.com/yyx990803/8854f8f6a97631576c14b63c8acd8f2e):
 
 ![folder component after](./images/composition-api-after.png)
 
