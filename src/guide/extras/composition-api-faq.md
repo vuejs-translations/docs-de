@@ -76,7 +76,7 @@ Beachten Sie, dass Code, der sich mit demselben logischen Problem befasst, unter
 
 Hier ist dieselbe Komponente vor und nach der [Umstrukturierung zur Composition API](https://gist.github.com/yyx990803/8854f8f6a97631576c14b63c8acd8f2e):
 
-![folder component after](./images/composition-api-after.png)
+![Ordnerkomponente nach](./images/composition-api-after.png)
 
 Notice how the code related to the same logical concern can now be grouped together: we no longer need to jump between different options blocks while working on a specific logical concern. Moreover, we can now move a group of code into an external file with minimal effort, since we no longer need to shuffle the code around in order to extract them. This reduced friction for refactoring is key to the long-term maintainability in large codebases.
 
