@@ -78,7 +78,7 @@ Hier ist dieselbe Komponente vor und nach der [Umstrukturierung zur Composition 
 
 ![Ordnerkomponente nach](./images/composition-api-after.png)
 
-Notice how the code related to the same logical concern can now be grouped together: we no longer need to jump between different options blocks while working on a specific logical concern. Moreover, we can now move a group of code into an external file with minimal effort, since we no longer need to shuffle the code around in order to extract them. This reduced friction for refactoring is key to the long-term maintainability in large codebases.
+Beachten Sie, wie der Code, der sich auf dasselbe logische Anliegen bezieht, jetzt gruppiert werden kann: Wir müssen nicht mehr zwischen verschiedenen Optionsblöcken hin- und herspringen, während wir an einem bestimmten logischen Anliegen arbeiten. Außerdem können wir jetzt eine Gruppe von Code mit minimalem Aufwand in eine externe Datei verschieben, da wir den Code nicht mehr umherschieben müssen, um ihn zu extrahieren. Diese geringere Reibung beim Refactoring ist der Schlüssel für die langfristige Wartbarkeit großer Codebasen.
 
 ### Better Type Inference {#better-type-inference}
 
