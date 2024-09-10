@@ -80,7 +80,7 @@ Hier ist dieselbe Komponente vor und nach der [Umstrukturierung zur Composition 
 
 Beachten Sie, wie der Code, der sich auf dasselbe logische Anliegen bezieht, jetzt gruppiert werden kann: Wir müssen nicht mehr zwischen verschiedenen Optionsblöcken hin- und herspringen, während wir an einem bestimmten logischen Anliegen arbeiten. Außerdem können wir jetzt eine Gruppe von Code mit minimalem Aufwand in eine externe Datei verschieben, da wir den Code nicht mehr umherschieben müssen, um ihn zu extrahieren. Diese geringere Reibung beim Refactoring ist der Schlüssel für die langfristige Wartbarkeit großer Codebasen.
 
-### Better Type Inference {#better-type-inference}
+### Bessere Typeninferenz {#better-type-inference}
 
 In recent years, more and more frontend developers are adopting [TypeScript](https://www.typescriptlang.org/) as it helps us write more robust code, make changes with more confidence, and provides a great development experience with IDE support. However, the Options API, originally conceived in 2013, was designed without type inference in mind. We had to implement some [absurdly complex type gymnastics](https://github.com/vuejs/core/blob/44b95276f5c086e1d88fa3c686a5f39eb5bb7821/packages/runtime-core/src/componentPublicInstance.ts#L132-L165) to make type inference work with the Options API. Even with all this effort, type inference for Options API can still break down for mixins and dependency injection.
 
