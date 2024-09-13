@@ -86,7 +86,7 @@ In den letzten Jahren haben immer mehr Frontend-Entwickler [TypeScript] (https:/
 
 Dies führte dazu, dass viele Entwickler, die Vue mit TS verwenden wollten, sich auf die Klassen-API von „Vue-Class-Component“ stützten. Eine klassenbasierte API verlässt sich jedoch stark auf ES-Dekoratoren, ein Sprachfeature, das nur ein Vorschlag der Stufe 2 war, als Vue 3 im Jahr 2019 entwickelt wurde. Wir hielten es für zu riskant, eine offizielle API auf einen instabilen Vorschlag zu stützen. Seitdem wurde der Vorschlag für Dekoratoren noch einmal komplett überarbeitet und erreichte schließlich 2022 die Stufe 3. Darüber hinaus leidet die klassenbasierte API unter logischer Wiederverwendung und organisatorischen Einschränkungen, ähnlich wie die Options-API.
 
-In comparison, Composition API utilizes mostly plain variables and functions, which are naturally type friendly. Code written in Composition API can enjoy full type inference with little need for manual type hints. Most of the time, Composition API code will look largely identical in TypeScript and plain JavaScript. This also makes it possible for plain JavaScript users to benefit from partial type inference.
+Im Vergleich dazu verwendet die Composition API hauptsächlich einfache Variablen und Funktionen, die von Natur aus typfreundlich sind. In Composition API geschriebener Code kann eine vollständige Typinferenz genießen, ohne dass manuelle Typhinweise erforderlich sind. Die meiste Zeit sieht Composition-API-Code in TypeScript und einfachem JavaScript weitgehend identisch aus. Dadurch können auch Benutzer von einfachem JavaScript von der partiellen Typinferenz profitieren.
 
 ### Smaller Production Bundle and Less Overhead {#smaller-production-bundle-and-less-overhead}
 
