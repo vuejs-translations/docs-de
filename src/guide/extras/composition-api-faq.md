@@ -88,7 +88,7 @@ Dies führte dazu, dass viele Entwickler, die Vue mit TS verwenden wollten, sich
 
 Im Vergleich dazu verwendet die Composition API hauptsächlich einfache Variablen und Funktionen, die von Natur aus typfreundlich sind. In Composition API geschriebener Code kann eine vollständige Typinferenz genießen, ohne dass manuelle Typhinweise erforderlich sind. Die meiste Zeit sieht Composition-API-Code in TypeScript und einfachem JavaScript weitgehend identisch aus. Dadurch können auch Benutzer von einfachem JavaScript von der partiellen Typinferenz profitieren.
 
-### Smaller Production Bundle and Less Overhead {#smaller-production-bundle-and-less-overhead}
+### Kleineres Produktionsbündel und weniger Gemeinkosten {#smaller-production-bundle-and-less-overhead}
 
 Code written in Composition API and `<script setup>` is also more efficient and minification-friendly than Options API equivalent. This is because the template in a `<script setup>` component is compiled as a function inlined in the same scope of the `<script setup>` code. Unlike property access from `this`, the compiled template code can directly access variables declared inside `<script setup>`, without an instance proxy in between. This also leads to better minification because all the variable names can be safely shortened.
 
