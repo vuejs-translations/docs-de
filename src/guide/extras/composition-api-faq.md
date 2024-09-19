@@ -92,7 +92,7 @@ Im Vergleich dazu verwendet die Composition API hauptsächlich einfache Variable
 
 Mit Composition API und `<script setup>` geschriebener Code ist auch effizienter und minification-freundlicher als das Äquivalent von Options API. Das liegt daran, dass die Vorlage in einer `<script setup>`-Komponente als eine Funktion kompiliert wird, die im selben Bereich wie der `<script setup>`-Code eingefügt ist. Im Gegensatz zum Eigenschaftszugriff von `this` kann der kompilierte Template-Code direkt auf Variablen zugreifen, die innerhalb von `<script setup>` deklariert sind, ohne einen Instanz-Proxy dazwischen. Dies führt auch zu einer besseren Minifizierung, da alle Variablennamen sicher gekürzt werden können.
 
-## Relationship with Options API {#relationship-with-options-api}
+## Beziehung zur Options-API {#relationship-with-options-api}
 
 ### Trade-offs {#trade-offs}
 
