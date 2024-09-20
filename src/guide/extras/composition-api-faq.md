@@ -94,7 +94,7 @@ Mit Composition API und `<script setup>` geschriebener Code ist auch effizienter
 
 ## Beziehung zur Options-API {#relationship-with-options-api}
 
-### Trade-offs {#trade-offs}
+### Abwägungen {#trade-offs}
 
 Some users moving from Options API found their Composition API code less organized, and concluded that Composition API is "worse" in terms of code organization. We recommend users with such opinions to look at that problem from a different perspective.
 
