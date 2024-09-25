@@ -96,7 +96,7 @@ Mit Composition API und `<script setup>` geschriebener Code ist auch effizienter
 
 ### Abwägungen {#trade-offs}
 
-Some users moving from Options API found their Composition API code less organized, and concluded that Composition API is "worse" in terms of code organization. We recommend users with such opinions to look at that problem from a different perspective.
+Einige Benutzer, die von der Options-API auf die Composition-API umgestiegen sind, fanden ihren Code weniger gut organisiert und kamen zu dem Schluss, dass die Composition-API in Bezug auf die Codeorganisation „schlechter“ ist. Wir empfehlen Nutzern mit einer solchen Meinung, dieses Problem aus einer anderen Perspektive zu betrachten.
 
 It is true that Composition API no longer provides the "guard rails" that guide you to put your code into respective buckets. In return, you get to author component code like how you would write normal JavaScript. This means **you can and should apply any code organization best practices to your Composition API code as you would when writing normal JavaScript**. If you can write well-organized JavaScript, you should also be able to write well-organized Composition API code.
 
