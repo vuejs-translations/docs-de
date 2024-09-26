@@ -100,7 +100,7 @@ Einige Benutzer, die von der Options-API auf die Composition-API umgestiegen sin
 
 Es stimmt, dass die Composition API nicht mehr die „Leitplanken“ bietet, die Sie anleiten, Ihren Code in die entsprechenden Buckets einzuordnen. Im Gegenzug können Sie den Komponentencode so verfassen, wie Sie auch normales JavaScript schreiben würden. Das bedeutet, **dass Sie auf Ihren Composition-API-Code alle bewährten Verfahren zur Codeorganisation anwenden können und sollten, wie Sie es beim Schreiben von normalem JavaScript tun würden**. Wenn Sie gut organisiertes JavaScript schreiben können, sollten Sie auch in der Lage sein, gut organisierten Composition-API-Code zu schreiben.
 
-Options API does allow you to "think less" when writing component code, which is why many users love it. However, in reducing the mental overhead, it also locks you into the prescribed code organization pattern with no escape hatch, which can make it difficult to refactor or improve code quality in larger scale projects. In this regard, Composition API provides better long term scalability.
+Die Options-API ermöglicht es Ihnen, beim Schreiben von Komponentencode „weniger nachzudenken“, weshalb viele Benutzer sie lieben. Durch die Verringerung des mentalen Aufwands werden Sie jedoch auch in das vorgeschriebene Code-Organisationsmuster ohne Ausweichmöglichkeit eingesperrt, was das Refactoring oder die Verbesserung der Codequalität in größeren Projekten erschweren kann. In dieser Hinsicht bietet die Composition API eine bessere langfristige Skalierbarkeit.
 
 ### Does Composition API cover all use cases? {#does-composition-api-cover-all-use-cases}
 
