@@ -102,7 +102,7 @@ Es stimmt, dass die Composition API nicht mehr die „Leitplanken“ bietet, die
 
 Die Options-API ermöglicht es Ihnen, beim Schreiben von Komponentencode „weniger nachzudenken“, weshalb viele Benutzer sie lieben. Durch die Verringerung des mentalen Aufwands werden Sie jedoch auch in das vorgeschriebene Code-Organisationsmuster ohne Ausweichmöglichkeit eingesperrt, was das Refactoring oder die Verbesserung der Codequalität in größeren Projekten erschweren kann. In dieser Hinsicht bietet die Composition API eine bessere langfristige Skalierbarkeit.
 
-### Does Composition API cover all use cases? {#does-composition-api-cover-all-use-cases}
+### Deckt die Composition API alle Anwendungsfälle ab? {#does-composition-api-cover-all-use-cases}
 
 Yes in terms of stateful logic. When using Composition API, there are only a few options that may still be needed: `props`, `emits`, `name`, and `inheritAttrs`. If using `<script setup>`, then `inheritAttrs` is typically the only option that may require a separate normal `<script>` block.
 
