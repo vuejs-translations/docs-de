@@ -106,7 +106,7 @@ Die Options-API ermöglicht es Ihnen, beim Schreiben von Komponentencode „weni
 
 Ja, was die zustandsabhängige Logik betrifft. Bei der Verwendung der Kompositions-API gibt es nur ein paar Optionen, die möglicherweise noch benötigt werden: `props`, `emits`, `name`, und `inheritAttrs`. Wenn `<script setup>` verwendet wird, dann ist `inheritAttrs` normalerweise die einzige Option, die einen separaten normalen `<script>` Block erfordert.
 
-If you intend to exclusively use Composition API (along with the options listed above), you can shave a few kbs off your production bundle via a [compile-time flag](https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags) that drops Options API related code from Vue. Note this also affects Vue components in your dependencies.
+Wenn Sie beabsichtigen, ausschließlich die Composition API (zusammen mit den oben genannten Optionen) zu verwenden, können Sie einige Kilobyte von Ihrem Produktions-Bundle durch ein [compile-time flag](https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags) einsparen, das den Options API bezogenen Code aus Vue entfernt. Beachten Sie, dass dies auch Vue-Komponenten in Ihren Abhängigkeiten betrifft.
 
 ### Can I use both APIs together? {#can-i-use-both-apis-together}
 
