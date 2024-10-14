@@ -110,7 +110,7 @@ Wenn Sie beabsichtigen, ausschließlich die Composition API (zusammen mit den ob
 
 ### Kann ich beide APIs zusammen verwenden? {#can-i-use-both-apis-together}
 
-Yes. You can use Composition API via the [`setup()`](/api/composition-api-setup.html) option in an Options API component.
+Ja, Sie können die Composition API über die Option [`setup()`](/api/composition-api-setup.html) in einer Options-API-Komponente verwenden.
 
 However, we only recommend doing so if you have an existing Options API codebase that needs to integrate with new features / external libraries written with Composition API.
 
