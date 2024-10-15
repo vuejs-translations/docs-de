@@ -112,7 +112,7 @@ Wenn Sie beabsichtigen, ausschließlich die Composition API (zusammen mit den ob
 
 Ja, Sie können die Composition API über die Option [`setup()`](/api/composition-api-setup.html) in einer Options-API-Komponente verwenden.
 
-However, we only recommend doing so if you have an existing Options API codebase that needs to integrate with new features / external libraries written with Composition API.
+Wir empfehlen dies jedoch nur, wenn Sie eine bestehende Options-API-Codebasis haben, die mit neuen Funktionen / externen Bibliotheken, die mit der Composition API geschrieben wurden, integriert werden muss.
 
 ### Will Options API be deprecated? {#will-options-api-be-deprecated}
 
