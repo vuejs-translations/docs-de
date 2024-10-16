@@ -114,7 +114,7 @@ Ja, Sie können die Composition API über die Option [`setup()`](/api/compositio
 
 Wir empfehlen dies jedoch nur, wenn Sie eine bestehende Options-API-Codebasis haben, die mit neuen Funktionen / externen Bibliotheken, die mit der Composition API geschrieben wurden, integriert werden muss.
 
-### Will Options API be deprecated? {#will-options-api-be-deprecated}
+### Wird Options API veraltet sein? {#will-options-api-be-deprecated}
 
 No, we do not have any plan to do so. Options API is an integral part of Vue and the reason many developers love it. We also realize that many of the benefits of Composition API only manifest in larger-scale projects, and Options API remains a solid choice for many low-to-medium-complexity scenarios.
 
