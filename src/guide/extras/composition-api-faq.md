@@ -116,7 +116,7 @@ Wir empfehlen dies jedoch nur, wenn Sie eine bestehende Options-API-Codebasis ha
 
 ### Wird Options API veraltet sein? {#will-options-api-be-deprecated}
 
-No, we do not have any plan to do so. Options API is an integral part of Vue and the reason many developers love it. We also realize that many of the benefits of Composition API only manifest in larger-scale projects, and Options API remains a solid choice for many low-to-medium-complexity scenarios.
+Nein, wir haben keine Pläne, dies zu tun. Options API ist ein integraler Bestandteil von Vue und der Grund, warum viele Entwickler es lieben. Wir sind uns auch bewusst, dass viele der Vorteile der Composition API nur in größeren Projekten zum Tragen kommen, und die Options API bleibt eine solide Wahl für viele Szenarien mit geringer bis mittlerer Komplexität.
 
 ## Relationship with Class API {#relationship-with-class-api}
 
