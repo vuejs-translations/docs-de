@@ -118,7 +118,7 @@ Wir empfehlen dies jedoch nur, wenn Sie eine bestehende Options-API-Codebasis ha
 
 Nein, wir haben keine Pläne, dies zu tun. Options API ist ein integraler Bestandteil von Vue und der Grund, warum viele Entwickler es lieben. Wir sind uns auch bewusst, dass viele der Vorteile der Composition API nur in größeren Projekten zum Tragen kommen, und die Options API bleibt eine solide Wahl für viele Szenarien mit geringer bis mittlerer Komplexität.
 
-## Relationship with Class API {#relationship-with-class-api}
+## Beziehung zur Klassen-API {#relationship-with-class-api}
 
 We no longer recommend using Class API with Vue 3, given that Composition API provides great TypeScript integration with additional logic reuse and code organization benefits.
 
