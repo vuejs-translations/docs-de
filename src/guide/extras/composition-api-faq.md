@@ -120,7 +120,7 @@ Nein, wir haben keine Pläne, dies zu tun. Options API ist ein integraler Bestan
 
 ## Beziehung zur Klassen-API {#relationship-with-class-api}
 
-We no longer recommend using Class API with Vue 3, given that Composition API provides great TypeScript integration with additional logic reuse and code organization benefits.
+Wir empfehlen nicht mehr, Class API mit Vue 3 zu verwenden, da Composition API eine großartige TypeScript-Integration mit zusätzlichen Vorteilen bei der Wiederverwendung von Logik und Codeorganisation bietet.
 
 ## Comparison with React Hooks {#comparison-with-react-hooks}
 
