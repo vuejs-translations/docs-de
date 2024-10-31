@@ -124,9 +124,9 @@ Wir empfehlen nicht mehr, Class API mit Vue 3 zu verwenden, da Composition API e
 
 ## Vergleich mit React Hooks {#comparison-with-react-hooks}
 
-Composition API provides the same level of logic composition capabilities as React Hooks, but with some important differences.
+Die Composition API bietet die gleichen logischen Kompositionsmöglichkeiten wie React Hooks, jedoch mit einigen wichtigen Unterschieden.
 
-React Hooks are invoked repeatedly every time a component updates. This creates a number of caveats that can confuse even seasoned React developers. It also leads to performance optimization issues that can severely affect development experience. Here are some examples:
+React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt aufgerufen. Dies führt zu einer Reihe von Vorbehalten, die selbst erfahrene React-Entwickler verwirren können. Es führt auch zu Problemen bei der Leistungsoptimierung, die die Entwicklungserfahrung stark beeinträchtigen können. Hier sind einige Beispiele:
 
 - Hooks are call-order sensitive and cannot be conditional.
 
