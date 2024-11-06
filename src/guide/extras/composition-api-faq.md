@@ -130,7 +130,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 - Hooks sind aufrufreihenfolgeabhängig und können nicht konditional sein.
 
-- Variables declared in a React component can be captured by a hook closure and become "stale" if the developer fails to pass in the correct dependencies array. This leads to React developers relying on ESLint rules to ensure correct dependencies are passed. However, the rule is often not smart enough and over-compensates for correctness, which leads to unnecessary invalidation and headaches when edge cases are encountered.
+- In einer React-Komponente deklarierte Variablen können von einer Hook-Closure erfasst werden und veralten, wenn der Entwickler es versäumt, das korrekte Abhängigkeits-Array zu übergeben. Dies führt dazu, dass React-Entwickler sich auf ESLint-Regeln verlassen, um sicherzustellen, dass korrekte Abhängigkeiten übergeben werden. Die Regeln sind jedoch oft nicht intelligent genug und überkompensieren die Korrektheit, was zu unnötigen Ungültigkeitserklärungen und Kopfschmerzen führt, wenn Edge Cases auftauchen.
 
 - Expensive computations require the use of `useMemo`, which again requires manually passing in the correct dependencies array.
 
