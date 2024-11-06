@@ -128,7 +128,7 @@ Die Composition API bietet die gleichen logischen Kompositionsmöglichkeiten wie
 
 React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt aufgerufen. Dies führt zu einer Reihe von Vorbehalten, die selbst erfahrene React-Entwickler verwirren können. Es führt auch zu Problemen bei der Leistungsoptimierung, die die Entwicklungserfahrung stark beeinträchtigen können. Hier sind einige Beispiele:
 
-- Hooks are call-order sensitive and cannot be conditional.
+- Hooks sind aufrufreihenfolgeabhängig und können nicht konditional sein.
 
 - Variables declared in a React component can be captured by a hook closure and become "stale" if the developer fails to pass in the correct dependencies array. This leads to React developers relying on ESLint rules to ensure correct dependencies are passed. However, the rule is often not smart enough and over-compensates for correctness, which leads to unnecessary invalidation and headaches when edge cases are encountered.
 
