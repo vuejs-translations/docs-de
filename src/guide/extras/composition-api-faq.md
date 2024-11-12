@@ -132,7 +132,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 - In einer React-Komponente deklarierte Variablen können von einer Hook-Closure erfasst werden und veralten, wenn der Entwickler es versäumt, das korrekte Abhängigkeits-Array zu übergeben. Dies führt dazu, dass React-Entwickler sich auf ESLint-Regeln verlassen, um sicherzustellen, dass korrekte Abhängigkeiten übergeben werden. Die Regeln sind jedoch oft nicht intelligent genug und überkompensieren die Korrektheit, was zu unnötigen Ungültigkeitserklärungen und Kopfschmerzen führt, wenn Edge Cases auftauchen.
 
-- Expensive computations require the use of `useMemo`, which again requires manually passing in the correct dependencies array.
+- Aufwändige Berechnungen erfordern die Verwendung von `useMemo`, was wiederum die manuelle Übergabe des korrekten Abhängigkeits-Arrays erfordert.
 
 - Event handlers passed to child components cause unnecessary child updates by default, and require explicit `useCallback` as an optimization. This is almost always needed, and again requires a correct dependencies array. Neglecting this leads to over-rendering apps by default and can cause performance issues without realizing it.
 
