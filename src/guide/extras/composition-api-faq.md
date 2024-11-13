@@ -134,7 +134,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 - Aufwändige Berechnungen erfordern die Verwendung von `useMemo`, was wiederum die manuelle Übergabe des korrekten Abhängigkeits-Arrays erfordert.
 
-- Event handlers passed to child components cause unnecessary child updates by default, and require explicit `useCallback` as an optimization. This is almost always needed, and again requires a correct dependencies array. Neglecting this leads to over-rendering apps by default and can cause performance issues without realizing it.
+- Ereignishandler, die an untergeordnete Komponenten übergeben werden, führen standardmäßig zu unnötigen Aktualisierungen der untergeordneten Komponenten und erfordern als Optimierung ein explizites `useCallback`. Dies ist fast immer erforderlich und erfordert wiederum ein korrektes Abhängigkeits-Array. Wird dies vernachlässigt, führt dies dazu, dass Anwendungen standardmäßig übermäßig gerendert werden, was zu Leistungsproblemen führen kann, ohne dass man es merkt.
 
 - The stale closure problem, combined with Concurrent features, makes it difficult to reason about when a piece of hooks code is run, and makes working with mutable state that should persist across renders (via `useRef`) cumbersome.
 
