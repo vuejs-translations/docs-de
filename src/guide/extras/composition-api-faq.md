@@ -138,7 +138,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 - Das Stale-Closure-Problem in Verbindung mit Concurrent-Features macht es schwierig, Aussagen darüber zu treffen, wann ein Teil des Hooks-Codes ausgeführt wird, und macht die Arbeit mit veränderlichen Zuständen, die über mehrere Rendervorgänge hinweg bestehen bleiben sollten (über `useRef`), umständlich.
 
-In comparison, Vue Composition API:
+Im Vergleich dazu ist die Vue Composition API:
 
 - Invokes `setup()` or `<script setup>` code only once. This makes the code align better with the intuitions of idiomatic JavaScript usage as there are no stale closures to worry about. Composition API calls are also not sensitive to call order and can be conditional.
 
