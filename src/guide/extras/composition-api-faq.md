@@ -136,7 +136,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 - Ereignishandler, die an untergeordnete Komponenten übergeben werden, führen standardmäßig zu unnötigen Aktualisierungen der untergeordneten Komponenten und erfordern als Optimierung ein explizites `useCallback`. Dies ist fast immer erforderlich und erfordert wiederum ein korrektes Abhängigkeits-Array. Wird dies vernachlässigt, führt dies dazu, dass Anwendungen standardmäßig übermäßig gerendert werden, was zu Leistungsproblemen führen kann, ohne dass man es merkt.
 
-- The stale closure problem, combined with Concurrent features, makes it difficult to reason about when a piece of hooks code is run, and makes working with mutable state that should persist across renders (via `useRef`) cumbersome.
+- Das Stale-Closure-Problem in Verbindung mit Concurrent-Features macht es schwierig, Aussagen darüber zu treffen, wann ein Teil des Hooks-Codes ausgeführt wird, und macht die Arbeit mit veränderlichen Zuständen, die über mehrere Rendervorgänge hinweg bestehen bleiben sollten (über `useRef`), umständlich.
 
 In comparison, Vue Composition API:
 
