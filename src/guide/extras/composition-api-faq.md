@@ -140,7 +140,7 @@ React Hooks werden jedes Mal, wenn eine Komponente aktualisiert wird, wiederholt
 
 Im Vergleich dazu ist die Vue Composition API:
 
-- Invokes `setup()` or `<script setup>` code only once. This makes the code align better with the intuitions of idiomatic JavaScript usage as there are no stale closures to worry about. Composition API calls are also not sensitive to call order and can be conditional.
+- Ruft `setup()` oder `<script setup>` Code nur einmal auf. Dadurch lässt sich der Code besser mit den Intuitionen der idiomatischen JavaScript-Nutzung in Einklang bringen, da es keine veralteten Abschlüsse gibt, über die man sich Gedanken machen muss. Kompositions-API-Aufrufe sind auch nicht empfindlich gegenüber der Aufrufreihenfolge und können an Bedingungen geknüpft sein.
 
 - Vue's runtime reactivity system automatically collects reactive dependencies used in computed properties and watchers, so there's no need to manually declare dependencies.
 
