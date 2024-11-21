@@ -142,7 +142,7 @@ Im Vergleich dazu ist die Vue Composition API:
 
 - Ruft `setup()` oder `<script setup>` Code nur einmal auf. Dadurch lässt sich der Code besser mit den Intuitionen der idiomatischen JavaScript-Nutzung in Einklang bringen, da es keine veralteten Abschlüsse gibt, über die man sich Gedanken machen muss. Kompositions-API-Aufrufe sind auch nicht empfindlich gegenüber der Aufrufreihenfolge und können an Bedingungen geknüpft sein.
 
-- Vue's runtime reactivity system automatically collects reactive dependencies used in computed properties and watchers, so there's no need to manually declare dependencies.
+- Vue's Laufzeit-Reaktivitätssystem sammelt automatisch reaktive Abhängigkeiten, die in berechneten Eigenschaften und Watchern verwendet werden, so dass es nicht notwendig ist, Abhängigkeiten manuell zu deklarieren.
 
 - No need to manually cache callback functions to avoid unnecessary child updates. In general, Vue's fine-grained reactivity system ensures child components only update when they need to. Manual child-update optimizations are rarely a concern for Vue developers.
 
