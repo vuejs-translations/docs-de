@@ -144,6 +144,6 @@ Im Vergleich dazu ist die Vue Composition API:
 
 - Vue's Laufzeit-Reaktivitätssystem sammelt automatisch reaktive Abhängigkeiten, die in berechneten Eigenschaften und Watchern verwendet werden, so dass es nicht notwendig ist, Abhängigkeiten manuell zu deklarieren.
 
-- No need to manually cache callback functions to avoid unnecessary child updates. In general, Vue's fine-grained reactivity system ensures child components only update when they need to. Manual child-update optimizations are rarely a concern for Vue developers.
+- Es ist nicht notwendig, Callback-Funktionen manuell zwischenzuspeichern, um unnötige Aktualisierungen der untergeordneten Komponenten zu vermeiden. Im Allgemeinen stellt das feinkörnige Reaktivitätssystem von Vue sicher, dass Child-Komponenten nur dann aktualisiert werden, wenn sie es müssen. Manuelle Child-Update-Optimierungen sind für Vue-Entwickler selten ein Thema.
 
 We acknowledge the creativity of React Hooks, and it is a major source of inspiration for Composition API. However, the issues mentioned above do exist in its design and we noticed Vue's reactivity model happens to provide a way around them.
