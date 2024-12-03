@@ -10,7 +10,7 @@ import SpreadSheet from './demos/SpreadSheet.vue'
 
 Eines der markantesten Merkmale von Vue ist das unaufdringliche Reaktivitätssystem. Der Zustand einer Komponente besteht aus reaktiven JavaScript-Objekten. Wenn Sie diese ändern, wird die Ansicht aktualisiert. Es macht die Zustandsverwaltung einfach und intuitiv, aber es ist auch wichtig zu verstehen, wie es funktioniert, um einige häufige Fehler zu vermeiden. In diesem Abschnitt werden wir uns mit einigen Details des Reaktivitätssystems von Vue beschäftigen.
 
-## What is Reactivity? {#what-is-reactivity}
+## Was ist Reaktivität? {#what-is-reactivity}
 
 This term comes up in programming quite a bit these days, but what do people mean when they say it? Reactivity is a programming paradigm that allows us to adjust to changes in a declarative manner. The canonical example that people usually show, because it’s a great one, is an Excel spreadsheet:
 
