@@ -12,7 +12,7 @@ Eines der markantesten Merkmale von Vue ist das unaufdringliche Reaktivitätssys
 
 ## Was ist Reaktivität? {#what-is-reactivity}
 
-This term comes up in programming quite a bit these days, but what do people mean when they say it? Reactivity is a programming paradigm that allows us to adjust to changes in a declarative manner. The canonical example that people usually show, because it’s a great one, is an Excel spreadsheet:
+Dieser Begriff taucht in der Programmierung heutzutage recht häufig auf, aber was ist damit gemeint? Reaktivität ist ein Programmierparadigma, mit dem wir uns auf deklarative Weise an Änderungen anpassen können. Das kanonische Beispiel, das die Leute gewöhnlich zeigen, weil es ein großartiges Beispiel ist, ist eine Excel-Tabelle:
 
 <SpreadSheet />
 
