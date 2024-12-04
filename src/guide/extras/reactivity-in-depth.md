@@ -16,9 +16,9 @@ Dieser Begriff taucht in der Programmierung heutzutage recht häufig auf, aber w
 
 <SpreadSheet />
 
-Here cell A2 is defined via a formula of `= A0 + A1` (you can click on A2 to view or edit the formula), so the spreadsheet gives us 3. No surprises there. But if you update A0 or A1, you'll notice that A2 automagically updates too.
+In diesem Fall ist die Zelle A2 durch die Formel `= A0 + A1` definiert (Sie können auf A2 klicken, um die Formel anzuzeigen oder zu bearbeiten), so dass das Rechenblatt 3 anzeigt. Das ist keine Überraschung. Aber wenn Sie A0 oder A1 aktualisieren, werden Sie feststellen, dass A2 automatisch mit aktualisiert wird.
 
-JavaScript doesn’t usually work like this. If we were to write something comparable in JavaScript:
+JavaScript funktioniert normalerweise nicht so. Wenn wir etwas Vergleichbares in JavaScript schreiben würden:
 
 ```js
 let A0 = 1
