@@ -31,7 +31,7 @@ A0 = 2
 console.log(A2) // Still 3
 ```
 
-When we mutate `A0`, `A2` does not change automatically.
+Wenn wir `A0` mutieren, ändert sich `A2` nicht automatisch.
 
 So how would we do this in JavaScript? First, in order to re-run the code that updates `A2`, let's wrap it in a function:
 
