@@ -33,7 +33,7 @@ console.log(A2) // Still 3
 
 Wenn wir `A0` mutieren, ändert sich `A2` nicht automatisch.
 
-So how would we do this in JavaScript? First, in order to re-run the code that updates `A2`, let's wrap it in a function:
+Wie würden wir das in JavaScript machen? Um den Code zur Aktualisierung von „A2“ erneut auszuführen, müssen wir ihn zunächst in eine Funktion verpacken:
 
 ```js
 let A2
