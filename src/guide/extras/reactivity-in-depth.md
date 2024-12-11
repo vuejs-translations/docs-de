@@ -43,7 +43,7 @@ function update() {
 }
 ```
 
-Then, we need to define a few terms:
+Dann müssen wir ein paar Begriffe definieren:
 
 - The `update()` function produces a **side effect**, or **effect** for short, because it modifies the state of the program.
 
