@@ -45,7 +45,7 @@ function update() {
 
 Dann müssen wir ein paar Begriffe definieren:
 
-- The `update()` function produces a **side effect**, or **effect** for short, because it modifies the state of the program.
+- Die Funktion `update()` erzeugt einen **Seiteneffekt**, oder kurz **Effekt**, weil sie den Zustand des Programms verändert.
 
 - `A0` and `A1` are considered **dependencies** of the effect, as their values are used to perform the effect. The effect is said to be a **subscriber** to its dependencies.
 
