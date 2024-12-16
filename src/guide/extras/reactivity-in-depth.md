@@ -49,7 +49,7 @@ Dann müssen wir ein paar Begriffe definieren:
 
 - `A0` und `A1` werden als **Abhängigkeiten** des Effekts betrachtet, da ihre Werte zur Ausführung des Effekts verwendet werden. Der Effekt wird als **Abonnent** für seine Abhängigkeiten bezeichnet.
 
-What we need is a magic function that can invoke `update()` (the **effect**) whenever `A0` or `A1` (the **dependencies**) change:
+Was wir brauchen, ist eine magische Funktion, die `update()` (die **Auswirkung**) aufrufen kann, wenn sich `A0` oder `A1` (die **Abhängigkeiten**) ändern:
 
 ```js
 whenDepsChange(update)
