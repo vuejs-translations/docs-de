@@ -47,7 +47,7 @@ Dann müssen wir ein paar Begriffe definieren:
 
 - Die Funktion `update()` erzeugt einen **Seiteneffekt**, oder kurz **Effekt**, weil sie den Zustand des Programms verändert.
 
-- `A0` and `A1` are considered **dependencies** of the effect, as their values are used to perform the effect. The effect is said to be a **subscriber** to its dependencies.
+- `A0` und `A1` werden als **Abhängigkeiten** des Effekts betrachtet, da ihre Werte zur Ausführung des Effekts verwendet werden. Der Effekt wird als **Abonnent** für seine Abhängigkeiten bezeichnet.
 
 What we need is a magic function that can invoke `update()` (the **effect**) whenever `A0` or `A1` (the **dependencies**) change:
 
