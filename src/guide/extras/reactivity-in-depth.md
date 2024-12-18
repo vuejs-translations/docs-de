@@ -55,7 +55,7 @@ Was wir brauchen, ist eine magische Funktion, die `update()` (die **Auswirkung**
 whenDepsChange(update)
 ```
 
-This `whenDepsChange()` function has the following tasks:
+This `whenDepsChange()` Funktion hat folgende Aufgaben:
 
 1. Track when a variable is read. E.g. when evaluating the expression `A0 + A1`, both `A0` and `A1` are read.
 
