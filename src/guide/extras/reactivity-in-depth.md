@@ -57,11 +57,13 @@ whenDepsChange(update)
 
 This `whenDepsChange()` Funktion hat folgende Aufgaben:
 
-1. Track when a variable is read. E.g. when evaluating the expression `A0 + A1`, both `A0` and `A1` are read.
+1. Verfolgen, wann eine Variable gelesen wird. Wenn z.B. der Ausdruck `A0 + A1` ausgewertet wird, werden sowohl `A0` als auch `A1` gelesen.
 
-2. If a variable is read when there is a currently running effect, make that effect a subscriber to that variable. E.g. because `A0` and `A1` are read when `update()` is being executed, `update()` becomes a subscriber to both `A0` and `A1` after the first call.
+2. Wenn eine Variable gelesen wird, während ein Effekt gerade läuft, mache diesen Effekt zu einem Abonnenten dieser Variable. Da z.B. `A0` und `A1` gelesen werden, wenn `update()` ausgeführt wird, wird `update()` nach dem ersten Aufruf zu einem Abonnenten von `A0` und `A1`.
 
-3. Detect when a variable is mutated. E.g. when `A0` is assigned a new value, notify all its subscriber effects to re-run.
+3. Erkennen, wenn eine Variable verändert wird. Wenn z.B. `A0` ein neuer Wert zugewiesen wird, werden alle seine Abonnenten benachrichtigt, damit sie erneut ausgeführt werden.
+
+Übersetzt mit DeepL.com (kostenlose Version)
 
 ## How Reactivity Works in Vue {#how-reactivity-works-in-vue}
 
