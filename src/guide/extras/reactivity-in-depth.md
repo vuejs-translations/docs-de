@@ -63,9 +63,7 @@ This `whenDepsChange()` Funktion hat folgende Aufgaben:
 
 3. Erkennen, wenn eine Variable verändert wird. Wenn z.B. `A0` ein neuer Wert zugewiesen wird, werden alle seine Abonnenten benachrichtigt, damit sie erneut ausgeführt werden.
 
-Übersetzt mit DeepL.com (kostenlose Version)
-
-## How Reactivity Works in Vue {#how-reactivity-works-in-vue}
+## Wie Reaktivität in Vue funktioniert {#how-reactivity-works-in-vue}
 
 We can't really track the reading and writing of local variables like in the example. There's just no mechanism for doing that in vanilla JavaScript. What we **can** do though, is intercept the reading and writing of **object properties**.
 
