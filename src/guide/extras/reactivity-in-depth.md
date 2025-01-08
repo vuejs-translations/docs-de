@@ -67,7 +67,7 @@ This `whenDepsChange()` Funktion hat folgende Aufgaben:
 
 Wir können das Lesen und Schreiben von lokalen Variablen wie im Beispiel nicht wirklich verfolgen. Es gibt einfach keinen Mechanismus, um das in Vanilla JavaScript zu tun. Was wir jedoch **können**, ist das Abfangen des Lesens und Schreibens von **Objekteigenschaften**.
 
-There are two ways of intercepting property access in JavaScript: [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) / [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) and [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy). Vue 2 used getter / setters exclusively due to browser support limitations. In Vue 3, Proxies are used for reactive objects and getter / setters are used for refs. Here's some pseudo-code that illustrates how they work:
+Es gibt zwei Möglichkeiten, den Zugriff auf Eigenschaften in JavaScript abzufangen: [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) / [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) und [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy). Vue 2 verwendet aufgrund von Einschränkungen der Browserunterstützung ausschließlich Getter / Setter. In Vue 3 werden Proxies für reaktive Objekte und Getter / Setter für Refs verwendet. Hier ist einige Pseudo-Code, der zeigt, wie sie funktionieren:
 
 ```js{4,9,17,22}
 function reactive(obj) {
