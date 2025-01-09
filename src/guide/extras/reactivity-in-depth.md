@@ -99,7 +99,7 @@ function ref(value) {
 ```
 
 :::tip
-Code snippets here and below are meant to explain the core concepts in the simplest form possible, so many details are omitted, and edge cases ignored.
+Die Codeschnipsel hier und weiter unten sollen die Kernkonzepte in möglichst einfacher Form erklären, daher werden viele Details weggelassen und Randfälle ignoriert.
 :::
 
 This explains a few [limitations of reactive objects](/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive) that we have discussed in the fundamentals section:
