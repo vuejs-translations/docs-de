@@ -409,4 +409,4 @@ export function useMachine(options) {
 
 ### RxJS {#rxjs}
 
-[RxJS](https://rxjs.dev/) is a library for working with asynchronous event streams. The [VueUse](https://vueuse.org/) library provides the [`@vueuse/rxjs`](https://vueuse.org/rxjs/readme.html) add-on for connecting RxJS streams with Vue's reactivity system.
+[RxJS](https://rxjs.dev/) ist eine Bibliothek für die Arbeit mit asynchronen Ereignisströmen. Die [VueUse](https://vueuse.org/) Bibliothek stellt das [`@vueuse/rxjs`](https://vueuse.org/rxjs/readme.html) Add-on zur Verfügung, um RxJS Streams mit dem Reaktivitätssystem von Vue zu verbinden.
