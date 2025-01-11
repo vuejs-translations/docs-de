@@ -56,4 +56,4 @@ Obwohl Vue in erster Linie für die Erstellung von Webanwendungen konzipiert ist
 - Erstellen Sie Desktop-Apps mit [Electron](https://www.electronjs.org/) oder [Tauri](https://tauri.studio/en/)
 - Erstellen Sie mobile Apps mit [Ionic Vue](https://ionicframework.com/docs/vue/overview)
 - Erstellen Sie mit [Quasar](https://quasar.dev/) Desktop- und mobile Apps aus derselben Codebasis.
-- Verwenden Sie die [Custom Renderer API](/api/custom-renderer) von Vue, um benutzerdefinierte Renderer zu erstellen, die auf [WebGL](https://troisjs.github.io/) oder sogar [das Terminal](https://github.com) abzielen /ycmjason/vuminal)!
+- Verwenden Sie die [Custom Renderer API](/api/custom-renderer) von Vue, um benutzerdefinierte Renderer zu erstellen, die auf [WebGL](https://troisjs.github.io/) oder sogar [das Terminal](https://github.com/ycmjason/vuminal)) abzielen!
