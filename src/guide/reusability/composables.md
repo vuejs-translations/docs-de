@@ -1,4 +1,4 @@
-# Composables {#composables}
+# Verbrauchsmaterialien {#composables}
 
 <script setup>
 import { useMouse } from './mouse'
@@ -6,7 +6,7 @@ const { x, y } = useMouse()
 </script>
 
 :::tip
-This section assumes basic knowledge of Composition API. If you have been learning Vue with Options API only, you can set the API Preference to Composition API (using the toggle at the top of the left sidebar) and re-read the [Reactivity Fundamentals](/guide/essentials/reactivity-fundamentals.html) and [Lifecycle Hooks](/guide/essentials/lifecycle.html) chapters.
+Dieser Abschnitt setzt grundlegende Kenntnisse der Composition API voraus. Wenn Sie Vue nur mit der Options-API gelernt haben, können Sie die API-Präferenz auf Composition-API setzen (mit dem Umschalter oben in der linken Seitenleiste) und die Kapitel [Reactivity Fundamentals](/guide/essentials/reactivity-fundamentals.html) und [Lifecycle Hooks](/guide/essentials/lifecycle.html) erneut lesen.
 :::
 
 ## What is a "Composable"? {#what-is-a-composable}
