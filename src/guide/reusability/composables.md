@@ -1,4 +1,4 @@
-# Verbrauchsmaterialien {#composables}
+# Composable {#composables}
 
 <script setup>
 import { useMouse } from './mouse'
@@ -9,7 +9,7 @@ const { x, y } = useMouse()
 Dieser Abschnitt setzt grundlegende Kenntnisse der Composition API voraus. Wenn Sie Vue nur mit der Options-API gelernt haben, können Sie die API-Präferenz auf Composition-API setzen (mit dem Umschalter oben in der linken Seitenleiste) und die Kapitel [Reactivity Fundamentals](/guide/essentials/reactivity-fundamentals.html) und [Lifecycle Hooks](/guide/essentials/lifecycle.html) erneut lesen.
 :::
 
-## What is a "Composable"? {#what-is-a-composable}
+## Was ist ein „Composable“? {#what-is-a-composable}
 
 In the context of Vue applications, a "composable" is a function that leverages Vue's Composition API to encapsulate and reuse **stateful logic**.
 
