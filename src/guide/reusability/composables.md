@@ -11,9 +11,9 @@ Dieser Abschnitt setzt grundlegende Kenntnisse der Composition API voraus. Wenn 
 
 ## Was ist ein „Composable“? {#what-is-a-composable}
 
-In the context of Vue applications, a "composable" is a function that leverages Vue's Composition API to encapsulate and reuse **stateful logic**.
+Im Kontext von Vue-Anwendungen ist eine „Composable“ eine Funktion, die die Composition API von Vue nutzt, um **zustandsbezogene Logik** zu kapseln und wiederzuverwenden.
 
-When building frontend applications, we often need to reuse logic for common tasks. For example, we may need to format dates in many places, so we extract a reusable function for that. This formatter function encapsulates **stateless logic**: it takes some input and immediately returns expected output. There are many libraries out there for reusing stateless logic - for example [lodash](https://lodash.com/) and [date-fns](https://date-fns.org/), which you may have heard of.
+Bei der Erstellung von Frontend-Anwendungen müssen wir oft Logik für allgemeine Aufgaben wiederverwenden. Zum Beispiel müssen wir vielleicht Datumsangaben an vielen Stellen formatieren, also extrahieren wir eine wiederverwendbare Funktion dafür. Diese Formatierungsfunktion kapselt **zustandslose Logik**: Sie nimmt eine Eingabe entgegen und gibt sofort die erwartete Ausgabe zurück. Es gibt viele Bibliotheken für die Wiederverwendung zustandsloser Logik - zum Beispiel [lodash](https://lodash.com/) und [date-fns](https://date-fns.org/), von denen Sie vielleicht schon gehört haben.
 
 By contrast, stateful logic involves managing state that changes over time. A simple example would be tracking the current position of the mouse on a page. In real world scenarios, it could also be more complex logic such as touch gestures or connection status to a database.
 
