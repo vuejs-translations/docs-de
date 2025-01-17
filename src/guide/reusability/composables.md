@@ -15,7 +15,7 @@ Im Kontext von Vue-Anwendungen ist eine „Composable“ eine Funktion, die die 
 
 Bei der Erstellung von Frontend-Anwendungen müssen wir oft Logik für allgemeine Aufgaben wiederverwenden. Zum Beispiel müssen wir vielleicht Datumsangaben an vielen Stellen formatieren, also extrahieren wir eine wiederverwendbare Funktion dafür. Diese Formatierungsfunktion kapselt **zustandslose Logik**: Sie nimmt eine Eingabe entgegen und gibt sofort die erwartete Ausgabe zurück. Es gibt viele Bibliotheken für die Wiederverwendung zustandsloser Logik - zum Beispiel [lodash](https://lodash.com/) und [date-fns](https://date-fns.org/), von denen Sie vielleicht schon gehört haben.
 
-By contrast, stateful logic involves managing state that changes over time. A simple example would be tracking the current position of the mouse on a page. In real world scenarios, it could also be more complex logic such as touch gestures or connection status to a database.
+Im Gegensatz dazu geht es bei der zustandsabhängigen Logik um die Verwaltung von Zuständen, die sich im Laufe der Zeit ändern. Ein einfaches Beispiel wäre die Verfolgung der aktuellen Position der Maus auf einer Seite. In realen Szenarien kann es sich auch um eine komplexere Logik handeln, wie z. B. Berührungsgesten oder den Verbindungsstatus zu einer Datenbank.
 
 ## Mouse Tracker Example {#mouse-tracker-example}
 
