@@ -19,7 +19,7 @@ Im Gegensatz dazu geht es bei der zustandsabhängigen Logik um die Verwaltung vo
 
 ## Beispiel für einen Maus-Tracker {#mouse-tracker-example}
 
-If we were to implement the mouse tracking functionality using the Composition API directly inside a component, it would look like this:
+Wenn wir die Mausverfolgungsfunktionalität mit Hilfe der Composition API direkt in einer Komponente implementieren würden, sähe es folgendermaßen aus:
 
 ```vue
 <script setup>
