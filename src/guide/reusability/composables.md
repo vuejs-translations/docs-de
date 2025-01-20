@@ -17,7 +17,7 @@ Bei der Erstellung von Frontend-Anwendungen müssen wir oft Logik für allgemein
 
 Im Gegensatz dazu geht es bei der zustandsabhängigen Logik um die Verwaltung von Zuständen, die sich im Laufe der Zeit ändern. Ein einfaches Beispiel wäre die Verfolgung der aktuellen Position der Maus auf einer Seite. In realen Szenarien kann es sich auch um eine komplexere Logik handeln, wie z. B. Berührungsgesten oder den Verbindungsstatus zu einer Datenbank.
 
-## Mouse Tracker Example {#mouse-tracker-example}
+## Beispiel für einen Maus-Tracker {#mouse-tracker-example}
 
 If we were to implement the mouse tracking functionality using the Composition API directly inside a component, it would look like this:
 
