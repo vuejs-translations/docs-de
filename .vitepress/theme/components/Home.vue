@@ -13,13 +13,12 @@ onMounted(load)
   <section id="hero">
     <img id="uwu" alt="Vue.js Kawaii Logo by @icarusgkx" />
     <h1 class="tagline">
-      The
+      Das
       <span class="accent">Progressive</span>
       <br />JavaScript Framework
     </h1>
     <p class="description">
-      An approachable, performant and versatile framework for building web
-      user interfaces.
+      Ein einfaches, performantes und flexibles Framework für die Erstellung von Webschnittstellen.
     </p>
     <p class="actions">
       <VueMasteryModal />
@@ -54,7 +53,7 @@ onMounted(load)
   </section>
 
   <section v-if="data && data.special" id="special-sponsor">
-    <span class="lead">Special Sponsor</span>
+    <span class="lead">Besonderer Sponsor</span>
     <template v-for="{ url, img, name, description } of data.special">
       <a :href="url" target="_blank" rel="sponsored noopener">
         <picture v-if="img.endsWith('png')">
@@ -78,39 +77,39 @@ onMounted(load)
   <section v-else id="special-sponsor">
     <span>
       <a href="/sponsor/#tier-benefits">
-        Special Sponsor slot is now vacant - Inquire now
+        Platz für Sondersponsor ist jetzt frei - Jetzt anfragen
       </a>
     </span>
   </section>
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>Approachable</h2>
+      <h2>Zugänglich</h2>
       <p>
         Builds on top of standard HTML, CSS and JavaScript with intuitive
         API and world-class documentation.
       </p>
     </div>
     <div class="vt-box">
-      <h2>Performant</h2>
+      <h2>Leistungsfähig</h2>
       <p>
-        Truly reactive, compiler-optimized rendering system that rarely
-        requires manual optimization.
+        Vollständig reaktives, compiler-optimiertes Rendering-System,
+        das selten manuelle Optimierung benötigt.
       </p>
     </div>
     <div class="vt-box">
-      <h2>Versatile</h2>
+      <h2>Praktisch</h2>
       <p>
-        A rich, incrementally adoptable ecosystem that scales between a
-        library and a full-featured framework.
+        Ein reichhaltiges, schrittweise anpassbares Ökosystem, das zwischen
+        einer Bibliothek und einem vollwertigen Framework skaliert.
       </p>
     </div>
   </section>
 
   <section id="sponsors">
-    <h2>Platinum Sponsors</h2>
+    <h2>Platin Sponsoren</h2>
     <SponsorsGroup tier="platinum" placement="landing" />
-    <h2>Gold Sponsors</h2>
+    <h2>Gold Sponsoren</h2>
     <SponsorsGroup tier="gold" placement="landing" />
   </section>
 
