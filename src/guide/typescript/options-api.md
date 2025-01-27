@@ -199,7 +199,7 @@ export default defineComponent({
 </template>
 ```
 
-Without type annotation, the `event` argument will implicitly have a type of `any`. This will also result in a TS error if `"strict": true` or `"noImplicitAny": true` are used in `tsconfig.json`. It is therefore recommended to explicitly annotate the argument of event handlers. In addition, you may need to explicitly cast properties on `event`:
+Without type annotation, the `event` argument will implicitly have a type of `any`. This will also result in a TS error if `"strict": true` or `"noImplicitAny": true` are used in `tsconfig.json`. It is therefore recommended to explicitly annotate the argument of event handlers. In addition, you may need to use type assertions when accessing the properties of `event`:
 
 ```ts
 import { defineComponent } from 'vue'
@@ -215,7 +215,7 @@ export default defineComponent({
 
 ## Augmenting Global Properties {#augmenting-global-properties}
 
-Some plugins install globally available properties to all component instances via [`app.config.globalProperties`](/api/application.html#app-config-globalproperties). For example, we may install `this.$http` for data-fetching or `this.$translate` for internationalization. To make this play well with TypeScript, Vue exposes a `ComponentCustomProperties` interface designed to be augmented via [TypeScript module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation):
+Some plugins install globally available properties to all component instances via [`app.config.globalProperties`](/api/application#app-config-globalproperties). For example, we may install `this.$http` for data-fetching or `this.$translate` for internationalization. To make this play well with TypeScript, Vue exposes a `ComponentCustomProperties` interface designed to be augmented via [TypeScript module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation):
 
 ```ts
 import axios from 'axios'
@@ -230,7 +230,7 @@ declare module 'vue' {
 
 See also:
 
-- [TypeScript unit tests for component type extensions](https://github.com/vuejs/core/blob/main/test-dts/componentTypeExtensions.test-d.tsx)
+- [TypeScript unit tests for component type extensions](https://github.com/vuejs/core/blob/main/packages-private/dts-test/componentTypeExtensions.test-d.tsx)
 
 ### Type Augmentation Placement {#type-augmentation-placement}
 
@@ -286,8 +286,8 @@ declare module 'vue' {
 
 Now the `beforeRouteEnter` option will be properly typed. Note this is just an example - well-typed libraries like `vue-router` should automatically perform these augmentations in their own type definitions.
 
-The placement of this augmentation is subject the [same restrictions](#type-augmentation-placement) as global property augmentations.
+The placement of this augmentation is subject to the [same restrictions](#type-augmentation-placement) as global property augmentations.
 
 See also:
 
-- [TypeScript unit tests for component type extensions](https://github.com/vuejs/core/blob/main/test-dts/componentTypeExtensions.test-d.tsx)
+- [TypeScript unit tests for component type extensions](https://github.com/vuejs/core/blob/main/packages-private/dts-test/componentTypeExtensions.test-d.tsx)

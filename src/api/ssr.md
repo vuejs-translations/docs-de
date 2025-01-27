@@ -30,9 +30,9 @@
   })()
   ```
 
-  ### SSR Context
+  ### SSR Context {#ssr-context}
 
-  You can pass an optional context object, which can be used to record additional data during the render, for example [accessing content of Teleports](/guide/scaling-up/ssr.html#teleports):
+  You can pass an optional context object, which can be used to record additional data during the render, for example [accessing content of Teleports](/guide/scaling-up/ssr#teleports):
 
   ```js
   const ctx = {}
@@ -43,7 +43,7 @@
 
   Most other SSR APIs on this page also optionally accept a context object. The context object can be accessed in component code via the [useSSRContext](#usessrcontext) helper.
 
-- **See also:** [Guide - Server-Side Rendering](/guide/scaling-up/ssr.html)
+- **See also** [Guide - Server-Side Rendering](/guide/scaling-up/ssr)
 
 ## renderToNodeStream() {#rendertonodestream}
 
@@ -220,3 +220,23 @@ A runtime API used to retrieve the context object passed to `renderToString()` o
   }
   </script>
   ```
+
+## data-allow-mismatch <sup class="vt-badge" data-text="3.5+" /> {#data-allow-mismatch}
+
+A special attribute that can be used to suppress [hydration mismatch](/guide/scaling-up/ssr#hydration-mismatch) warnings.
+
+- **Example**
+
+  ```html
+  <div data-allow-mismatch="text">{{ data.toLocaleString() }}</div>
+  ```
+
+  The value can limit the allowed mismatch to a specific type. Allowed values are:
+
+  - `text`
+  - `children` (only allows mismatch for direct children)
+  - `class`
+  - `style`
+  - `attribute`
+
+  If no value is provided, all types of mismatches will be allowed.

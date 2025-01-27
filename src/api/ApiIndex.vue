@@ -3,10 +3,16 @@
 // named import "data" is the resolved static data
 // can also import types for type consistency
 import { data as apiIndex, APIGroup } from './api.data'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { withBase } from 'vitepress'
 
+const search = ref()
 const query = ref('')
 const normalize = (s: string) => s.toLowerCase().replace(/-/g, ' ')
+
+onMounted(() => {
+  search.value?.focus()
+})
 
 const filtered = computed(() => {
   const q = normalize(query.value)
@@ -46,23 +52,6 @@ const filtered = computed(() => {
     })
     .filter((i) => i) as APIGroup[]
 })
-
-// same as vitepress' slugify logic
-function slugify(text: string): string {
-  return (
-    text
-      // Replace special characters
-      .replace(/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g, '-')
-      // Remove continuous separators
-      .replace(/\-{2,}/g, '-')
-      // Remove prefixing and trailing separators
-      .replace(/^\-+|\-+$/g, '')
-      // ensure it doesn't start with a number (#121)
-      .replace(/^(\d)/, '_$1')
-      // lowercase
-      .toLowerCase()
-  )
-}
 </script>
 
 <template>
@@ -72,6 +61,7 @@ function slugify(text: string): string {
       <div class="api-filter">
         <label for="api-filter">Filter</label>
         <input
+          ref="search"
           type="search"
           placeholder="Enter keyword"
           id="api-filter"
@@ -85,7 +75,7 @@ function slugify(text: string): string {
       :key="section.text"
       class="api-section"
     >
-      <h2 :id="slugify(section.text)">{{ section.text }}</h2>
+      <h2 :id="section.anchor">{{ section.text }}</h2>
       <div class="api-groups">
         <div
           v-for="item of section.items"
@@ -95,7 +85,7 @@ function slugify(text: string): string {
           <h3>{{ item.text }}</h3>
           <ul>
             <li v-for="h of item.headers" :key="h.anchor">
-              <a :href="item.link + '.html#' + slugify(h.anchor)">{{ h.anchor }}</a>
+              <a :href="withBase(item.link) + '.html#' + h.anchor">{{ h.text }}</a>
             </li>
           </ul>
         </div>
@@ -175,7 +165,7 @@ h3 {
   margin-bottom: 20px;
   background-color: var(--vt-c-bg-soft);
   border-radius: 8px;
-  padding: 28px 32px;
+  padding: 24px 28px;
   transition: background-color 0.5s;
 }
 
@@ -192,10 +182,15 @@ h3 {
   gap: 1rem;
 }
 
-.api-filter input {
+#api-filter {
   border: 1px solid var(--vt-c-divider);
   border-radius: 8px;
   padding: 6px 12px;
+  transition: box-shadow 0.25s ease;
+}
+
+#api-filter:focus {
+  box-shadow: 0 0 4pt #00d47499;
 }
 
 .api-filter:focus {

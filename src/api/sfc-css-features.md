@@ -120,7 +120,7 @@ A `<style module>` tag is compiled as [CSS Modules](https://github.com/css-modul
 
 The resulting classes are hashed to avoid collision, achieving the same effect of scoping the CSS to the current component only.
 
-Refer to the [CSS Modules spec](https://github.com/css-modules/css-modules) for more details such as [global exceptions](https://github.com/css-modules/css-modules#exceptions) and [composition](https://github.com/css-modules/css-modules#composition).
+Refer to the [CSS Modules spec](https://github.com/css-modules/css-modules) for more details such as [global exceptions](https://github.com/css-modules/css-modules/blob/master/docs/composition.md#exceptions) and [composition](https://github.com/css-modules/css-modules/blob/master/docs/composition.md#composition).
 
 ### Custom Inject Name {#custom-inject-name}
 
@@ -153,6 +153,26 @@ useCssModule()
 useCssModule('classes')
 ```
 
+- **Example**
+
+```vue
+<script setup lang="ts">
+import { useCssModule } from 'vue'
+
+const classes = useCssModule()
+</script>
+
+<template>
+  <p :class="classes.red">red</p>
+</template>
+
+<style module>
+.red {
+  color: red;
+}
+</style>
+```
+
 ## `v-bind()` in CSS {#v-bind-in-css}
 
 SFC `<style>` tags support linking CSS values to dynamic component state using the `v-bind` CSS function:
@@ -183,9 +203,10 @@ The syntax works with [`<script setup>`](./sfc-script-setup), and supports JavaS
 
 ```vue
 <script setup>
-const theme = {
-  color: 'red'
-}
+import { ref } from 'vue'
+const theme = ref({
+    color: 'red',
+})
 </script>
 
 <template>

@@ -10,13 +10,13 @@ Vue is designed to be performant for most common use cases without much need for
 
 First, let's discuss the two major aspects of web performance:
 
-- **Page Load Performance**: how fast the application shows content and becomes interactive on the initial visit. This is usually measured using web vital metrics like [Largest Contentful Paint (LCP)](https://web.dev/lcp/) and [First Input Delay (FID)](https://web.dev/fid/).
+- **Page Load Performance**: how fast the application shows content and becomes interactive on the initial visit. This is usually measured using web vital metrics like [Largest Contentful Paint (LCP)](https://web.dev/lcp/) and [Interaction to Next Paint](https://web.dev/articles/inp).
 
 - **Update Performance**: how fast the application updates in response to user input. For example, how fast a list updates when the user types in a search box, or how fast the page switches when the user clicks a navigation link in a Single-Page Application (SPA).
 
 While it would be ideal to maximize both, different frontend architectures tend to affect how easy it is to attain desired performance in these aspects. In addition, the type of application you are building greatly influences what you should prioritize in terms of performance. Therefore, the first step of ensuring optimal performance is picking the right architecture for the type of application you are building:
 
-- Consult [Ways of Using Vue](/guide/extras/ways-of-using-vue.html) to see how you can leverage Vue in different ways.
+- Consult [Ways of Using Vue](/guide/extras/ways-of-using-vue) to see how you can leverage Vue in different ways.
 
 - Jason Miller discusses the types of web applications and their respective ideal implementation / delivery in [Application Holotypes](https://jasonformat.com/application-holotypes/).
 
@@ -32,8 +32,8 @@ For profiling load performance of production deployments:
 For profiling performance during local development:
 
 - [Chrome DevTools Performance Panel](https://developer.chrome.com/docs/devtools/evaluate-performance/)
-  - [`app.config.performance`](/api/application.html#app-config-performance) enables Vue-specific performance markers in Chrome DevTools' performance timeline.
-- [Vue DevTools Extension](/guide/scaling-up/tooling.html#browser-devtools) also provides a performance profiling feature.
+  - [`app.config.performance`](/api/application#app-config-performance) enables Vue-specific performance markers in Chrome DevTools' performance timeline.
+- [Vue DevTools Extension](/guide/scaling-up/tooling#browser-devtools) also provides a performance profiling feature.
 
 ## Page Load Optimizations {#page-load-optimizations}
 
@@ -41,7 +41,7 @@ There are many framework-agnostic aspects for optimizing page load performance -
 
 ### Choosing the Right Architecture {#choosing-the-right-architecture}
 
-If your use case is sensitive to page load performance, avoid shipping it as a pure client-side SPA. You want your server to be directly sending HTML containing the content the users want to see. Pure client-side rendering suffers from slow time-to-content. This can be mitigated with [Server-Side Rendering (SSR)](/guide/extras/ways-of-using-vue.html#fullstack-ssr) or [Static Site Generation (SSG)](/guide/extras/ways-of-using-vue.html#jamstack-ssg). Check out the [SSR Guide](/guide/scaling-up/ssr.html) to learn about performing SSR with Vue. If your app doesn't have rich interactivity requirements, you can also use a traditional backend server to render the HTML and enhance it with Vue on the client.
+If your use case is sensitive to page load performance, avoid shipping it as a pure client-side SPA. You want your server to be directly sending HTML containing the content the users want to see. Pure client-side rendering suffers from slow time-to-content. This can be mitigated with [Server-Side Rendering (SSR)](/guide/extras/ways-of-using-vue#fullstack-ssr) or [Static Site Generation (SSG)](/guide/extras/ways-of-using-vue#jamstack-ssg). Check out the [SSR Guide](/guide/scaling-up/ssr) to learn about performing SSR with Vue. If your app doesn't have rich interactivity requirements, you can also use a traditional backend server to render the HTML and enhance it with Vue on the client.
 
 If your main application has to be an SPA, but has marketing pages (landing, about, blog), ship them separately! Your marketing pages should ideally be deployed as static HTML with minimal JS, by using SSG.
 
@@ -55,7 +55,7 @@ One of the most effective ways to improve page load performance is shipping smal
 
   - When using a build step, templates are pre-compiled so we don't need to ship the Vue compiler to the browser. This saves **14kb** min+gzipped JavaScript and avoids the runtime compilation cost.
 
-- Be cautious of size when introducing new dependencies! In real world applications, bloated bundles are most often a result of introducing heavy dependencies without realizing it.
+- Be cautious of size when introducing new dependencies! In real-world applications, bloated bundles are most often a result of introducing heavy dependencies without realizing it.
 
   - If using a build step, prefer dependencies that offer ES module formats and are tree-shaking friendly. For example, prefer `lodash-es` over `lodash`.
 
@@ -77,7 +77,7 @@ function loadLazy() {
 }
 ```
 
-Lazy loading is best used on features that are not immediately needed after initial page load. In Vue applications, this can be used in combination with Vue's [Async Component](/guide/components/async.html) feature to create split chunks for component trees:
+Lazy loading is best used on features that are not immediately needed after initial page load. In Vue applications, this can be used in combination with Vue's [Async Component](/guide/components/async) feature to create split chunks for component trees:
 
 ```js
 import { defineAsyncComponent } from 'vue'
@@ -118,11 +118,56 @@ Now, for most components the `active` prop will remain the same when `activeId` 
 
 ### `v-once` {#v-once}
 
-`v-once` is a built-in directive that can be used to render content that relies on runtime data but never needs to update. The entire sub-tree it is used on will be skipped for all future updates. Consult its [API reference](/api/built-in-directives.html#v-once) for more details.
+`v-once` is a built-in directive that can be used to render content that relies on runtime data but never needs to update. The entire sub-tree it is used on will be skipped for all future updates. Consult its [API reference](/api/built-in-directives#v-once) for more details.
 
 ### `v-memo` {#v-memo}
 
-`v-memo` is a built-in directive that can be used to conditionally skip the update of large sub-trees or `v-for` lists. Consult its [API reference](/api/built-in-directives.html#v-memo) for more details.
+`v-memo` is a built-in directive that can be used to conditionally skip the update of large sub-trees or `v-for` lists. Consult its [API reference](/api/built-in-directives#v-memo) for more details.
+
+### Computed Stability {#computed-stability}
+
+In Vue 3.4 and above, a computed property will only trigger effects when its computed value has changed from the previous one. For example, the following `isEven` computed only triggers effects if the returned value has changed from `true` to `false`, or vice-versa:
+
+```js
+const count = ref(0)
+const isEven = computed(() => count.value % 2 === 0)
+
+watchEffect(() => console.log(isEven.value)) // true
+
+// will not trigger new logs because the computed value stays `true`
+count.value = 2
+count.value = 4
+```
+
+This reduces unnecessary effect triggers, but unfortunately doesn't work if the computed creates a new object on each compute:
+
+```js
+const computedObj = computed(() => {
+  return {
+    isEven: count.value % 2 === 0
+  }
+})
+```
+
+Because a new object is created each time, the new value is technically always different from the old value. Even if the `isEven` property remains the same, Vue won't be able to know unless it performs a deep comparison of the old value and the new value. Such comparison could be expensive and likely not worth it.
+
+Instead, we can optimize this by manually comparing the new value with the old value, and conditionally returning the old value if we know nothing has changed:
+
+```js
+const computedObj = computed((oldValue) => {
+  const newValue = {
+    isEven: count.value % 2 === 0
+  }
+  if (oldValue && oldValue.isEven === newValue.isEven) {
+    return oldValue
+  }
+  return newValue
+})
+```
+
+[Try it in the playground](https://play.vuejs.org/#eNqVVMtu2zAQ/JUFgSZK4UpuczMkow/40AJ9IC3aQ9mDIlG2EokUyKVt1PC/d0lKtoEminMQQC1nZ4c7S+7Yu66L11awGUtNoesOwQi03ZzLuu2URtiBFtUECtV2FkU5gU2OxWpRVaJA2EOlVQuXxHDJJZeFkgYJayVC5hKj6dUxLnzSjZXmV40rZfFrh3Vb/82xVrLH//5DCQNNKPkweNiNVFP+zBsrIJvDjksgGrRahjVAbRZrIWdBVLz2yBfwBrIsg6mD7LncPyryfIVnywupUmz68HOEEqqCI+XFBQzrOKR79MDdx66GCn1jhpQDZx8f0oZ+nBgdRVcH/aMuBt1xZ80qGvGvh/X6nlXwnGpPl6qsLLxTtitzFFTNl0oSN/79AKOCHHQuS5pw4XorbXsr9ImHZN7nHFdx1SilI78MeOJ7Ca+nbvgd+GgomQOv6CNjSQqXaRJuHd03+kHRdg3JoT+A3a7XsfcmpbcWkQS/LZq6uM84C8o5m4fFuOg0CemeOXXX2w2E6ylsgj2gTgeYio/f1l5UEqj+Z3yC7lGuNDlpApswNNTrql7Gd0ZJeqW8TZw5t+tGaMdDXnA2G4acs7xp1OaTj6G2YjLEi5Uo7h+I35mti3H2TQsj9Jp6etjDXC8Fhu3F9y9iS+vDZqtK2xB6ZPNGGNVYpzHA3ltZkuwTnFf70b+1tVz+MIstCmmGQzmh/p56PGf00H4YOfpR7nV8PTxubP8P2GAP9Q==)
+
+Note that you should always perform the full computation before comparing and returning the old value, so that the same dependencies can be collected on every run.
 
 ## General Optimizations {#general-optimizations}
 
@@ -144,7 +189,7 @@ Implementing list virtualization isn't easy, luckily there are existing communit
 
 Vue's reactivity system is deep by default. While this makes state management intuitive, it does create a certain level of overhead when the data size is large, because every property access triggers proxy traps that perform dependency tracking. This typically becomes noticeable when dealing with large arrays of deeply nested objects, where a single render needs to access 100,000+ properties, so it should only affect very specific use cases.
 
-Vue does provide an escape hatch to opt-out of deep reactivity by using [`shallowRef()`](/api/reactivity-advanced.html#shallowref) and [`shallowReactive()`](/api/reactivity-advanced.html#shallowreactive). Shallow APIs create state that is reactive only at the root level, and exposes all nested objects untouched. This keeps nested property access fast, with the trade-off being that we must now treat all nested objects as immutable, and updates can only be triggered by replacing the root state:
+Vue does provide an escape hatch to opt-out of deep reactivity by using [`shallowRef()`](/api/reactivity-advanced#shallowref) and [`shallowReactive()`](/api/reactivity-advanced#shallowreactive). Shallow APIs create state that is reactive only at the root level, and exposes all nested objects untouched. This keeps nested property access fast, with the trade-off being that we must now treat all nested objects as immutable, and updates can only be triggered by replacing the root state:
 
 ```js
 const shallowArray = shallowRef([
@@ -170,6 +215,6 @@ shallowArray.value = [
 
 ### Avoid Unnecessary Component Abstractions {#avoid-unnecessary-component-abstractions}
 
-Sometimes we may create [renderless components](/guide/components/slots.html#renderless-components) or higher-order components (i.e. components that render other components with extra props) for better abstraction or code organization. While there is nothing wrong with this, do keep in mind that component instances are much more expensive than plain DOM nodes, and creating too many of them due to abstraction patterns will incur performance costs.
+Sometimes we may create [renderless components](/guide/components/slots#renderless-components) or higher-order components (i.e. components that render other components with extra props) for better abstraction or code organization. While there is nothing wrong with this, do keep in mind that component instances are much more expensive than plain DOM nodes, and creating too many of them due to abstraction patterns will incur performance costs.
 
 Note that reducing only a few instances won't have noticeable effect, so don't sweat it if the component is rendered only a few times in the app. The best scenario to consider this optimization is again in large lists. Imagine a list of 100 items where each item component contains many child components. Removing one unnecessary component abstraction here could result in a reduction of hundreds of component instances.

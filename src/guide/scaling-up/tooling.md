@@ -1,10 +1,14 @@
+<script setup>
+import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
+</script>
+
 # Tooling {#tooling}
 
 ## Try It Online {#try-it-online}
 
 You don't need to install anything on your machine to try out Vue SFCs - there are online playgrounds that allow you to do so right in the browser:
 
-- [Vue SFC Playground](https://sfc.vuejs.org)
+- [Vue SFC Playground](https://play.vuejs.org)
   - Always deployed from latest commit
   - Designed for inspecting component compilation results
 - [Vue + Vite on StackBlitz](https://vite.new/vue)
@@ -21,12 +25,45 @@ It is also recommended to use these online playgrounds to provide reproductions 
 
 To get started with Vite + Vue, simply run:
 
-<div class="language-sh"><pre><code><span class="line"><span style="color:var(--vt-c-green);">$</span> <span style="color:#A6ACCD;">npm init vue@latest</span></span></code></pre></div>
+<VTCodeGroup>
+  <VTCodeGroupTab label="npm">
+
+  ```sh
+  $ npm create vue@latest
+  ```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="pnpm">
+  
+  ```sh
+  $ pnpm create vue@latest
+  ```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="yarn">
+  
+  ```sh
+  # For Yarn Modern (v2+)
+  $ yarn create vue@latest
+  
+  # For Yarn ^v4.11
+  $ yarn dlx create-vue@latest
+  ```
+
+  </VTCodeGroupTab>
+  <VTCodeGroupTab label="bun">
+  
+  ```sh
+  $ bun create vue@latest
+  ```
+
+  </VTCodeGroupTab>
+</VTCodeGroup>
 
 This command will install and execute [create-vue](https://github.com/vuejs/create-vue), the official Vue project scaffolding tool.
 
 - To learn more about Vite, check out the [Vite docs](https://vitejs.dev).
-- To configure Vue-specific behavior in a Vite project, for example passing options to the Vue compiler, check out the docs for [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue#readme).
+- To configure Vue-specific behavior in a Vite project, for example passing options to the Vue compiler, check out the docs for [@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#readme).
 
 Both online playgrounds mentioned above also support downloading files as a Vite project.
 
@@ -53,10 +90,10 @@ If you are looking for a lighter-weight alternative for no-build-step usage, che
 
 ## IDE Support {#ide-support}
 
-- The recommended IDE setup is [VSCode](https://code.visualstudio.com/) + the [Volar](https://github.com/johnsoncodehk/volar) extension. Volar provides syntax highlighting, TypeScript support, and intellisense for template expressions and component props.
+- The recommended IDE setup is [VS Code](https://code.visualstudio.com/) + the [Vue - Official extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar). The extension provides syntax highlighting, TypeScript support, and intellisense for template expressions and component props.
 
   :::tip
-  Volar replaces [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), our previous official VSCode extension for Vue 2. If you have Vetur currently installed, make sure to disable it in Vue 3 projects.
+  Vue - Official replaces [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), our previous official VS Code extension for Vue 2. If you have Vetur currently installed, make sure to disable it in Vue 3 projects.
   :::
 
 - [WebStorm](https://www.jetbrains.com/webstorm/) also provides great built-in support for Vue SFCs.
@@ -71,24 +108,22 @@ If you are looking for a lighter-weight alternative for no-build-step usage, che
 
 ## Browser Devtools {#browser-devtools}
 
-<VueSchoolLink href="https://vueschool.io/lessons/using-vue-dev-tools-with-vuejs-3" title="Free Vue.js Devtools Lesson"/>
-
 The Vue browser devtools extension allows you to explore a Vue app's component tree, inspect the state of individual components, track state management events, and profile performance.
 
-![devtools screenshot](https://raw.githubusercontent.com/vuejs/devtools/main/media/screenshot-shadow.png)
+![devtools screenshot](./images/devtools.png)
 
 - [Documentation](https://devtools.vuejs.org/)
-- [Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [Firefox Addon](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-- [Standalone Electron app](https://devtools.vuejs.org/guide/installation.html#standalone)
+- [Chrome Extension](https://chromewebstore.google.com/detail/vuejs-devtools-beta/ljjemllljcmogpfapbkkighbhhppjdbg)
+- [Vite Plugin](https://devtools.vuejs.org/guide/vite-plugin)
+- [Standalone Electron app](https://devtools.vuejs.org/guide/standalone)
 
 ## TypeScript {#typescript}
 
 Main article: [Using Vue with TypeScript](/guide/typescript/overview).
 
-- [Volar](https://github.com/johnsoncodehk/volar) provides type checking for SFCs using `<script lang="ts">` blocks, including template expressions and cross-component props validation.
+- [Vue - Official extension](https://github.com/vuejs/language-tools) provides type checking for SFCs using `<script lang="ts">` blocks, including template expressions and cross-component props validation.
 
-- Use [`vue-tsc`](https://github.com/johnsoncodehk/volar/tree/master/vue-language-tools/vue-tsc) for performing the same type checking from the command line, or for generating `d.ts` files for SFCs.
+- Use [`vue-tsc`](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating `d.ts` files for SFCs.
 
 ## Testing {#testing}
 
@@ -108,7 +143,7 @@ Users previously using Vue CLI may be used to having linters configured via webp
 
 1. `npm install -D eslint eslint-plugin-vue`, then follow `eslint-plugin-vue`'s [configuration guide](https://eslint.vuejs.org/user-guide/#usage).
 
-2. Setup ESLint IDE extensions, for example [ESLint for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), so you get linter feedback right in your editor during development. This also avoids unnecessary linting cost when starting the dev server.
+2. Setup ESLint IDE extensions, for example [ESLint for VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), so you get linter feedback right in your editor during development. This also avoids unnecessary linting cost when starting the dev server.
 
 3. Run ESLint as part of the production build command, so you get full linter feedback before shipping to production.
 
@@ -116,7 +151,7 @@ Users previously using Vue CLI may be used to having linters configured via webp
 
 ## Formatting {#formatting}
 
-- The [Volar](https://github.com/johnsoncodehk/volar) VSCode extension provides formatting for Vue SFCs out of the box.
+- The [Vue - Official](https://github.com/vuejs/language-tools) VS Code extension provides formatting for Vue SFCs out of the box.
 
 - Alternatively, [Prettier](https://prettier.io/) provides built-in Vue SFC formatting support.
 
@@ -124,7 +159,7 @@ Users previously using Vue CLI may be used to having linters configured via webp
 
 Custom blocks are compiled into imports to the same Vue file with different request queries. It is up to the underlying build tool to handle these import requests.
 
-- If using Vite, a custom Vite plugin should be used to transform matched custom blocks into executable JavaScript. [Example](https://github.com/vitejs/vite/tree/main/packages/plugin-vue#example-for-transforming-custom-blocks)
+- If using Vite, a custom Vite plugin should be used to transform matched custom blocks into executable JavaScript. [Example](https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#example-for-transforming-custom-blocks)
 
 - If using Vue CLI or plain webpack, a webpack loader should be configured to transform the matched blocks. [Example](https://vue-loader.vuejs.org/guide/custom-blocks.html)
 
@@ -144,7 +179,7 @@ Always prefer using this package via the `vue/compiler-sfc` deep import since th
 
 ### `@vitejs/plugin-vue` {#vitejs-plugin-vue}
 
-- [Docs](https://github.com/vitejs/vite/tree/main/packages/plugin-vue)
+- [Docs](https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue)
 
 Official plugin that provides Vue SFC support in Vite.
 
@@ -158,9 +193,8 @@ The official loader that provides Vue SFC support in webpack. If you are using V
 
 - [VueUse Playground](https://play.vueuse.org)
 - [Vue + Vite on Repl.it](https://replit.com/@templates/VueJS-with-Vite)
-- [Vue on CodeSandbox](https://codesandbox.io/s/vue-3)
+- [Vue on CodeSandbox](https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/vue-vite)
 - [Vue on Codepen](https://codepen.io/pen/editor/vue)
-- [Vue on Components.studio](https://components.studio/create/vue3)
 - [Vue on WebComponents.dev](https://webcomponents.dev/create/cevue)
 
 <!-- TODO ## Backend Framework Integrations -->

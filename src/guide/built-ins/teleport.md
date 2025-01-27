@@ -6,9 +6,9 @@
 
 ## Basic Usage {#basic-usage}
 
-Sometimes we may run into the following scenario: a part of a component's template belongs to it logically, but from a visual standpoint, it should be displayed somewhere else in the DOM, outside of the Vue application.
+Sometimes a part of a component's template belongs to it logically, but from a visual standpoint, it should be displayed somewhere else in the DOM, perhaps even outside of the Vue application.
 
-The most common example of this is when building a full-screen modal. Ideally, we want the modal's button and the modal itself to live within the same component, since they are both related to the open / close state of the modal. But that means the modal will be rendered alongside the button, deeply nested in the application's DOM hierarchy. This can create some tricky issues when positioning the modal via CSS.
+The most common example of this is when building a full-screen modal. Ideally, we want the code for the modal's button and the modal itself to be written within the same single-file component, since they are both related to the open / close state of the modal. But that means the modal will be rendered alongside the button, deeply nested in the application's DOM hierarchy. This can create some tricky issues when positioning the modal via CSS.
 
 Consider the following HTML structure.
 
@@ -116,7 +116,8 @@ The `to` target of `<Teleport>` expects a CSS selector string or an actual DOM n
 You can click the button below and inspect the `<body>` tag via your browser's devtools:
 
 <script setup>
-let open = $ref(false)
+import { ref } from 'vue'
+const open = ref(false)
 </script>
 
 <div class="demo">
@@ -168,11 +169,11 @@ In some cases, we may want to conditionally disable `<Teleport>`. For example, w
 </Teleport>
 ```
 
-Where the `isMobile` state can be dynamically updated by detecting media query changes.
+We could then dynamically update `isMobile`.
 
 ## Multiple Teleports on the Same Target {#multiple-teleports-on-the-same-target}
 
-A common use case would be a reusable `<Modal>` component, with the potential for multiple instances to be active at the same time. For this kind of scenario, multiple `<Teleport>` components can mount their content to the same target element. The order will be a simple append - later mounts will be located after earlier ones within the target element.
+A common use case would be a reusable `<Modal>` component, with the potential for multiple instances to be active at the same time. For this kind of scenario, multiple `<Teleport>` components can mount their content to the same target element. The order will be a simple append, with later mounts located after earlier ones, but all within the target element.
 
 Given the following usage:
 
@@ -194,9 +195,22 @@ The rendered result would be:
 </div>
 ```
 
+## Deferred Teleport <sup class="vt-badge" data-text="3.5+" /> {#deferred-teleport}
+
+In Vue 3.5 and above, we can use the `defer` prop to defer the target resolving of a Teleport until other parts of the application have mounted. This allows the Teleport to target a container element that is rendered by Vue, but in a later part of the component tree:
+
+```vue-html
+<Teleport defer to="#late-div">...</Teleport>
+
+<!-- somewhere later in the template -->
+<div id="late-div"></div>
+```
+
+Note that the target element must be rendered in the same mount / update tick with the Teleport - i.e. if the `<div>` is only mounted a second later, the Teleport will still report an error. The defer works similarly to the `mounted` lifecycle hook.
+
 ---
 
 **Related**
 
-- [`<Teleport>` API reference](/api/built-in-components.html#teleport)
-- [Handling Teleports in SSR](/guide/scaling-up/ssr.html#teleports)
+- [`<Teleport>` API reference](/api/built-in-components#teleport)
+- [Handling Teleports in SSR](/guide/scaling-up/ssr#teleports)
