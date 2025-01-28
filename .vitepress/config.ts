@@ -577,9 +577,9 @@ export default defineConfigWithTheme<ThemeConfig>({
     hostname: 'https://vuejs.org'
   },
 
-  lang: 'en-US',
+  lang: 'de-DE',
   title: 'Vue.js',
-  description: 'Vue.js - The Progressive JavaScript Framework',
+  description: 'Vue.js - Das Progressive JavaScript Framework',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
 
@@ -592,7 +592,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       'meta',
       {
         property: 'og:description',
-        content: 'Vue.js - The Progressive JavaScript Framework'
+        content: 'Vue.js - Das Progressive JavaScript Framework'
       }
     ],
     [
@@ -714,7 +714,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       },
       {
         link: '/translations/',
-        text: 'Help Us Translate!',
+        text: 'Helfen Sie beim Übersetzen!',
         isTranslationsDesc: true
       }
     ],
@@ -741,15 +741,15 @@ export default defineConfigWithTheme<ThemeConfig>({
 
     editLink: {
       repo: 'vuejs/docs',
-      text: 'Edit this page on GitHub'
+      text: 'Die Seite auf GitHub editieren'
     },
 
     footer: {
       license: {
-        text: 'MIT License',
+        text: 'MIT Lizenz',
         link: 'https://opensource.org/licenses/MIT'
       },
-      copyright: `Copyright © 2014-${new Date().getFullYear()} Evan You`
+      copyright: `Urheberrecht © 2014-${new Date().getFullYear()} Evan You`
     }
   },
 
