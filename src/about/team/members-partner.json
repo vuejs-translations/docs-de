@@ -57,7 +57,7 @@
   },
   {
     "name": "Vincent Mayers",
-    "avatarPic": "https://pbs.twimg.com/profile_images/916531463905992706/MNvTkO5K_400x400.jpg",
+    "avatarPic": "https://pbs.twimg.com/profile_images/1618755757184253954/YvKB816o_400x400.jpg",
     "title": "Organizer",
     "company": "VueConf US",
     "projects": [
@@ -92,7 +92,7 @@
   },
   {
     "name": "Jos Gerards",
-    "avatarPic": "https://pbs.twimg.com/profile_images/1110510517951627269/LDzDyd4N_400x400.jpg",
+    "avatarPic": "https://pbs.twimg.com/profile_images/1668258954831446031/RTVopxrO_400x400.jpg",
     "title": "Event Manager",
     "company": "Vue.js Amsterdam",
     "projects": [
@@ -161,8 +161,8 @@
   {
     "name": "Sebastien Chopin",
     "title": "#1 Nuxt Brother",
-    "company": "NuxtJS",
-    "companyLink": "https://nuxtjs.org",
+    "company": "NuxtLabs",
+    "companyLink": "https://nuxtlabs.com",
     "location": "Bordeaux, France",
     "languages": ["French", "English"],
     "projects": [
@@ -171,12 +171,12 @@
         "url": "https://github.com/nuxt"
       },
       {
-        "label": "nuxt-community/*",
-        "url": "https://github.com/nuxt-community"
+        "label": "nuxt-modules/*",
+        "url": "https://github.com/nuxt-modules"
       },
       {
-        "label": "nuxt/vue-meta",
-        "url": "https://github.com/nuxt/vue-meta"
+        "label": "nuxt-themes/*",
+        "url": "https://github.com/nuxt-themes"
       }
     ],
     "socials": {
@@ -187,8 +187,8 @@
   {
     "name": "Alexandre Chopin",
     "title": "#1 Nuxt Brother",
-    "company": "NuxtJS",
-    "companyLink": "https://nuxtjs.org",
+    "company": "NuxtLabs",
+    "companyLink": "https://nuxtlabs.com",
     "location": "Bordeaux, France",
     "languages": ["French", "English"],
     "projects": [
@@ -197,12 +197,8 @@
         "url": "https://github.com/nuxt"
       },
       {
-        "label": "nuxt-community/*",
-        "url": "https://github.com/nuxt-community"
-      },
-      {
-        "label": "vue-flexboxgrid",
-        "url": "https://github.com/alexchopin/vue-flexboxgrid"
+        "label": "nuxt-modules/*",
+        "url": "https://github.com/nuxt-modules"
       }
     ],
     "socials": {
@@ -353,10 +349,10 @@
   },
   {
     "name": "Erick Petrucelli",
-    "title": "Head of Engineering",
-    "company": "Airbank",
-    "companyLink": "https://www.joinairbank.com/",
-    "location": "João Pessoa, Brazil",
+    "title": "Lead Software Engineer, UI/UX Specialist, Manager, Teacher, Speaker, Writer",
+    "company": "LawnStarter",
+    "companyLink": "https://www.lawnstarter.com/",
+    "location": "Campinas, Brazil",
     "languages": ["Portuguese", "English"],
     "projects": [
       {

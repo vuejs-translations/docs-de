@@ -1,5 +1,9 @@
 # Priority B Rules: Strongly Recommended {#priority-b-rules-strongly-recommended}
 
+::: warning Note
+This Vue.js Style Guide is outdated and needs to be reviewed. If you have any questions or suggestions, please [open an issue](https://github.com/vuejs/docs/issues/new).
+:::
+
 These rules have been found to improve readability and/or developer experience in most projects. Your code will still run if you violate them, but violations should be rare and well-justified.
 
 ## Component files {#component-files}
@@ -42,7 +46,7 @@ components/
 
 ## Single-file component filename casing {#single-file-component-filename-casing}
 
-**Filenames of [Single-File Components](/guide/scaling-up/sfc.html) should either be always PascalCase or always kebab-case.**
+**Filenames of [Single-File Components](/guide/scaling-up/sfc) should either be always PascalCase or always kebab-case.**
 
 PascalCase works best with autocompletion in code editors, as it's consistent with how we reference components in JS(X) and templates, wherever possible. However, mixed case filenames can sometimes create issues on case-insensitive file systems, which is why kebab-case is also perfectly acceptable.
 
@@ -152,34 +156,6 @@ components/
 |- VButton.vue
 |- VTable.vue
 |- VIcon.vue
-```
-
-</div>
-
-## Single-instance component names {#single-instance-component-names}
-
-**Components that should only ever have a single active instance should begin with the `The` prefix, to denote that there can be only one.**
-
-This does not mean the component is only used in a single page, but it will only be used once _per page_. These components never accept any props, since they are specific to your app, not their context within your app. If you find the need to add props, it's a good indication that this is actually a reusable component that is only used once per page _for now_.
-
-<div class="style-example style-example-bad">
-<h3>Bad</h3>
-
-```
-components/
-|- Heading.vue
-|- MySidebar.vue
-```
-
-</div>
-
-<div class="style-example style-example-good">
-<h3>Good</h3>
-
-```
-components/
-|- TheHeading.vue
-|- TheSidebar.vue
 ```
 
 </div>
@@ -337,7 +313,7 @@ components/
 
 ## Self-closing components {#self-closing-components}
 
-**Components with no content should be self-closing in [Single-File Components](/guide/scaling-up/sfc.html), string templates, and [JSX](/guide/extras/render-function.html#jsx-tsx) - but never in DOM templates.**
+**Components with no content should be self-closing in [Single-File Components](/guide/scaling-up/sfc), string templates, and [JSX](/guide/extras/render-function#jsx-tsx) - but never in in-DOM templates.**
 
 Components that self-close communicate that they not only have no content, but are **meant** to have no content. It's the difference between a blank page in a book and one labeled "This page intentionally left blank." Your code is also cleaner without the unnecessary closing tag.
 
@@ -352,7 +328,7 @@ Unfortunately, HTML doesn't allow custom elements to be self-closing - only [off
 ```
 
 ```vue-html
-<!-- In DOM templates -->
+<!-- In in-DOM templates -->
 <my-component/>
 ```
 
@@ -367,7 +343,7 @@ Unfortunately, HTML doesn't allow custom elements to be self-closing - only [off
 ```
 
 ```vue-html
-<!-- In DOM templates -->
+<!-- In in-DOM templates -->
 <my-component></my-component>
 ```
 
@@ -375,7 +351,7 @@ Unfortunately, HTML doesn't allow custom elements to be self-closing - only [off
 
 ## Component name casing in templates {#component-name-casing-in-templates}
 
-**In most projects, component names should always be PascalCase in [Single-File Components](/guide/scaling-up/sfc.html) and string templates - but kebab-case in DOM templates.**
+**In most projects, component names should always be PascalCase in [Single-File Components](/guide/scaling-up/sfc) and string templates - but kebab-case in in-DOM templates.**
 
 PascalCase has a few advantages over kebab-case:
 
@@ -383,7 +359,7 @@ PascalCase has a few advantages over kebab-case:
 - `<MyComponent>` is more visually distinct from a single-word HTML element than `<my-component>`, because there are two character differences (the two capitals), rather than just one (a hyphen).
 - If you use any non-Vue custom elements in your templates, such as a web component, PascalCase ensures that your Vue components remain distinctly visible.
 
-Unfortunately, due to HTML's case insensitivity, DOM templates must still use kebab-case.
+Unfortunately, due to HTML's case insensitivity, in-DOM templates must still use kebab-case.
 
 Also note that if you've already invested heavily in kebab-case, consistency with HTML conventions and being able to use the same casing across all your projects may be more important than the advantages listed above. In those cases, **using kebab-case everywhere is also acceptable.**
 
@@ -401,7 +377,7 @@ Also note that if you've already invested heavily in kebab-case, consistency wit
 ```
 
 ```vue-html
-<!-- In DOM templates -->
+<!-- In in-DOM templates -->
 <MyComponent></MyComponent>
 ```
 
@@ -416,7 +392,7 @@ Also note that if you've already invested heavily in kebab-case, consistency wit
 ```
 
 ```vue-html
-<!-- In DOM templates -->
+<!-- In in-DOM templates -->
 <my-component></my-component>
 ```
 
@@ -431,7 +407,7 @@ OR
 
 ## Component name casing in JS/JSX {#component-name-casing-in-js-jsx}
 
-**Component names in JS/[JSX](/guide/extras/render-function.html#jsx-tsx) should always be PascalCase, though they may be kebab-case inside strings for simpler applications that only use global component registration through `app.component`.**
+**Component names in JS/[JSX](/guide/extras/render-function#jsx-tsx) should always be PascalCase, though they may be kebab-case inside strings for simpler applications that only use global component registration through `app.component`.**
 
 ::: details Detailed Explanation
 In JavaScript, PascalCase is the convention for classes and prototype constructors - essentially, anything that can have distinct instances. Vue components also have instances, so it makes sense to also use PascalCase. As an added benefit, using PascalCase within JSX (and templates) allows readers of the code to more easily distinguish between components and HTML elements.
@@ -529,12 +505,12 @@ components/
 
 ## Prop name casing {#prop-name-casing}
 
-**Prop names should always use camelCase during declaration, but kebab-case in templates and [JSX](/guide/extras/render-function.html#jsx-tsx).**
-
-We're simply following the conventions of each language. Within JavaScript, camelCase is more natural. Within HTML, kebab-case is.
+**Prop names should always use camelCase during declaration. When used inside in-DOM templates, props should be kebab-cased. Single-File Components templates and [JSX](/guide/extras/render-function#jsx-tsx) can use either kebab-case or camelCase props. Casing should be consistent - if you choose to use camelCased props, make sure you don't use kebab-cased ones in your application**
 
 <div class="style-example style-example-bad">
 <h3>Bad</h3>
+
+<div class="options-api">
 
 ```js
 props: {
@@ -542,8 +518,21 @@ props: {
 }
 ```
 
+</div>
+
+<div class="composition-api">
+
+```js
+const props = defineProps({
+  'greeting-text': String
+})
+```
+
+</div>
+
 ```vue-html
-<WelcomeMessage greetingText="hi"/>
+// for in-DOM templates
+<welcome-message greetingText="hi"></welcome-message>
 ```
 
 </div>
@@ -551,14 +540,37 @@ props: {
 <div class="style-example style-example-good">
 <h3>Good</h3>
 
+<div class="options-api">
+
 ```js
 props: {
   greetingText: String
 }
 ```
 
+</div>
+
+<div class="composition-api">
+
+```js
+const props = defineProps({
+  greetingText: String
+})
+```
+
+</div>
+
 ```vue-html
+// for SFC - please make sure your casing is consistent throughout the project
+// you can use either convention but we don't recommend mixing two different casing styles
 <WelcomeMessage greeting-text="hi"/>
+// or
+<WelcomeMessage greetingText="hi"/>
+```
+
+```vue-html
+// for in-DOM templates
+<welcome-message greeting-text="hi"></welcome-message>
 ```
 
 </div>
@@ -567,7 +579,7 @@ props: {
 
 **Elements with multiple attributes should span multiple lines, with one attribute per line.**
 
-In JavaScript, splitting objects with multiple properties over multiple lines is widely considered a good convention, because it's much easier to read. Our templates and [JSX](/guide/extras/render-function.html#jsx-tsx) deserve the same consideration.
+In JavaScript, splitting objects with multiple properties over multiple lines is widely considered a good convention, because it's much easier to read. Our templates and [JSX](/guide/extras/render-function#jsx-tsx) deserve the same consideration.
 
 <div class="style-example style-example-bad">
 <h3>Bad</h3>
@@ -629,6 +641,8 @@ Complex expressions in your templates make them less declarative. We should stri
 {{ normalizedFullName }}
 ```
 
+<div class="options-api">
+
 ```js
 // The complex expression has been moved to a computed property
 computed: {
@@ -639,6 +653,22 @@ computed: {
   }
 }
 ```
+
+</div>
+
+<div class="composition-api">
+
+```js
+// The complex expression has been moved to a computed property
+const normalizedFullName = computed(() =>
+  fullName.value
+    .split(' ')
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(' ')
+)
+```
+
+</div>
 
 </div>
 
@@ -667,6 +697,8 @@ Simpler, well-named computed properties are:
 <div class="style-example style-example-bad">
 <h3>Bad</h3>
 
+<div class="options-api">
+
 ```js
 computed: {
   price() {
@@ -681,8 +713,23 @@ computed: {
 
 </div>
 
+<div class="composition-api">
+
+```js
+const price = computed(() => {
+  const basePrice = manufactureCost.value / (1 - profitMargin.value)
+  return basePrice - basePrice * (discountPercent.value || 0)
+})
+```
+
+</div>
+
+</div>
+
 <div class="style-example style-example-good">
 <h3>Good</h3>
+
+<div class="options-api">
 
 ```js
 computed: {
@@ -699,6 +746,24 @@ computed: {
   }
 }
 ```
+
+</div>
+
+<div class="composition-api">
+
+```js
+const basePrice = computed(
+  () => manufactureCost.value / (1 - profitMargin.value)
+)
+
+const discount = computed(
+  () => basePrice.value * (discountPercent.value || 0)
+)
+
+const finalPrice = computed(() => basePrice.value - discount.value)
+```
+
+</div>
 
 </div>
 

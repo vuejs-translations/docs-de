@@ -1,6 +1,6 @@
 <section class="todoapp">
   <header class="header">
-    <h1>todos</h1>
+    <h1>Todos</h1>
     <input
       class="new-todo"
       autofocus
@@ -34,7 +34,7 @@
           class="edit"
           type="text"
           v-model="todo.title"
-          @vnode-mounted="({ el }) => el.focus()"
+          @vue:mounted="({ el }) => el.focus()"
           @blur="doneEdit(todo)"
           @keyup.enter="doneEdit(todo)"
           @keyup.escape="cancelEdit(todo)"
@@ -45,7 +45,7 @@
   <footer class="footer" v-show="todos.length">
     <span class="todo-count">
       <strong>{{ remaining }}</strong>
-      <span>{{ remaining === 1 ? 'item' : 'items' }} left</span>
+      <span>{{ remaining === 1 ? ' item' : ' items' }} left</span>
     </span>
     <ul class="filters">
       <li>

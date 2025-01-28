@@ -5,7 +5,7 @@ export interface Member {
   company?: string
   companyLink?: string
   projects: Link[]
-  location: string
+  location: string | string[]
   languages: string[]
   website?: Link
   socials: Socials
@@ -21,5 +21,6 @@ export interface Link {
 export interface Socials {
   github: string
   twitter?: string
+  linkedin?: string
   codepen?: string
 }

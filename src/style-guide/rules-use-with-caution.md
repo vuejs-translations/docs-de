@@ -1,5 +1,9 @@
 # Priority D Rules: Use with Caution {#priority-d-rules-use-with-caution}
 
+::: warning Note
+This Vue.js Style Guide is outdated and needs to be reviewed. If you have any questions or suggestions, please [open an issue](https://github.com/vuejs/docs/issues/new).
+:::
+
 Some features of Vue exist to accommodate rare edge cases or smoother migrations from a legacy code base. When overused however, they can make your code more difficult to maintain or even become a source of bugs. These rules shine a light on potentially risky features, describing when and why they should be avoided.
 
 ## Element selectors with `scoped` {#element-selectors-with-scoped}
@@ -55,6 +59,8 @@ button {
 An ideal Vue application is props down, events up. Sticking to this convention makes your components much easier to understand. However, there are edge cases where prop mutation or `this.$parent` can simplify two components that are already deeply coupled.
 
 The problem is, there are also many _simple_ cases where these patterns may offer convenience. Beware: do not be seduced into trading simplicity (being able to understand the flow of your state) for short-term convenience (writing less code).
+
+<div class="options-api">
 
 <div class="style-example style-example-bad">
 <h3>Bad</h3>
@@ -146,5 +152,104 @@ app.component('TodoItem', {
   `
 })
 ```
+
+</div>
+
+</div>
+
+<div class="composition-api">
+
+<div class="style-example style-example-bad">
+<h3>Bad</h3>
+
+```vue
+<script setup>
+defineProps({
+  todo: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
+<template>
+  <input v-model="todo.text" />
+</template>
+```
+
+```vue
+<script setup>
+import { getCurrentInstance } from 'vue'
+
+const props = defineProps({
+  todo: {
+    type: Object,
+    required: true
+  }
+})
+
+const instance = getCurrentInstance()
+
+function removeTodo() {
+  const parent = instance.parent
+  if (!parent) return
+
+  parent.props.todos = parent.props.todos.filter((todo) => {
+    return todo.id !== props.todo.id
+  })
+}
+</script>
+
+<template>
+  <span>
+    {{ todo.text }}
+    <button @click="removeTodo">×</button>
+  </span>
+</template>
+```
+
+</div>
+
+<div class="style-example style-example-good">
+<h3>Good</h3>
+
+```vue
+<script setup>
+defineProps({
+  todo: {
+    type: Object,
+    required: true
+  }
+})
+
+const emit = defineEmits(['input'])
+</script>
+
+<template>
+  <input :value="todo.text" @input="emit('input', $event.target.value)" />
+</template>
+```
+
+```vue
+<script setup>
+defineProps({
+  todo: {
+    type: Object,
+    required: true
+  }
+})
+
+const emit = defineEmits(['delete'])
+</script>
+
+<template>
+  <span>
+    {{ todo.text }}
+    <button @click="emit('delete')">×</button>
+  </span>
+</template>
+```
+
+</div>
 
 </div>

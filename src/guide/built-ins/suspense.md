@@ -32,7 +32,7 @@ There are two types of async dependencies that `<Suspense>` can wait on:
 
 1. Components with an async `setup()` hook. This includes components using `<script setup>` with top-level `await` expressions.
 
-2. [Async Components](/guide/components/async.html).
+2. [Async Components](/guide/components/async).
 
 ### `async setup()` {#async-setup}
 
@@ -101,7 +101,7 @@ The events could be used, for example, to show a loading indicator in front of t
 
 ## Error Handling {#error-handling}
 
-`<Suspense>` currently does not provide error handling via the component itself - however, you can use the [`errorCaptured`](/api/options-lifecycle.html#errorcaptured) option or the [`onErrorCaptured()`](/api/composition-api-lifecycle.html#onerrorcaptured) hook to capture and handle async errors in the parent component of `<Suspense>`.
+`<Suspense>` currently does not provide error handling via the component itself - however, you can use the [`errorCaptured`](/api/options-lifecycle#errorcaptured) option or the [`onErrorCaptured()`](/api/composition-api-lifecycle#onerrorcaptured) hook to capture and handle async errors in the parent component of `<Suspense>`.
 
 ## Combining with Other Components {#combining-with-other-components}
 
@@ -132,3 +132,39 @@ The following example shows how to nest these components so that they all behave
 ```
 
 Vue Router has built-in support for [lazily loading components](https://router.vuejs.org/guide/advanced/lazy-loading.html) using dynamic imports. These are distinct from async components and currently they will not trigger `<Suspense>`. However, they can still have async components as descendants and those can trigger `<Suspense>` in the usual way.
+
+## Nested Suspense {#nested-suspense}
+
+- Only supported in 3.3+
+
+When we have multiple async components (common for nested or layout-based routes) like this:
+
+```vue-html
+<Suspense>
+  <component :is="DynamicAsyncOuter">
+    <component :is="DynamicAsyncInner" />
+  </component>
+</Suspense>
+```
+
+`<Suspense>` creates a boundary that will resolve all the async components down the tree, as expected. However, when we change `DynamicAsyncOuter`, `<Suspense>` awaits it correctly, but when we change `DynamicAsyncInner`, the nested `DynamicAsyncInner` renders an empty node until it has been resolved (instead of the previous one or fallback slot).
+
+In order to solve that, we could have a nested suspense to handle the patch for the nested component, like:
+
+```vue-html
+<Suspense>
+  <component :is="DynamicAsyncOuter">
+    <Suspense suspensible> <!-- this -->
+      <component :is="DynamicAsyncInner" />
+    </Suspense>
+  </component>
+</Suspense>
+```
+
+If you don't set the `suspensible` prop, the inner `<Suspense>` will be treated like a sync component by the parent `<Suspense>`. That means that it has its own fallback slot and if both `Dynamic` components change at the same time, there might be empty nodes and multiple patching cycles while the child `<Suspense>` is loading its own dependency tree, which might not be desirable. When it's set, all the async dependency handling is given to the parent `<Suspense>` (including the events emitted) and the inner `<Suspense>` serves solely as another boundary for the dependency resolution and patching.
+
+---
+
+**Related**
+
+- [`<Suspense>` API reference](/api/built-in-components#suspense)

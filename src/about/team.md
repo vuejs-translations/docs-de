@@ -1,6 +1,6 @@
 ---
 page: true
-title: Lernen Sie das Team kennen
+title: Meet the Team
 ---
 
 <script setup>

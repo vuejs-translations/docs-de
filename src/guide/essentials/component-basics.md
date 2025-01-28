@@ -1,16 +1,16 @@
-# Grundlagen zu Komponenten {#components-basics}
+# Components Basics {#components-basics}
 
-Komponenten ermöglichen es, das User Interface in unabhängige und wiederverwendbare Teile aufzuteilen und jedes einzelne Teil isoliert zu konzipieren. Üblicherweise wird eine Applikation als Baum verschachtelter Komponenten organisiert:
+Components allow us to split the UI into independent and reusable pieces, and think about each piece in isolation. It's common for an app to be organized into a tree of nested components:
 
-![Komponentenbaum](./images/components.png)
+![Component Tree](./images/components.png)
 
 <!-- https://www.figma.com/file/qa7WHDQRWuEZNRs7iZRZSI/components -->
 
-Dies ist der Art, wie native HTML-Elemente ineinander verschachtelt werden, sehr ähnlich, wobei Vue sein eigenens Komponentenmodell nutzt. Dieses Modell ermöhlicht es, den Inhalt und die Funktionalität - also die Anwendungslogik - einer selbsterstellten Komponete zu kapseln. Vue harmoniert dabei gut mit nativen Komponenten (Web Components). Weiterführende Informationen zum Gemeinsamkeiten und Unterschieden von Komponenten in Vue und nativen Komponenten können Sie [hier](/guide/extras/web-components.html) finden.
+This is very similar to how we nest native HTML elements, but Vue implements its own component model that allows us to encapsulate custom content and logic in each component. Vue also plays nicely with native Web Components. If you are curious about the relationship between Vue Components and native Web Components, [read more here](/guide/extras/web-components).
 
-## Komponenten definieren {#defining-a-component}
+## Defining a Component {#defining-a-component}
 
-Wird die Applikation mit einem Build Tool erstellt, definieren wir eine Vue-Komponente üblicherweise in einer eigenen Datei, die mit Dateiendung `.vue` gespeichert wird. Diese Komponente wird daher als [Single-File Component](/guide/scaling-up/sfc.html)  bezeichnet (oder oft auch als SFC abgekürzt):
+When using a build step, we typically define each Vue component in a dedicated file using the `.vue` extension - known as a [Single-File Component](/guide/scaling-up/sfc) (SFC for short):
 
 <div class="options-api">
 
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-  <button @click="count++">Du hast mich {{ count }} Mal geklickt.</button>
+  <button @click="count++">You clicked me {{ count }} times.</button>
 </template>
 ```
 
@@ -41,13 +41,13 @@ const count = ref(0)
 </script>
 
 <template>
-  <button @click="count++">Du hast mich {{ count }} Mal geklickt.</button>
+  <button @click="count++">You clicked me {{ count }} times.</button>
 </template>
 ```
 
 </div>
 
-Wird kein Build Tool verwendet, kann eine Vue-Komponente als normales JavaScript-Objekt erstellt werden. Dieses Objekt enthält dabei einige Vue-spezifische Optionen:
+When not using a build step, a Vue component can be defined as a plain JavaScript object containing Vue-specific options:
 
 <div class="options-api">
 
@@ -60,7 +60,7 @@ export default {
   },
   template: `
     <button @click="count++">
-      Du hast mich {{ count }} Mal geklickt.
+      You clicked me {{ count }} times.
     </button>`
 }
 ```
@@ -80,23 +80,24 @@ export default {
     <button @click="count++">
       You clicked me {{ count }} times.
     </button>`
-  // or `template: '#my-template-element'`
+  // Can also target an in-DOM template:
+  // template: '#my-template-element'
 }
 ```
 
 </div>
 
-Das Template ist hierbei ein Inline-JavaScript-String. Vue wird diesen String zu Laufzeit kompilieren. Es kann auch ein ID-Selektor verwendet werden, der auf ein DOM-Element verweist (üblicherweise das native `<template>` Element) - Vue nutzt dann dessen INhalt als Quelle für das Vue-Template.
+The template is inlined as a JavaScript string here, which Vue will compile on the fly. You can also use an ID selector pointing to an element (usually native `<template>` elements) - Vue will use its content as the template source.
 
-Das Beispiel definiert eine einzelne Komponente und exportiert diese als Standardexport in einer `.js`-Datei. Es können aber auch benannte Exporte verwendet werden, um mehrere Komponenten aus derselben Datei zu exportieren.
+The example above defines a single component and exports it as the default export of a `.js` file, but you can use named exports to export multiple components from the same file.
 
-## Komponenten nutzen {#using-a-component}
+## Using a Component {#using-a-component}
 
 :::tip
-In der Dokumentation werden wir die SFC-Syntax verwenden. Die eingesetzen Konzepte sind unabhängig von der Nutzung eines Build-Tools identisch. Im Bereich [Beispiele](/examples/) finden sich Beispiele für die Nutzung von Komponenten in beiden Szenarien.
+We will be using SFC syntax for the rest of this guide - the concepts around components are the same regardless of whether you are using a build step or not. The [Examples](/examples/) section shows component usage in both scenarios.
 :::
 
-Um eine untergeordnete Komponente zu verwenden, müssen wir sie in die übergeordnete Komponente importieren. Angenommen, wir haben unsere Zählerkomponente in einer Datei mit dem Namen "ButtonCounter.vue" platziert, wird die Komponente als Standard-Export der Datei angezeigt:
+To use a child component, we need to import it in the parent component. Assuming we placed our counter component inside a file called `ButtonCounter.vue`, the component will be exposed as the file's default export:
 
 <div class="options-api">
 
@@ -117,7 +118,7 @@ export default {
 </template>
 ```
 
-Um die importierte Komponente für unsere Vorlage freizugeben, müssen wir [registrieren](/guide/components/registration.html) mit der Option `components`. Die Komponente ist dann als Tag mit dem Schlüssel, unter dem sie registriert ist, verfügbar.
+To expose the imported component to our template, we need to [register](/guide/components/registration) it with the `components` option. The component will then be available as a tag using the key it is registered under.
 
 </div>
 
@@ -134,13 +135,13 @@ import ButtonCounter from './ButtonCounter.vue'
 </template>
 ```
 
-Mit `<script setup>` werden importierte Komponenten automatisch in der Vorlage verfügbar gemacht.
+With `<script setup>`, imported components are automatically made available to the template.
 
 </div>
 
-Es ist auch möglich, eine Komponente global zu registrieren, so dass sie für alle Komponenten in einer bestimmten Anwendung verfügbar ist, ohne dass sie importiert werden muss. Die Vor- und Nachteile der globalen gegenüber der lokalen Registrierung werden im Abschnitt [Komponentenregistrierung](/guide/components/registration.html) diskutiert.
+It's also possible to globally register a component, making it available to all components in a given app without having to import it. The pros and cons of global vs. local registration is discussed in the dedicated [Component Registration](/guide/components/registration) section.
 
-Die Komponenten können beliebig oft wiederverwendet werden:
+Components can be reused as many times as you want:
 
 ```vue-html
 <h1>Here are many child components!</h1>
@@ -151,20 +152,20 @@ Die Komponenten können beliebig oft wiederverwendet werden:
 
 <div class="options-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdD5cbmltcG9ydCBCdXR0b25Db3VudGVyIGZyb20gJy4vQnV0dG9uQ291bnRlci52dWUnXG4gIFxuZXhwb3J0IGRlZmF1bHQge1xuICBjb21wb25lbnRzOiB7XG4gICAgQnV0dG9uQ291bnRlclxuICB9XG59XG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuXHQ8aDE+SGVyZSBhcmUgbWFueSBjaGlsZCBjb21wb25lbnRzITwvaDE+XG5cdDxCdXR0b25Db3VudGVyIC8+XG5cdDxCdXR0b25Db3VudGVyIC8+XG5cdDxCdXR0b25Db3VudGVyIC8+XG48L3RlbXBsYXRlPiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHtcbiAgICBcInZ1ZVwiOiBcImh0dHBzOi8vc2ZjLnZ1ZWpzLm9yZy92dWUucnVudGltZS5lc20tYnJvd3Nlci5qc1wiXG4gIH1cbn0iLCJCdXR0b25Db3VudGVyLnZ1ZSI6IjxzY3JpcHQ+XG5leHBvcnQgZGVmYXVsdCB7XG4gIGRhdGEoKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgIGNvdW50OiAwXG4gICAgfVxuICB9XG59XG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICA8YnV0dG9uIEBjbGljaz1cImNvdW50KytcIj5cbiAgICBZb3UgY2xpY2tlZCBtZSB7eyBjb3VudCB9fSB0aW1lcy5cbiAgPC9idXR0b24+XG48L3RlbXBsYXRlPiJ9)
+[Try it in the Playground](https://play.vuejs.org/#eNqVUE1LxDAQ/StjLqusNHotcfHj4l8QcontLBtsJiGdiFL6301SdrEqyEJyeG9m3ps3k3gIoXlPKFqhxi7awDtN1gUfGR4Ts6cnn4gxwj56B5tGrtgyutEEoAk/6lCPe5MGhqmwnc9KhMRjuxCwFi3UrCk/JU/uGTC6MBjGglgdbnfPGBFM/s7QJ3QHO/TfxC+UzD21d72zPItU8uQrrsWvnKsT/ZW2N2wur45BI3KKdETlFlmphZsF58j/RgdQr3UJuO8G273daVFFtlstahngxSeoNezBIUzTYgPzDGwdjk1VkYvMj4jzF0nwsyQ=)
 
 </div>
 <div class="composition-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCBCdXR0b25Db3VudGVyIGZyb20gJy4vQnV0dG9uQ291bnRlci52dWUnXG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuXHQ8aDE+SGVyZSBhcmUgbWFueSBjaGlsZCBjb21wb25lbnRzITwvaDE+XG5cdDxCdXR0b25Db3VudGVyIC8+XG5cdDxCdXR0b25Db3VudGVyIC8+XG5cdDxCdXR0b25Db3VudGVyIC8+XG48L3RlbXBsYXRlPiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHtcbiAgICBcInZ1ZVwiOiBcImh0dHBzOi8vc2ZjLnZ1ZWpzLm9yZy92dWUucnVudGltZS5lc20tYnJvd3Nlci5qc1wiXG4gIH1cbn0iLCJCdXR0b25Db3VudGVyLnZ1ZSI6IjxzY3JpcHQgc2V0dXA+XG5pbXBvcnQgeyByZWYgfSBmcm9tICd2dWUnXG5cbmNvbnN0IGNvdW50ID0gcmVmKDApXG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICA8YnV0dG9uIEBjbGljaz1cImNvdW50KytcIj5cbiAgICBZb3UgY2xpY2tlZCBtZSB7eyBjb3VudCB9fSB0aW1lcy5cbiAgPC9idXR0b24+XG48L3RlbXBsYXRlPiJ9)
+[Try it in the Playground](https://play.vuejs.org/#eNqVj91KAzEQhV/lmJsqlY3eSlr8ufEVhNys6ZQGNz8kE0GWfXez2SJUsdCLuZiZM9+ZM4qnGLvPQuJBqGySjYxMXOJWe+tiSIznwhz8SyieKWGfgsOqkyfTGbDSXsmFUG9rw+Ti0DPNHavD/faVEqGv5Xr/BXOwww4mVBNPnvOVklXTtKeO8qKhkj++4lb8+fL/mCMS7TEdAy6BtDfBZ65fVgA2s+L67uZMUEC9N0s8msGaj40W7Xa91qKtgbdQ0Ha0gyOM45E+TWDrKHeNIhfMr0DTN4U0me8=)
 
 </div>
 
-Beachten Sie, dass beim Anklicken der Schaltflächen jede ihre eigene, separate `count` beibehält. Das liegt daran, dass jedes Mal, wenn Sie eine Komponente verwenden, eine neue **Instanz** der Komponente erstellt wird.
+Notice that when clicking on the buttons, each one maintains its own, separate `count`. That's because each time you use a component, a new **instance** of it is created.
 
-In SFCs wird empfohlen, Tag-Namen für untergeordnete Komponenten in PascalCase zu verwenden, um sie von nativen HTML-Elementen zu unterscheiden. Obwohl native HTML-Tag-Namen Groß- und Kleinschreibung nicht berücksichtigen, ist Vue SFC ein kompiliertes Format, so dass wir in der Lage sind, Tag-Namen mit Groß- und Kleinschreibung zu verwenden. Wir sind auch in der Lage, `/>` zu verwenden, um ein Tag zu schließen.
+In SFCs, it's recommended to use `PascalCase` tag names for child components to differentiate from native HTML elements. Although native HTML tag names are case-insensitive, Vue SFC is a compiled format so we are able to use case-sensitive tag names in it. We are also able to use `/>` to close a tag.
 
-Wenn Sie Ihre Templates direkt in einem DOM erstellen (z.B. als Inhalt eines nativen `<Template>`-Elements), wird das Template dem nativen HTML-Parsing-Verhalten des Browsers unterliegen. In solchen Fällen müssen Sie `kebab-case` und explizite schließende Tags für Komponenten verwenden:
+If you are authoring your templates directly in a DOM (e.g. as the content of a native `<template>` element), the template will be subject to the browser's native HTML parsing behavior. In such cases, you will need to use `kebab-case` and explicit closing tags for components:
 
 ```vue-html
 <!-- if this template is written in the DOM -->
@@ -173,13 +174,13 @@ Wenn Sie Ihre Templates direkt in einem DOM erstellen (z.B. als Inhalt eines nat
 <button-counter></button-counter>
 ```
 
-Siehe [DOM template parsing caveats](#dom-template-parsing-caveats) für weitere Details.
+See [in-DOM template parsing caveats](#in-dom-template-parsing-caveats) for more details.
 
-## Passende Requisiten {#passing-props}
+## Passing Props {#passing-props}
 
-Wenn wir einen Blog erstellen, benötigen wir wahrscheinlich eine Komponente, die einen Blogbeitrag darstellt. Wir möchten, dass alle Blogeinträge das gleiche visuelle Layout haben, aber mit unterschiedlichem Inhalt. Eine solche Komponente ist nur dann nützlich, wenn Sie ihr Daten übergeben können, z. B. den Titel und den Inhalt des bestimmten Beitrags, den wir anzeigen möchten. An dieser Stelle kommen Props ins Spiel.
+If we are building a blog, we will likely need a component representing a blog post. We want all the blog posts to share the same visual layout, but with different content. Such a component won't be useful unless you can pass data to it, such as the title and content of the specific post we want to display. That's where props come in.
 
-Props sind benutzerdefinierte Attribute, die Sie für eine Komponente registrieren können. Um einen Titel an unsere Blogpost-Komponente zu übergeben, müssen wir ihn in der Liste der Requisiten, die diese Komponente akzeptiert, deklarieren, indem wir die <span class="options-api">[`props`](/api/options-state.html#props) Option</span><span class="composition-api">[`defineProps`](/api/sfc-script-setup.html#defineprops-defineemits) Makro</span>:
+Props are custom attributes you can register on a component. To pass a title to our blog post component, we must declare it in the list of props this component accepts, using the <span class="options-api">[`props`](/api/options-state#props) option</span><span class="composition-api">[`defineProps`](/api/sfc-script-setup#defineprops-defineemits) macro</span>:
 
 <div class="options-api">
 
@@ -196,7 +197,7 @@ export default {
 </template>
 ```
 
-Wenn ein Wert an ein prop-Attribut übergeben wird, wird er zu einer Eigenschaft dieser Komponenteninstanz. Auf den Wert dieser Eigenschaft kann innerhalb der Vorlage und im Kontext "this" der Komponente zugegriffen werden, genau wie auf jede andere Komponenteneigenschaft.
+When a value is passed to a prop attribute, it becomes a property on that component instance. The value of that property is accessible within the template and on the component's `this` context, just like any other component property.
 
 </div>
 <div class="composition-api">
@@ -212,16 +213,16 @@ defineProps(['title'])
 </template>
 ```
 
-`defineProps` ist ein Makro zur Kompilierzeit, das nur innerhalb von `<script setup>` verfügbar ist und nicht explizit importiert werden muss. Deklarierte Requisiten werden automatisch in der Vorlage angezeigt. `defineProps` gibt auch ein Objekt zurück, das alle an die Komponente übergebenen Requisiten enthält, so dass wir bei Bedarf in JavaScript darauf zugreifen können:
+`defineProps` is a compile-time macro that is only available inside `<script setup>` and does not need to be explicitly imported. Declared props are automatically exposed to the template. `defineProps` also returns an object that contains all the props passed to the component, so that we can access them in JavaScript if needed:
 
 ```js
 const props = defineProps(['title'])
 console.log(props.title)
 ```
 
-Siehe auch: [Typing Component Props](/guide/typescript/composition-api.html#typing-component-props) <sup class="vt-badge ts" />
+See also: [Typing Component Props](/guide/typescript/composition-api#typing-component-props) <sup class="vt-badge ts" />
 
-Wenn Sie nicht `<script setup>` verwenden, sollten props mit der Option `props` deklariert werden, und das props-Objekt wird an `setup()` als erstes Argument übergeben:
+If you are not using `<script setup>`, props should be declared using the `props` option, and the props object will be passed to `setup()` as the first argument:
 
 ```js
 export default {
@@ -234,9 +235,9 @@ export default {
 
 </div>
 
-Eine Komponente kann so viele Requisiten haben, wie Sie möchten, und standardmäßig kann jeder Wert an jede Requisite übergeben werden.
+A component can have as many props as you like and, by default, any value can be passed to any prop.
 
-Sobald eine Requisite registriert ist, können Sie ihr Daten als benutzerdefiniertes Attribut übergeben, etwa so:
+Once a prop is registered, you can pass data to it as a custom attribute, like this:
 
 ```vue-html
 <BlogPost title="My journey with Vue" />
@@ -244,7 +245,7 @@ Sobald eine Requisite registriert ist, können Sie ihr Daten als benutzerdefinie
 <BlogPost title="Why Vue is so fun" />
 ```
 
-In einer typischen Anwendung werden Sie jedoch wahrscheinlich ein Array von Beiträgen in Ihrer übergeordneten Komponente haben:
+In a typical app, however, you'll likely have an array of posts in your parent component:
 
 <div class="options-api">
 
@@ -254,9 +255,9 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Meine Reise mit Vue' },
-        { id: 2, title: 'Bloggen mit Vue' },
-        { id: 3, title: 'Warum Vue so viel Spaß macht' }
+        { id: 1, title: 'My journey with Vue' },
+        { id: 2, title: 'Blogging with Vue' },
+        { id: 3, title: 'Why Vue is so fun' }
       ]
     }
   }
@@ -276,7 +277,7 @@ const posts = ref([
 
 </div>
 
-Dann wollen Sie eine Komponente für jede, mit `v-for` zu rendern:
+Then want to render a component for each one, using `v-for`:
 
 ```vue-html
 <BlogPost
@@ -288,24 +289,24 @@ Dann wollen Sie eine Komponente für jede, mit `v-for` zu rendern:
 
 <div class="options-api">
 
-[Probieren Sie es auf dem Playground](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdD5cbmltcG9ydCBCbG9nUG9zdCBmcm9tICcuL0Jsb2dQb3N0LnZ1ZSdcbiAgXG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHtcbiAgICBCbG9nUG9zdFxuICB9LFxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBwb3N0czogW1xuICAgICAgICB7IGlkOiAxLCB0aXRsZTogJ015IGpvdXJuZXkgd2l0aCBWdWUnIH0sXG4gICAgICAgIHsgaWQ6IDIsIHRpdGxlOiAnQmxvZ2dpbmcgd2l0aCBWdWUnIH0sXG4gICAgICAgIHsgaWQ6IDMsIHRpdGxlOiAnV2h5IFZ1ZSBpcyBzbyBmdW4nIH1cbiAgICAgIF1cbiAgICB9XG4gIH1cbn1cbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG5cdDxCbG9nUG9zdFxuICBcdHYtZm9yPVwicG9zdCBpbiBwb3N0c1wiXG5cdCAgOmtleT1cInBvc3QuaWRcIlxuICBcdDp0aXRsZT1cInBvc3QudGl0bGVcIlxuXHQ+PC9CbG9nUG9zdD5cbjwvdGVtcGxhdGU+IiwiaW1wb3J0LW1hcC5qc29uIjoie1xuICBcImltcG9ydHNcIjoge1xuICAgIFwidnVlXCI6IFwiaHR0cHM6Ly9zZmMudnVlanMub3JnL3Z1ZS5ydW50aW1lLmVzbS1icm93c2VyLmpzXCJcbiAgfVxufSIsIkJsb2dQb3N0LnZ1ZSI6IjxzY3JpcHQ+XG5leHBvcnQgZGVmYXVsdCB7XG4gIHByb3BzOiBbJ3RpdGxlJ11cbn1cbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG4gIDxoND57eyB0aXRsZSB9fTwvaDQ+XG48L3RlbXBsYXRlPiJ9)
+[Try it in the Playground](https://play.vuejs.org/#eNp9UU1rhDAU/CtDLrawVfpxklRo74We2kPtQdaoaTUJ8bmtiP+9ia6uC2VBgjOZeXnz3sCejAkPnWAx4+3eSkNJqmRjtCU817p81S2hsLpBEEYL4Q1BqoBUid9Jmosi62rC4Nm9dn4lFLXxTGAt5dG482eeUXZ1vdxbQZ1VCwKM0zr3x4KBATKPcbsDSapFjOClx5d2JtHjR1KFN9fTsfbWcXdy+CZKqcqL+vuT/r3qvQqyRatRdMrpF/nn/DNhd7iPR+v8HCDRmDoj4RHxbfyUDjeFto8p8yEh1Rw2ZV4JxN+iP96FMvest8RTTws/gdmQ8HUr7ikere+yHduu62y//y3NWG38xIOpeODyXcoE8OohGYZ5VhhHHjl83sD4B3XgyGI=)
 
 </div>
 <div class="composition-api">
 
-[Probieren Sie es auf dem Playground](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbmltcG9ydCBCbG9nUG9zdCBmcm9tICcuL0Jsb2dQb3N0LnZ1ZSdcbiAgXG5jb25zdCBwb3N0cyA9IHJlZihbXG4gIHsgaWQ6IDEsIHRpdGxlOiAnTXkgam91cm5leSB3aXRoIFZ1ZScgfSxcbiAgeyBpZDogMiwgdGl0bGU6ICdCbG9nZ2luZyB3aXRoIFZ1ZScgfSxcbiAgeyBpZDogMywgdGl0bGU6ICdXaHkgVnVlIGlzIHNvIGZ1bicgfVxuXSlcbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG5cdDxCbG9nUG9zdFxuICBcdHYtZm9yPVwicG9zdCBpbiBwb3N0c1wiXG5cdCAgOmtleT1cInBvc3QuaWRcIlxuICBcdDp0aXRsZT1cInBvc3QudGl0bGVcIlxuXHQ+PC9CbG9nUG9zdD5cbjwvdGVtcGxhdGU+IiwiaW1wb3J0LW1hcC5qc29uIjoie1xuICBcImltcG9ydHNcIjoge1xuICAgIFwidnVlXCI6IFwiaHR0cHM6Ly9zZmMudnVlanMub3JnL3Z1ZS5ydW50aW1lLmVzbS1icm93c2VyLmpzXCJcbiAgfVxufSIsIkJsb2dQb3N0LnZ1ZSI6IjxzY3JpcHQgc2V0dXA+XG5kZWZpbmVQcm9wcyhbJ3RpdGxlJ10pXG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICA8aDQ+e3sgdGl0bGUgfX08L2g0PlxuPC90ZW1wbGF0ZT4ifQ==)
+[Try it in the Playground](https://play.vuejs.org/#eNp9kU9PhDAUxL/KpBfWBCH+OZEuid5N9qSHrQezFKhC27RlDSF8d1tYQBP1+N78OpN5HciD1sm54yQj1J6M0A6Wu07nTIpWK+MwwPASI0qjWkQejVbpsVHVQVl30ZJ0WQRHjwFMnpT0gPZLi32w2h2DMEAUGW5iOOEaniF66vGuOiN5j0/hajx7B4zxxt5ubIiphKz+IO828qXugw5hYRXKTnqSydcrJmk61/VF/eB4q5s3x8Pk6FJjauDO16Uye0ZCBwg5d2EkkED2wfuLlogibMOTbMpf9tMwP8jpeiMfRdM1l8Tk+/F++Y6Cl0Lyg1Ha7o7R5Bn9WwSg9X0+DPMxMI409fPP1PELlVmwdQ==)
 
 </div>
 
-Beachten Sie, wie `v-bind` verwendet wird, um dynamische Prop-Werte zu übergeben. Dies ist besonders nützlich, wenn Sie den genauen Inhalt, den Sie rendern werden, nicht im Voraus kennen.
+Notice how [`v-bind` syntax](/api/built-in-directives#v-bind) (`:title="post.title"`) is used to pass dynamic prop values. This is especially useful when you don't know the exact content you're going to render ahead of time.
 
-Das ist alles, was Sie im Moment über Requisiten wissen müssen. Wenn Sie diese Seite gelesen haben und mit ihrem Inhalt vertraut sind, empfehlen wir Ihnen, später wiederzukommen, um den vollständigen Leitfaden zu [Props](/guide/components/props.html) zu lesen.
+That's all you need to know about props for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on [Props](/guide/components/props).
 
-## Anhören von Veranstaltungen {#listening-to-events}
+## Listening to Events {#listening-to-events}
 
-Bei der Entwicklung unserer `<BlogPost>`-Komponente kann es erforderlich sein, dass einige Funktionen mit der übergeordneten Komponente rückgekoppelt werden müssen. Wir könnten zum Beispiel beschließen, eine Funktion für die Barrierefreiheit einzubauen, um den Text von Blogeinträgen zu vergrößern, während der Rest der Seite in seiner Standardgröße bleibt.
+As we develop our `<BlogPost>` component, some features may require communicating back up to the parent. For example, we may decide to include an accessibility feature to enlarge the text of blog posts, while leaving the rest of the page at its default size.
 
-Im Elternteil können wir diese Funktion unterstützen, indem wir eine `postFontSize` <span class="options-api">data property</span><span class="composition-api">ref</span>:
+In the parent, we can support this feature by adding a `postFontSize` <span class="options-api">data property</span><span class="composition-api">ref</span>:
 
 <div class="options-api">
 
@@ -333,7 +334,7 @@ const postFontSize = ref(1)
 
 </div>
 
-die in der Vorlage verwendet werden kann, um die Schriftgröße aller Blogbeiträge zu steuern:
+Which can be used in the template to control the font size of all blog posts:
 
 ```vue-html{1,7}
 <div :style="{ fontSize: postFontSize + 'em' }">
@@ -345,7 +346,7 @@ die in der Vorlage verwendet werden kann, um die Schriftgröße aller Blogbeitr�
 </div>
 ```
 
-Fügen wir nun eine Schaltfläche in die Vorlage der Komponente "<BlogPost>" ein:
+Now let's add a button to the `<BlogPost>` component's template:
 
 ```vue{5}
 <!-- BlogPost.vue, omitting <script> -->
@@ -357,7 +358,7 @@ Fügen wir nun eine Schaltfläche in die Vorlage der Komponente "<BlogPost>" ein
 </template>
 ```
 
-Die Schaltfläche tut noch nichts - wir wollen, dass ein Klick auf die Schaltfläche dem übergeordneten Element mitteilt, dass es den Text aller Beiträge vergrößern soll. Um dieses Problem zu lösen, bieten Komponenten ein eigenes Ereignissystem. Die Elternkomponente kann auf jedes Ereignis der Kindkomponente mit `v-on` oder `@` hören, genau wie bei einem nativen DOM-Ereignis:
+The button doesn't do anything yet - we want clicking the button to communicate to the parent that it should enlarge the text of all posts. To solve this problem, components provide a custom events system. The parent can choose to listen to any event on the child component instance with `v-on` or `@`, just as we would with a native DOM event:
 
 ```vue-html{3}
 <BlogPost
@@ -366,7 +367,7 @@ Die Schaltfläche tut noch nichts - wir wollen, dass ein Klick auf die Schaltfl�
  />
 ```
 
-Dann kann die untergeordnete Komponente ein Ereignis für sich selbst auslösen, indem sie die integrierte [**`$emit`** method](/api/component-instance.html#emit), passing the name of the event:
+Then the child component can emit an event on itself by calling the built-in [**`$emit`** method](/api/component-instance#emit), passing the name of the event:
 
 ```vue{5}
 <!-- BlogPost.vue, omitting <script> -->
@@ -378,20 +379,20 @@ Dann kann die untergeordnete Komponente ein Ereignis für sich selbst auslösen,
 </template>
 ```
 
-Dank der `@enlarge-text="postFontSize += 0.1"` Hörer, empfängt der Elternteil das Ereignis und aktualisiert den Wert von `postFontSize`.
+Thanks to the `@enlarge-text="postFontSize += 0.1"` listener, the parent will receive the event and update the value of `postFontSize`.
 
 <div class="options-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdD5cbmltcG9ydCBCbG9nUG9zdCBmcm9tICcuL0Jsb2dQb3N0LnZ1ZSdcbiAgXG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHtcbiAgICBCbG9nUG9zdFxuICB9LFxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBwb3N0czogW1xuICAgICAgICB7IGlkOiAxLCB0aXRsZTogJ015IGpvdXJuZXkgd2l0aCBWdWUnIH0sXG4gICAgICAgIHsgaWQ6IDIsIHRpdGxlOiAnQmxvZ2dpbmcgd2l0aCBWdWUnIH0sXG4gICAgICAgIHsgaWQ6IDMsIHRpdGxlOiAnV2h5IFZ1ZSBpcyBzbyBmdW4nIH1cbiAgICAgIF0sXG4gICAgICBwb3N0Rm9udFNpemU6IDFcbiAgICB9XG4gIH1cbn1cbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG4gIDxkaXYgOnN0eWxlPVwieyBmb250U2l6ZTogcG9zdEZvbnRTaXplICsgJ2VtJyB9XCI+XG4gICAgPEJsb2dQb3N0XG4gICAgICB2LWZvcj1cInBvc3QgaW4gcG9zdHNcIlxuICAgICAgOmtleT1cInBvc3QuaWRcIlxuICAgICAgOnRpdGxlPVwicG9zdC50aXRsZVwiXG4gICAgICBAZW5sYXJnZS10ZXh0PVwicG9zdEZvbnRTaXplICs9IDAuMVwiXG4gICAgPjwvQmxvZ1Bvc3Q+XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7XG4gICAgXCJ2dWVcIjogXCJodHRwczovL3NmYy52dWVqcy5vcmcvdnVlLnJ1bnRpbWUuZXNtLWJyb3dzZXIuanNcIlxuICB9XG59IiwiQmxvZ1Bvc3QudnVlIjoiPHNjcmlwdD5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgcHJvcHM6IFsndGl0bGUnXSxcbiAgZW1pdHM6IFsnZW5sYXJnZS10ZXh0J11cbn1cbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG4gIDxkaXYgY2xhc3M9XCJibG9nLXBvc3RcIj5cblx0ICA8aDQ+e3sgdGl0bGUgfX08L2g0PlxuXHQgIDxidXR0b24gQGNsaWNrPVwiJGVtaXQoJ2VubGFyZ2UtdGV4dCcpXCI+RW5sYXJnZSB0ZXh0PC9idXR0b24+XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT4ifQ==)
+[Try it in the Playground](https://play.vuejs.org/#eNqNUsFOg0AQ/ZUJMaGNbbHqidCmmujNxMRED9IDhYWuhV0CQy0S/t1ZYIEmaiRkw8y8N/vmMZVxl6aLY8EM23ByP+Mprl3Bk1RmCPexjJ5ljhBmMgFzYemEIpiuAHAFOzXQgIVeESNUKutL4gsmMLfbBPStVFTP1Bl46E2mup4xLDKhI4CUsMR+1zFABTywYTkD5BgzG8ynEj4kkVgJnxz38Eqaut5jxvXAUCIiLqI/8TcD/m1fKhTwHHIJYSEIr+HbnqikPkqBL/yLSMs23eDooNexel8pQJaksYeMIgAn4EewcyxjtnKNCsK+zbgpXILJEnW30bCIN7ZTPcd5KDNqoWjARWufa+iyfWBlV13wYJRvJtWVJhiKGyZiL4vYHNkJO8wgaQVXi6UGr51+Ndq5LBqMvhyrH9eYGePtOVu3n3YozWSqFsBsVJmt3SzhzVaYY2nm9l82+7GX5zTGjlTM1SyNmy5SeX+7rqr2r0NdOxbFXWVXIEoBGz/m/oHIF0rB5Pz6KTV6aBOgEo7Vsn51ov4GgAAf2A==)
 
 </div>
 <div class="composition-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbmltcG9ydCBCbG9nUG9zdCBmcm9tICcuL0Jsb2dQb3N0LnZ1ZSdcbiAgXG5jb25zdCBwb3N0cyA9IHJlZihbXG4gIHsgaWQ6IDEsIHRpdGxlOiAnTXkgam91cm5leSB3aXRoIFZ1ZScgfSxcbiAgeyBpZDogMiwgdGl0bGU6ICdCbG9nZ2luZyB3aXRoIFZ1ZScgfSxcbiAgeyBpZDogMywgdGl0bGU6ICdXaHkgVnVlIGlzIHNvIGZ1bicgfVxuXSlcblxuY29uc3QgcG9zdEZvbnRTaXplID0gcmVmKDEpXG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuXHQ8ZGl2IDpzdHlsZT1cInsgZm9udFNpemU6IHBvc3RGb250U2l6ZSArICdlbScgfVwiPlxuICAgIDxCbG9nUG9zdFxuICAgICAgdi1mb3I9XCJwb3N0IGluIHBvc3RzXCJcbiAgICAgIDprZXk9XCJwb3N0LmlkXCJcbiAgICAgIDp0aXRsZT1cInBvc3QudGl0bGVcIlxuICAgICAgQGVubGFyZ2UtdGV4dD1cInBvc3RGb250U2l6ZSArPSAwLjFcIlxuICAgID48L0Jsb2dQb3N0PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+IiwiaW1wb3J0LW1hcC5qc29uIjoie1xuICBcImltcG9ydHNcIjoge1xuICAgIFwidnVlXCI6IFwiaHR0cHM6Ly9zZmMudnVlanMub3JnL3Z1ZS5ydW50aW1lLmVzbS1icm93c2VyLmpzXCJcbiAgfVxufSIsIkJsb2dQb3N0LnZ1ZSI6IjxzY3JpcHQgc2V0dXA+XG5kZWZpbmVQcm9wcyhbJ3RpdGxlJ10pXG5kZWZpbmVFbWl0cyhbJ2VubGFyZ2UtdGV4dCddKVxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPGRpdiBjbGFzcz1cImJsb2ctcG9zdFwiPlxuICAgIDxoND57eyB0aXRsZSB9fTwvaDQ+XG4gICAgPGJ1dHRvbiBAY2xpY2s9XCIkZW1pdCgnZW5sYXJnZS10ZXh0JylcIj5FbmxhcmdlIHRleHQ8L2J1dHRvbj5cbiAgPC9kaXY+XG48L3RlbXBsYXRlPiJ9)
+[Try it in the Playground](https://play.vuejs.org/#eNp1Uk1PwkAQ/SuTxqQYgYp6ahaiJngzITHRA/UAZQor7W7TnaK16X93th8UEuHEvPdm5s3bls5Tmo4POTq+I0yYyZTAIOXpLFAySXVGUEKGEVQQZToBl6XukXqO9XahDbXc2OsAO5FlAIEKtWJByqCBqR01WFqiBLnxYTIEkhSjD+5rAV86zxQW8C1pB+88Aaphr73rtXbNVqrtBeV9r/zYFZYHacBoiHLFykB9Xgfq1NmLVvQmf7E1OGFaeE0anAMXhEkarwhtRWIjD+AbKmKcBk4JUdvtn8+6ARcTu87hLuCf6NJpSoDDKNIZj7BtIFUTUuB0tL/HomXHcnOC18d1TF305COqeJVtcUT4Q62mtzSF2/GkE8/E8b1qh8Ljw/if8I7nOkPn9En/+Ug2GEmFi0ynZrB0azOujbfB54kki5+aqumL8bING28Yr4xh+2vePrI39CnuHmZl2TwwVJXwuG6ZdU6kFTyGsQz33HyFvH5wvvyaB80bACwgvKbrYgLVH979DQc=)
 
 </div>
 
-Optional können wir emittierte Ereignisse mit der Methode <span class="options-api">[`emits`](/api/options-state.html#emits) option</span><span class="composition-api">[`defineEmits`](/api/sfc-script-setup.html#defineprops-defineemits) macro</span>:
+We can optionally declare emitted events using the <span class="options-api">[`emits`](/api/options-state#emits) option</span><span class="composition-api">[`defineEmits`](/api/sfc-script-setup#defineprops-defineemits) macro</span>:
 
 <div class="options-api">
 
@@ -418,11 +419,11 @@ defineEmits(['enlarge-text'])
 
 </div>
 
-Sie dokumentiert alle Ereignisse, die eine Komponente auslöst und [validiert sie optional](/guide/components/events.html#events-validation). Es erlaubt Vue auch zu vermeiden, sie implizit als native Listener auf das Root-Element der Kindkomponente anzuwenden.
+This documents all the events that a component emits and optionally [validates them](/guide/components/events#events-validation). It also allows Vue to avoid implicitly applying them as native listeners to the child component's root element.
 
 <div class="composition-api">
 
-Ähnlich wie `defineProps` ist `defineEmits` nur in `<script setup>` verwendbar und muss nicht importiert werden. Es gibt eine `emit` Funktion zurück, die äquivalent zur `$emit` Methode ist. Sie kann verwendet werden, um Ereignisse im `<script setup>` Abschnitt einer Komponente auszulösen, wo `$emit` nicht direkt zugänglich ist:
+Similar to `defineProps`, `defineEmits` is only usable in `<script setup>` and doesn't need to be imported. It returns an `emit` function that is equivalent to the `$emit` method. It can be used to emit events in the `<script setup>` section of a component, where `$emit` isn't directly accessible:
 
 ```vue
 <script setup>
@@ -432,9 +433,9 @@ emit('enlarge-text')
 </script>
 ```
 
-Siehe auch: [Typing Component Emits](/guide/typescript/composition-api.html#typing-component-emits) <sup class="vt-badge ts" />
+See also: [Typing Component Emits](/guide/typescript/composition-api#typing-component-emits) <sup class="vt-badge ts" />
 
-Wenn Sie nicht `<script setup>` verwenden, können Sie emittierte Ereignisse mit der Option `emits` deklarieren. Sie können auf die Funktion `emit` als Eigenschaft des Setup-Kontextes zugreifen (der als zweites Argument an `setup()` übergeben wird):
+If you are not using `<script setup>`, you can declare emitted events using the `emits` option. You can access the `emit` function as a property of the setup context (passed to `setup()` as the second argument):
 
 ```js
 export default {
@@ -447,11 +448,11 @@ export default {
 
 </div>
 
-Das ist alles, was Sie im Moment über benutzerdefinierte Komponentenereignisse wissen müssen. Wenn Sie diese Seite gelesen haben und mit dem Inhalt vertraut sind, empfehlen wir Ihnen, zu einem späteren Zeitpunkt wiederzukommen, um die vollständige Anleitung zu [Benutzerdefinierte Ereignisse](/guide/components/events) zu lesen.
+That's all you need to know about custom component events for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on [Custom Events](/guide/components/events).
 
-## Verteilung von Inhalten mit Slots {#content-distribution-with-slots}
+## Content Distribution with Slots {#content-distribution-with-slots}
 
-Genau wie bei HTML-Elementen ist es oft nützlich, Inhalte an eine Komponente übergeben zu können, etwa so:
+Just like with HTML elements, it's often useful to be able to pass content to a component, like this:
 
 ```vue-html
 <AlertBox>
@@ -459,15 +460,16 @@ Genau wie bei HTML-Elementen ist es oft nützlich, Inhalte an eine Komponente ü
 </AlertBox>
 ```
 
-Das könnte in etwa so aussehen:
+Which might render something like:
 
-:::Gefahr Dies ist ein Fehler für Demozwecke
-Es ist etwas Schlimmes passiert.
+:::danger This is an Error for Demo Purposes
+Something bad happened.
 :::
 
-Dies kann durch die Verwendung von Vue's benutzerdefiniertem `<slot>` Element erreicht werden:
+This can be achieved using Vue's custom `<slot>` element:
 
-```vue{4}
+```vue{5}
+<!-- AlertBox.vue -->
 <template>
   <div class="alert-box">
     <strong>This is an Error for Demo Purposes</strong>
@@ -482,37 +484,37 @@ Dies kann durch die Verwendung von Vue's benutzerdefiniertem `<slot>` Element er
 </style>
 ```
 
-Wie Sie oben sehen, verwenden wir den `<slot>` als Platzhalter für den gewünschten Inhalt - und das war's. Wir sind fertig!
+As you'll see above, we use the `<slot>` as a placeholder where we want the content to go – and that's it. We're done!
 
 <div class="options-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdD5cbmltcG9ydCBBbGVydEJveCBmcm9tICcuL0FsZXJ0Qm94LnZ1ZSdcbiAgXG5leHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHsgQWxlcnRCb3ggfVxufVxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cblx0PEFsZXJ0Qm94PlxuICBcdFNvbWV0aGluZyBiYWQgaGFwcGVuZWQuXG5cdDwvQWxlcnRCb3g+XG48L3RlbXBsYXRlPiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHtcbiAgICBcInZ1ZVwiOiBcImh0dHBzOi8vc2ZjLnZ1ZWpzLm9yZy92dWUucnVudGltZS5lc20tYnJvd3Nlci5qc1wiXG4gIH1cbn0iLCJBbGVydEJveC52dWUiOiI8dGVtcGxhdGU+XG4gIDxkaXYgY2xhc3M9XCJhbGVydC1ib3hcIj5cbiAgICA8c3Ryb25nPkVycm9yITwvc3Ryb25nPlxuICAgIDxici8+XG4gICAgPHNsb3QgLz5cbiAgPC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c3R5bGUgc2NvcGVkPlxuLmFsZXJ0LWJveCB7XG4gIGNvbG9yOiAjNjY2O1xuICBib3JkZXI6IDFweCBzb2xpZCByZWQ7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgcGFkZGluZzogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjhmODtcbn1cbiAgXG5zdHJvbmcge1xuXHRjb2xvcjogcmVkOyAgICBcbn1cbjwvc3R5bGU+In0=)
+[Try it in the Playground](https://play.vuejs.org/#eNpVUcFOwzAM/RUTDruwFhCaUCmThsQXcO0lbbKtIo0jx52Kpv07TreWouTynl+en52z2oWQnXqrClXGhtrA28q3XUBi2DlL/IED7Ak7WGX5RKQHq8oDVN4Oo9TYve4dwzmxDcp7bz3HAs5/LpfKyy3zuY0Atl1wmm1CXE5SQeLNX9hZPrb+ALU2cNQhWG9NNkrnLKIt89lGPahlyDTVogVAadoTNE7H+F4pnZTrGodKjUUpRyb0h+0nEdKdRL3CW7GmfNY5ZLiiMhfP/ynG0SL/OAuxwWCNMNncbVqSQyrgfrPZvCVcIxkrxFMYIKJrDZA1i8qatGl72ehLGEY6aGNkNwU8P96YWjffB8Lem/Xkvn9NR6qy+fRd14FSgopvmtQmzTT9Toq9VZdfIpa5jQ==)
 
 </div>
 <div class="composition-api">
 
-[Versuchen Sie es auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCBBbGVydEJveCBmcm9tICcuL0FsZXJ0Qm94LnZ1ZSdcbjwvc2NyaXB0PlxuXG48dGVtcGxhdGU+XG5cdDxBbGVydEJveD5cbiAgXHRTb21ldGhpbmcgYmFkIGhhcHBlbmVkLlxuXHQ8L0FsZXJ0Qm94PlxuPC90ZW1wbGF0ZT4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7XG4gICAgXCJ2dWVcIjogXCJodHRwczovL3NmYy52dWVqcy5vcmcvdnVlLnJ1bnRpbWUuZXNtLWJyb3dzZXIuanNcIlxuICB9XG59IiwiQWxlcnRCb3gudnVlIjoiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwiYWxlcnQtYm94XCI+XG4gICAgPHN0cm9uZz5FcnJvciE8L3N0cm9uZz5cbiAgICA8YnIvPlxuICAgIDxzbG90IC8+XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT5cblxuPHN0eWxlIHNjb3BlZD5cbi5hbGVydC1ib3gge1xuICBjb2xvcjogIzY2NjtcbiAgYm9yZGVyOiAxcHggc29saWQgcmVkO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmOGY4Zjg7XG59XG4gIFxuc3Ryb25nIHtcblx0Y29sb3I6IHJlZDsgICAgXG59XG48L3N0eWxlPiJ9)
+[Try it in the Playground](https://play.vuejs.org/#eNpVUEtOwzAQvcpgFt3QBBCqUAiRisQJ2GbjxG4a4Xis8aQKqnp37PyUyqv3mZn3fBVH55JLr0Umcl9T6xi85t4VpW07h8RwNJr4Cwc4EXawS9KFiGO70ubpNBcmAmDdOSNZR8T5Yg0IoOQf7DSfW9tAJRWcpXPaapWM1nVt8ObpukY8ie29GHNzAiBX7QVqI73/LIWMzn2FQylGMcieCW1TfBMhPYSoE5zFitLVZ5BhQnkadt6nGKt5/jMafI1Oq8Ak6zW4xrEaDVIGj4fD4SPiCknpQLy4ATyaVgFptVH2JFXb+wze3DDSTioV/iaD1+eZqWT92xD2Vu2X7af3+IJ6G7/UToVigpJnTzwTO42eWDnELsTtH/wUqH4=)
 
 </div>
 
-Das ist alles, was Sie im Moment über Spielautomaten wissen müssen. Sobald Sie diese Seite gelesen haben und sich mit dem Inhalt vertraut gemacht haben, empfehlen wir Ihnen, später wiederzukommen, um den vollständigen Leitfaden auf [Slots](/guide/components/slots) zu lesen.
+That's all you need to know about slots for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on [Slots](/guide/components/slots).
 
-## Dynamische Komponenten {#dynamic-components}
+## Dynamic Components {#dynamic-components}
 
-Manchmal ist es sinnvoll, dynamisch zwischen den Komponenten zu wechseln, z. B. in einer Schnittstelle mit Registerkarten:
+Sometimes, it's useful to dynamically switch between components, like in a tabbed interface:
 
 <div class="options-api">
 
-[Offenes Beispiel auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdD5cbmltcG9ydCBIb21lIGZyb20gJy4vSG9tZS52dWUnXG5pbXBvcnQgUG9zdHMgZnJvbSAnLi9Qb3N0cy52dWUnXG5pbXBvcnQgQXJjaGl2ZSBmcm9tICcuL0FyY2hpdmUudnVlJ1xuICBcbmV4cG9ydCBkZWZhdWx0IHtcbiAgY29tcG9uZW50czoge1xuICAgIEhvbWUsXG4gICAgUG9zdHMsXG4gICAgQXJjaGl2ZVxuICB9LFxuICBkYXRhKCkge1xuICAgIHJldHVybiB7XG4gICAgICBjdXJyZW50VGFiOiAnSG9tZScsXG4gICAgICB0YWJzOiBbJ0hvbWUnLCAnUG9zdHMnLCAnQXJjaGl2ZSddXG4gICAgfVxuICB9XG59XG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwiZGVtb1wiPlxuICAgIDxidXR0b25cbiAgICAgICB2LWZvcj1cInRhYiBpbiB0YWJzXCJcbiAgICAgICA6a2V5PVwidGFiXCJcbiAgICAgICA6Y2xhc3M9XCJbJ3RhYi1idXR0b24nLCB7IGFjdGl2ZTogY3VycmVudFRhYiA9PT0gdGFiIH1dXCJcbiAgICAgICBAY2xpY2s9XCJjdXJyZW50VGFiID0gdGFiXCJcbiAgICAgPlxuICAgICAge3sgdGFiIH19XG4gICAgPC9idXR0b24+XG5cdCAgPGNvbXBvbmVudCA6aXM9XCJjdXJyZW50VGFiXCIgY2xhc3M9XCJ0YWJcIj48L2NvbXBvbmVudD5cbiAgPC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c3R5bGU+XG4uZGVtbyB7XG4gIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICBib3JkZXI6IDFweCBzb2xpZCAjZWVlO1xuICBib3JkZXItcmFkaXVzOiAycHg7XG4gIHBhZGRpbmc6IDIwcHggMzBweDtcbiAgbWFyZ2luLXRvcDogMWVtO1xuICBtYXJnaW4tYm90dG9tOiA0MHB4O1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbiAgb3ZlcmZsb3cteDogYXV0bztcbn1cblxuLnRhYi1idXR0b24ge1xuICBwYWRkaW5nOiA2cHggMTBweDtcbiAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogM3B4O1xuICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogM3B4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJhY2tncm91bmQ6ICNmMGYwZjA7XG4gIG1hcmdpbi1ib3R0b206IC0xcHg7XG4gIG1hcmdpbi1yaWdodDogLTFweDtcbn1cbi50YWItYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZDogI2UwZTBlMDtcbn1cbi50YWItYnV0dG9uLmFjdGl2ZSB7XG4gIGJhY2tncm91bmQ6ICNlMGUwZTA7XG59XG4udGFiIHtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgcGFkZGluZzogMTBweDtcbn1cbjwvc3R5bGU+IiwiaW1wb3J0LW1hcC5qc29uIjoie1xuICBcImltcG9ydHNcIjoge1xuICAgIFwidnVlXCI6IFwiaHR0cHM6Ly9zZmMudnVlanMub3JnL3Z1ZS5ydW50aW1lLmVzbS1icm93c2VyLmpzXCJcbiAgfVxufSIsIkhvbWUudnVlIjoiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwidGFiXCI+XG4gICAgSG9tZSBjb21wb25lbnRcbiAgPC9kaXY+XG48L3RlbXBsYXRlPiIsIlBvc3RzLnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPGRpdiBjbGFzcz1cInRhYlwiPlxuICAgIFBvc3RzIGNvbXBvbmVudFxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+IiwiQXJjaGl2ZS52dWUiOiI8dGVtcGxhdGU+XG4gIDxkaXYgY2xhc3M9XCJ0YWJcIj5cbiAgICBBcmNoaXZlIGNvbXBvbmVudFxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+In0=)
+[Open example in the Playground](https://play.vuejs.org/#eNqNVE2PmzAQ/Ssj9kArLSHbrXpwk1X31mMPvS17cIxJrICNbJMmivLfO/7AEG2jRiDkefP85sNmztlr3y8OA89ItjJMi96+VFJ0vdIWfqqOQ6NVB/midIYj5sn9Sxlrkt9b14RXzXbiMElEO5IAKsmPnljzhg6thbNDmcLdkktrSADAJ/IYlj5MXEc9Z1w8VFNLP30ed2luBy1HC4UHrVH2N90QyJ1kHnUALN1gtLeIQu6juEUMkb8H5sXHqiS+qzK1Cw3Lu76llqMFsKrFAVhLjVlXWc07VWUeR89msFbhhhAWDkWjNJIwPgjp06iy5CV7fgrOOTgKv+XoKIIgpnoGyiymSmZ1wnq9dqJweZ8p/GCtYHtUmBMdLXFitgDnc9ju68b0yxDO1WzRTEcFRLiUJsEqSw3wwi+rMpFDj0psEq5W5ax1aBp7at1y4foWzq5R0hYN7UR7ImCoNIXhWjTfnW+jdM01gaf+CEa1ooYHzvnMVWhaiwEP90t/9HBP61rILQJL3POMHw93VG+FLKzqUYx3c2yjsOaOwNeRO2B8zKHlzBKQWJNH1YHrplV/iiMBOliFILYNK5mOKdSTMviGCTyNojFdTKBoeWNT3s8f/Vpsd7cIV61gjHkXnotR6OqVkJbrQKdsv9VqkDWBh2bpnn8VXaDcHPexE4wFzsojO9eDUOSVPF+65wN/EW7sHRsi5XaFqaexn+EH9Xcpe8zG2eWG3O0/NVzUaeJMk+jGhUXlNPXulw5j8w7t2bi8X32cuf/Vv/wF/SL98A==)
 
 </div>
 <div class="composition-api">
 
-[Offenes Beispiel auf dem Spielplatz](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCBIb21lIGZyb20gJy4vSG9tZS52dWUnXG5pbXBvcnQgUG9zdHMgZnJvbSAnLi9Qb3N0cy52dWUnXG5pbXBvcnQgQXJjaGl2ZSBmcm9tICcuL0FyY2hpdmUudnVlJ1xuaW1wb3J0IHsgcmVmIH0gZnJvbSAndnVlJ1xuIFxuY29uc3QgY3VycmVudFRhYiA9IHJlZignSG9tZScpXG5cbmNvbnN0IHRhYnMgPSB7XG4gIEhvbWUsXG4gIFBvc3RzLFxuICBBcmNoaXZlXG59XG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwiZGVtb1wiPlxuICAgIDxidXR0b25cbiAgICAgICB2LWZvcj1cIihfLCB0YWIpIGluIHRhYnNcIlxuICAgICAgIDprZXk9XCJ0YWJcIlxuICAgICAgIDpjbGFzcz1cIlsndGFiLWJ1dHRvbicsIHsgYWN0aXZlOiBjdXJyZW50VGFiID09PSB0YWIgfV1cIlxuICAgICAgIEBjbGljaz1cImN1cnJlbnRUYWIgPSB0YWJcIlxuICAgICA+XG4gICAgICB7eyB0YWIgfX1cbiAgICA8L2J1dHRvbj5cblx0ICA8Y29tcG9uZW50IDppcz1cInRhYnNbY3VycmVudFRhYl1cIiBjbGFzcz1cInRhYlwiPjwvY29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzdHlsZT5cbi5kZW1vIHtcbiAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNlZWU7XG4gIGJvcmRlci1yYWRpdXM6IDJweDtcbiAgcGFkZGluZzogMjBweCAzMHB4O1xuICBtYXJnaW4tdG9wOiAxZW07XG4gIG1hcmdpbi1ib3R0b206IDQwcHg7XG4gIHVzZXItc2VsZWN0OiBub25lO1xuICBvdmVyZmxvdy14OiBhdXRvO1xufVxuXG4udGFiLWJ1dHRvbiB7XG4gIHBhZGRpbmc6IDZweCAxMHB4O1xuICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiAzcHg7XG4gIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAzcHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZDogI2YwZjBmMDtcbiAgbWFyZ2luLWJvdHRvbTogLTFweDtcbiAgbWFyZ2luLXJpZ2h0OiAtMXB4O1xufVxuLnRhYi1idXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kOiAjZTBlMGUwO1xufVxuLnRhYi1idXR0b24uYWN0aXZlIHtcbiAgYmFja2dyb3VuZDogI2UwZTBlMDtcbn1cbi50YWIge1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICBwYWRkaW5nOiAxMHB4O1xufVxuPC9zdHlsZT4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7XG4gICAgXCJ2dWVcIjogXCJodHRwczovL3NmYy52dWVqcy5vcmcvdnVlLnJ1bnRpbWUuZXNtLWJyb3dzZXIuanNcIlxuICB9XG59IiwiSG9tZS52dWUiOiI8dGVtcGxhdGU+XG4gIDxkaXYgY2xhc3M9XCJ0YWJcIj5cbiAgICBIb21lIGNvbXBvbmVudFxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+IiwiUG9zdHMudnVlIjoiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwidGFiXCI+XG4gICAgUG9zdHMgY29tcG9uZW50XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT4iLCJBcmNoaXZlLnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPGRpdiBjbGFzcz1cInRhYlwiPlxuICAgIEFyY2hpdmUgY29tcG9uZW50XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT4ifQ==)
+[Open example in the Playground](https://play.vuejs.org/#eNqNVMGOmzAQ/ZURe2BXCiHbrXpwk1X31mMPvS1V5RiTWAEb2SZNhPLvHdvggLZRE6TIM/P8/N5gpk/e2nZ57HhCkrVhWrQWDLdd+1pI0bRKW/iuGg6VVg2ky9wFDp7G8g9lrIl1H80Bb5rtxfFKMcRzUA+aV3AZQKEEhWRKGgus05pL+5NuYeNwj6mTkT4VckRYujVY63GT17twC6/Fr4YjC3kp5DoPNtEgBpY3bU0txwhgXYojsJoasymSkjeqSHweK9vOWoUbXIC/Y1YpjaDH3wt39hMI6TUUSYSQAz8jArPT5Mj+nmIhC6zpAu1TZlEhmXndbBwpXH5NGL6xWrADMsyaMj1lkAzQ92E7mvYe8nCcM24xZApbL5ECiHCSnP73KyseGnvh6V/XedwS2pVjv3C1ziddxNDYc+2WS9fC8E4qJW1W0UbUZwKGSpMZrkX11dW2SpdcE3huT2BULUp44JxPSpmmpegMgU/tyadbWpZC7jCxwj0v+OfTDdU7ITOrWiTjzTS3Vei8IfB5xHZ4PmqoObMEJHryWXXkuqrVn+xEgHZWYRKbh06uLyv4iQq+oIDnkXSQiwKymlc26n75WNdit78FmLWCMeZL+GKMwlKrhLRcBzhlh51WnSwJPFQr9/zLdIZ007w/O6bR4MQe2bseBJMzer5yzwf8MtzbOzYMkNsOY0+HfoZv1d+lZJGMg8fNqdsfbbio4b77uRVv7I0Li8xxZN1PHWbeHdyTWXc/+zgw/8t/+QsROe9h)
 
 </div>
 
-Das obige wird durch Vue's `<component>` Element mit dem speziellen `is` Attribut möglich gemacht:
+The above is made possible by Vue's `<component>` element with the special `is` attribute:
 
 <div class="options-api">
 
@@ -531,30 +533,30 @@ Das obige wird durch Vue's `<component>` Element mit dem speziellen `is` Attribu
 
 </div>
 
-In dem obigen Beispiel kann der an `:is` übergebene Wert entweder enthalten:
+In the example above, the value passed to `:is` can contain either:
 
-- die Zeichenkette des Namens einer registrierten Komponente, ODER
-- das tatsächliche importierte Komponentenobjekt
+- the name string of a registered component, OR
+- the actual imported component object
 
-Sie können auch das Attribut `is` verwenden, um normale HTML-Elemente zu erstellen.
+You can also use the `is` attribute to create regular HTML elements.
 
-Wenn man zwischen mehreren Komponenten mit `<component :is="...">` umschaltet, wird eine Komponente ausgehängt, wenn man sie ausschaltet. Wir können die inaktiven Komponenten dazu zwingen, "am Leben" zu bleiben mit der eingebauten [`<KeepAlive>` Komponente](/guide/built-ins/keep-alive.html).
+When switching between multiple components with `<component :is="...">`, a component will be unmounted when it is switched away from. We can force the inactive components to stay "alive" with the built-in [`<KeepAlive>` component](/guide/built-ins/keep-alive).
 
-## Vorbehalte bei der Analyse von DOM-Vorlagen {#dom-template-parsing-caveats}
+## in-DOM Template Parsing Caveats {#in-dom-template-parsing-caveats}
 
-Wenn Sie Ihre Vue-Templates direkt in das DOM schreiben, muss Vue den Template-String aus dem DOM abrufen. Dies führt zu einigen Einschränkungen aufgrund des nativen HTML-Parsing-Verhaltens der Browser.
+If you are writing your Vue templates directly in the DOM, Vue will have to retrieve the template string from the DOM. This leads to some caveats due to browsers' native HTML parsing behavior.
 
 :::tip
-Es ist zu beachten, dass die unten beschriebenen Einschränkungen nur gelten, wenn Sie Ihre Vorlagen direkt im DOM schreiben. Sie gelten NICHT, wenn Sie String-Vorlagen aus den folgenden Quellen verwenden:
+It should be noted that the limitations discussed below only apply if you are writing your templates directly in the DOM. They do NOT apply if you are using string templates from the following sources:
 
-- Einzeldatei Komponenten
-- Inlined template strings (z.B. `template: '...'`)
+- Single-File Components
+- Inlined template strings (e.g. `template: '...'`)
 - `<script type="text/x-template">`
   :::
 
-### Unempfindlichkeit gegenüber Großbuchstaben {#case-insensitivity}
+### Case Insensitivity {#case-insensitivity}
 
-Bei HTML-Tags und Attributnamen wird die Groß- und Kleinschreibung nicht beachtet, d. h. die Browser interpretieren alle Großbuchstaben als Kleinbuchstaben. Das bedeutet, dass bei der Verwendung von In-DOM-Vorlagen die Komponentennamen in PascalCase und die Prop-Namen in CamelCase oder die Ereignisnamen in `v-on` alle ihre Entsprechungen in Kebab-Case (mit Bindestrichen) verwenden müssen:
+HTML tags and attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, PascalCase component names and camelCased prop names or `v-on` event names all need to use their kebab-cased (hyphen-delimited) equivalents:
 
 ```js
 // camelCase in JavaScript
@@ -572,30 +574,30 @@ const BlogPost = {
 <blog-post post-title="hello!" @update-post="onUpdatePost"></blog-post>
 ```
 
-### Selbstschließende Tags {#self-closing-tags}
+### Self Closing Tags {#self-closing-tags}
 
-In früheren Codebeispielen haben wir bereits selbstschließende Tags für Komponenten verwendet:
+We have been using self-closing tags for components in previous code samples:
 
 ```vue-html
 <MyComponent />
 ```
 
-Das liegt daran, dass Vue's Template-Parser `/>` als Zeichen für das Ende eines jeden Tags respektiert, unabhängig von seinem Typ.
+This is because Vue's template parser respects `/>` as an indication to end any tag, regardless of its type.
 
-In DOM-Templates müssen wir jedoch immer explizit schließende Tags einfügen:
+In in-DOM templates, however, we must always include explicit closing tags:
 
 ```vue-html
 <my-component></my-component>
 ```
 
-Das liegt daran, dass die HTML-Spezifikation nur [einige wenige spezifische Elemente](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) zulässt um schließende Tags wegzulassen, die häufigsten sind `<input>` und `<img>`. Wenn Sie bei allen anderen Elementen den schließenden Tag weglassen, geht der HTML-Parser davon aus, dass Sie den öffnenden Tag nicht beendet haben. Ein Beispiel ist der folgende Ausschnitt:
+This is because the HTML spec only allows [a few specific elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) to omit closing tags, the most common being `<input>` and `<img>`. For all other elements, if you omit the closing tag, the native HTML parser will think you never terminated the opening tag. For example, the following snippet:
 
 ```vue-html
 <my-component /> <!-- we intend to close the tag here... -->
 <span>hello</span>
 ```
 
-wird geparst als:
+will be parsed as:
 
 ```vue-html
 <my-component>
@@ -603,11 +605,11 @@ wird geparst als:
 </my-component> <!-- but the browser will close it here. -->
 ```
 
-### Beschränkungen der Elementplatzierung {#element-placement-restrictions}
+### Element Placement Restrictions {#element-placement-restrictions}
 
-Einige HTML-Elemente, wie z. B. `<ul>`, `<ol>`, `<table>` und `<select>` haben Beschränkungen, welche Elemente in ihnen erscheinen können, und einige Elemente wie `<li>`, `<tr>`, und `<option>` können nur innerhalb bestimmter anderer Elemente erscheinen.
+Some HTML elements, such as `<ul>`, `<ol>`, `<table>` and `<select>` have restrictions on what elements can appear inside them, and some elements such as `<li>`, `<tr>`, and `<option>` can only appear inside certain other elements.
 
-Dies führt zu Problemen bei der Verwendung von Komponenten mit Elementen, die solche Einschränkungen haben. Zum Beispiel:
+This will lead to issues when using components with elements that have such restrictions. For example:
 
 ```vue-html
 <table>
@@ -615,7 +617,7 @@ Dies führt zu Problemen bei der Verwendung von Komponenten mit Elementen, die s
 </table>
 ```
 
-Die benutzerdefinierte Komponente `<blog-post-row>` wird als ungültiger Inhalt ausgegeben, was zu Fehlern in der gerenderten Ausgabe führt. Wir können die spezielle [`is` Attribut](/api/built-in-special-attributes.html#is) als Abhilfe:
+The custom component `<blog-post-row>` will be hoisted out as invalid content, causing errors in the eventual rendered output. We can use the special [`is` attribute](/api/built-in-special-attributes#is) as a workaround:
 
 ```vue-html
 <table>
@@ -624,9 +626,9 @@ Die benutzerdefinierte Komponente `<blog-post-row>` wird als ungültiger Inhalt 
 ```
 
 :::tip
-Bei der Verwendung in nativen HTML-Elementen muss dem Wert von "is" das Präfix "vue:" vorangestellt werden, damit er als Vue-Komponente interpretiert werden kann. Dies ist erforderlich, um Verwechslungen mit nativen [angepasste eingebaute Elemente](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example).
+When used on native HTML elements, the value of `is` must be prefixed with `vue:` in order to be interpreted as a Vue component. This is required to avoid confusion with native [customized built-in elements](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example).
 :::
 
-Das ist alles, was Sie für den Moment über DOM Template Parsing Caveats wissen müssen - und eigentlich auch das Ende von Vue's _Essentials_. Herzlichen Glückwunsch! Es gibt noch mehr zu lernen, aber zuerst empfehlen wir, eine Pause zu machen und selbst mit Vue zu spielen - bauen Sie etwas, das Spaß macht, oder schauen Sie sich einige der [Examples](/examples/) an, falls Sie das noch nicht getan haben.
+That's all you need to know about in-DOM template parsing caveats for now - and actually, the end of Vue's _Essentials_. Congratulations! There's still more to learn, but first, we recommend taking a break to play with Vue yourself - build something fun, or check out some of the [Examples](/examples/) if you haven't already.
 
-Sobald Sie sich mit dem Wissen, das Sie gerade verdaut haben, wohl fühlen, fahren Sie mit dem Leitfaden fort, um mehr über Komponenten in der Tiefe zu lernen.
+Once you feel comfortable with the knowledge you've just digested, move on with the guide to learn more about components in depth.

@@ -243,7 +243,7 @@ Dynamische Argumentausdrücke unterliegen einigen syntaktischen Einschränkungen
 <a :['foo' + bar]="value"> ... </a>
 ```
 
-Wenn Sie ein komplexes dynamisches Argument übergeben müssen, ist es wahrscheinlich besser, eine [berechnete Eigenschaft](./berechnet.html) zu verwenden, die wir in Kürze behandeln werden.
+Wenn Sie ein komplexes dynamisches Argument übergeben müssen, ist es wahrscheinlich besser, eine [berechnete Eigenschaft](./computed.html) zu verwenden, die wir in Kürze behandeln werden.
 
 Bei der Verwendung von In-DOM-Templates (Templates, die direkt in eine HTML-Datei geschrieben werden) sollten Sie außerdem vermeiden, Schlüssel mit Großbuchstaben zu benennen, da die Browser Attributnamen in Kleinbuchstaben umwandeln:
 

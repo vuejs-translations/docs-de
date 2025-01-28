@@ -1,15 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import PartnerHero from './PartnerHero.vue'
 import PartnerList from './PartnerList.vue'
 import PartnerJoin from './PartnerJoin.vue'
 import { Partner } from './type'
 import { VTIconSearch } from '@vue/theme'
 
-let query = $ref('')
+const query = ref('')
 
 function filter(p: Partner): boolean {
   return (
-    includes(p.name, query) || p.region.some((r) => includes(r, query))
+    includes(p.name, query.value) ||
+    p.region.some((r) => includes(r, query.value))
   )
 }
 
@@ -38,12 +40,14 @@ input {
   border-bottom: 1px solid var(--vt-c-divider-light);
   margin-bottom: 2em;
 }
+
 .container {
   max-width: 960px;
   margin: 1em auto 2em;
   padding: 0 28px;
   position: relative;
 }
+
 .icon {
   width: 18px;
   height: 18px;
