@@ -23,7 +23,7 @@ onMounted(load)
     <p class="actions">
       <VueMasteryModal />
       <a class="get-started" href="/guide/introduction.html">
-        Get Started
+        Los geht's
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,9 +36,9 @@ onMounted(load)
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">Install</a>
+      <a class="setup" href="/guide/quick-start.html">Installieren</a>
       <a class="security" href="https://v2.vuejs.org/eol/" target="_blank">
-        Get Security Updates for Vue 2
+        Sicherheitsupdates für Vue 2
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
