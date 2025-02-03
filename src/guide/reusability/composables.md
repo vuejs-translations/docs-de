@@ -40,7 +40,7 @@ onUnmounted(() => window.removeEventListener('mousemove', update))
 <template>Mouse position is at: {{ x }}, {{ y }}</template>
 ```
 
-But what if we want to reuse the same logic in multiple components? We can extract the logic into an external file, as a composable function:
+Was aber, wenn wir dieselbe Logik in mehreren Komponenten wiederverwenden wollen? Wir können die Logik in eine externe Datei extrahieren, und zwar als zusammensetzbare Funktion:
 
 ```js
 // mouse.js
