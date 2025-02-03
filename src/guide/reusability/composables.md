@@ -46,29 +46,29 @@ Was aber, wenn wir dieselbe Logik in mehreren Komponenten wiederverwenden wollen
 // mouse.js
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// by convention, composable function names start with "use"
+// Konventionell beginnen die Namen zusammensetzbarer Funktionen mit „use“
 export function useMouse() {
-  // state encapsulated and managed by the composable
+  // gekapselter und von der zusammensetzbaren Datenbank verwalteter Zustand
   const x = ref(0)
   const y = ref(0)
 
-  // a composable can update its managed state over time.
+  // kann ein Composable seinen verwalteten Zustand im Laufe der Zeit aktualisieren
   function update(event) {
     x.value = event.pageX
     y.value = event.pageY
   }
 
-  // a composable can also hook into its owner component's
+  // kann eine zusammensetzbare Komponente auch in die eigene Komponente
   // lifecycle to setup and teardown side effects.
   onMounted(() => window.addEventListener('mousemove', update))
   onUnmounted(() => window.removeEventListener('mousemove', update))
 
-  // expose managed state as return value
+  // den verwalteten Zustand als Rückgabewert offenlegen
   return { x, y }
 }
 ```
 
-And this is how it can be used in components:
+Und so kann es in Komponenten verwendet werden:
 
 ```vue
 <script setup>
