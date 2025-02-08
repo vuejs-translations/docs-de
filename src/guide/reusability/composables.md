@@ -88,7 +88,7 @@ const { x, y } = useMouse()
 
 Wie wir sehen können, bleibt die Kernlogik identisch - wir mussten sie nur in eine externe Funktion verschieben und den Status zurückgeben, der ausgesetzt werden sollte. Genau wie innerhalb einer Komponente können Sie die gesamte Palette der [Composition-API-Funktionen](/api/#composition-api) in Composables verwenden. Die gleiche `useMouse()` Funktionalität kann nun in jeder Komponente verwendet werden.
 
-The cooler part about composables though, is that you can also nest them: one composable function can call one or more other composable functions. This enables us to compose complex logic using small, isolated units, similar to how we compose an entire application using components. In fact, this is why we decided to call the collection of APIs that make this pattern possible Composition API.
+Das Tolle an Composables ist jedoch, dass man sie auch verschachteln kann: Eine Composable-Funktion kann eine oder mehrere andere Composable-Funktionen aufrufen. So können wir komplexe Logik aus kleinen, isolierten Einheiten zusammenstellen, ähnlich wie wir eine ganze Anwendung aus Komponenten zusammenstellen. Aus diesem Grund haben wir beschlossen, die Sammlung von APIs, die dieses Muster ermöglichen, Composition API zu nennen.
 
 For example, we can extract the logic of adding and removing a DOM event listener into its own composable:
 
