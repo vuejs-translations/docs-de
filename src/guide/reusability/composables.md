@@ -104,7 +104,7 @@ export function useEventListener(target, event, callback) {
 }
 ```
 
-And now our `useMouse()` composable can be simplified to:
+Und nun kann unser `useMouse()` composable zu vereinfacht werden:
 
 ```js{3,9-12}
 // mouse.js
