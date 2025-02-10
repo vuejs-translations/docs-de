@@ -90,7 +90,7 @@ Wie wir sehen können, bleibt die Kernlogik identisch - wir mussten sie nur in e
 
 Das Tolle an Composables ist jedoch, dass man sie auch verschachteln kann: Eine Composable-Funktion kann eine oder mehrere andere Composable-Funktionen aufrufen. So können wir komplexe Logik aus kleinen, isolierten Einheiten zusammenstellen, ähnlich wie wir eine ganze Anwendung aus Komponenten zusammenstellen. Aus diesem Grund haben wir beschlossen, die Sammlung von APIs, die dieses Muster ermöglichen, Composition API zu nennen.
 
-For example, we can extract the logic of adding and removing a DOM event listener into its own composable:
+Zum Beispiel können wir die Logik des Hinzufügens und Entfernens eines DOM-Ereignis-Listeners in ein eigenes Composable extrahieren:
 
 ```js
 // event.js
