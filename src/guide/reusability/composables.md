@@ -125,7 +125,7 @@ export function useMouse() {
 ```
 
 :::tip
-Each component instance calling `useMouse()` will create its own copies of `x` and `y` state so they won't interfere with one another. If you want to manage shared state between components, read the [State Management](/guide/scaling-up/state-management.html) chapter.
+Jede Komponenteninstanz, die `useMouse()` aufruft, erstellt ihre eigenen Kopien des `x`- und `y`-Zustands, damit sie sich nicht gegenseitig stören. Wenn Sie einen gemeinsamen Zustand zwischen Komponenten verwalten wollen, lesen Sie das Kapitel [State Management](/guide/scaling-up/state-management.html).
 :::
 
 ## Async State Example {#async-state-example}
