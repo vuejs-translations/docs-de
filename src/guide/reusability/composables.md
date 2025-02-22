@@ -128,7 +128,7 @@ export function useMouse() {
 Jede Komponenteninstanz, die `useMouse()` aufruft, erstellt ihre eigenen Kopien des `x`- und `y`-Zustands, damit sie sich nicht gegenseitig stören. Wenn Sie einen gemeinsamen Zustand zwischen Komponenten verwalten wollen, lesen Sie das Kapitel [State Management](/guide/scaling-up/state-management.html).
 :::
 
-## Async State Example {#async-state-example}
+## Beispiel für einen asynchronen Zustand {#async-state-example}
 
 The `useMouse()` composable doesn't take any arguments, so let's take a look at another example that makes use of one. When doing async data fetching, we often need to handle different states: loading, success, and error:
 
