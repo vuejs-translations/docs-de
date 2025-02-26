@@ -130,7 +130,7 @@ Jede Komponenteninstanz, die `useMouse()` aufruft, erstellt ihre eigenen Kopien 
 
 ## Beispiel für einen asynchronen Zustand {#async-state-example}
 
-The `useMouse()` composable doesn't take any arguments, so let's take a look at another example that makes use of one. When doing async data fetching, we often need to handle different states: loading, success, and error:
+Das Composable `useMouse()` nimmt keine Argumente entgegen, also schauen wir uns ein anderes Beispiel an, das davon Gebrauch macht. Beim asynchronen Abrufen von Daten müssen wir oft verschiedene Zustände behandeln: Laden, Erfolg und Fehler:
 
 ```vue
 <script setup>
