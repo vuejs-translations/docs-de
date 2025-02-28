@@ -155,7 +155,7 @@ fetch('...')
 </template>
 ```
 
-It would be tedious to have to repeat this pattern in every component that needs to fetch data. Let's extract it into a composable:
+Es wäre mühsam, dieses Muster in jeder Komponente, die Daten abrufen muss, zu wiederholen. Extrahieren wir es in eine zusammensetzbare:
 
 ```js
 // fetch.js
