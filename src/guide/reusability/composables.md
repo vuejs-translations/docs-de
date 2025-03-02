@@ -184,7 +184,7 @@ const { data, error } = useFetch('...')
 </script>
 ```
 
-`useFetch()` takes a static URL string as input - so it performs the fetch only once and is then done. What if we want it to re-fetch whenever the URL changes? We can achieve that by also accepting refs as an argument:
+`useFetch()` nimmt eine statische URL-Zeichenfolge als Eingabe - es führt also den Abruf nur einmal durch und ist dann fertig. Was aber, wenn wir wollen, dass es immer dann erneut abgerufen wird, wenn sich die URL ändert? Das können wir erreichen, indem wir auch refs als Argument akzeptieren:
 
 ```js
 // fetch.js
