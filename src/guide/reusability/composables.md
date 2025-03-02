@@ -174,7 +174,7 @@ export function useFetch(url) {
 }
 ```
 
-Now in our component we can just do:
+Jetzt können wir in unserer Komponente einfach tun:
 
 ```vue
 <script setup>
