@@ -226,7 +226,7 @@ Hier ist [die aktualisierte Version von `useFetch()`](https://sfc.vuejs.org/#eyJ
 
 ### Namensgebung {#naming}
 
-It is a convention to name composable functions with camelCase names that start with "use".
+Es ist eine Konvention, zusammensetzbare Funktionen mit camelCase-Namen zu benennen, die mit „use“ beginnen.
 
 ### Input Arguments {#input-arguments}
 
