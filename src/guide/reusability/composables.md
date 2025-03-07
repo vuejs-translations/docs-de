@@ -224,7 +224,7 @@ Hier ist [die aktualisierte Version von `useFetch()`](https://sfc.vuejs.org/#eyJ
 
 ## Konventionen und bewährte Praktiken {#conventions-and-best-practices}
 
-### Naming {#naming}
+### Namensgebung {#naming}
 
 It is a convention to name composable functions with camelCase names that start with "use".
 
