@@ -230,7 +230,7 @@ Es ist eine Konvention, zusammensetzbare Funktionen mit camelCase-Namen zu benen
 
 ### Eingabe-Argumente {#input-arguments}
 
-A composable can accept ref arguments even if it doesn't rely on them for reactivity. If you are writing a composable that may be used by other developers, it's a good idea to handle the case of input arguments being refs instead of raw values. The [`unref()`](/api/reactivity-utilities.html#unref) utility function will come in handy for this purpose:
+Ein Composable kann ref-Argumente akzeptieren, auch wenn es nicht auf sie angewiesen ist, um reaktiv zu sein. Wenn Sie ein Composable schreiben, das von anderen Entwicklern verwendet werden kann, ist es eine gute Idee, den Fall zu behandeln, dass die Eingabeargumente refs statt Rohwerte sind. Die [`unref()`](/api/reactivity-utilities.html#unref) Utility-Funktion wird für diesen Zweck sehr nützlich sein:
 
 ```js
 import { unref } from 'vue'
