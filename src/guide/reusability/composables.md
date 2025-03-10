@@ -228,7 +228,7 @@ Hier ist [die aktualisierte Version von `useFetch()`](https://sfc.vuejs.org/#eyJ
 
 Es ist eine Konvention, zusammensetzbare Funktionen mit camelCase-Namen zu benennen, die mit „use“ beginnen.
 
-### Input Arguments {#input-arguments}
+### Eingabe-Argumente {#input-arguments}
 
 A composable can accept ref arguments even if it doesn't rely on them for reactivity. If you are writing a composable that may be used by other developers, it's a good idea to handle the case of input arguments being refs instead of raw values. The [`unref()`](/api/reactivity-utilities.html#unref) utility function will come in handy for this purpose:
 
