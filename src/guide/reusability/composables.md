@@ -236,7 +236,7 @@ Ein Composable kann ref-Argumente akzeptieren, auch wenn es nicht auf sie angewi
 import { unref } from 'vue'
 
 function useFeature(maybeRef) {
-  // if maybeRef is indeed a ref, its .value will be returned
+  // wenn maybeRef tatsächlich eine Referenz ist, wird ihr Wert zurückgegeben.
   // otherwise, maybeRef is returned as-is
   const value = unref(maybeRef)
 }
