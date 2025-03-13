@@ -237,7 +237,7 @@ import { unref } from 'vue'
 
 function useFeature(maybeRef) {
   // wenn maybeRef tatsächlich eine Referenz ist, wird ihr Wert zurückgegeben.
-  // otherwise, maybeRef is returned as-is
+  // andernfalls wird maybeRef so zurückgegeben, wie es ist
   const value = unref(maybeRef)
 }
 ```
