@@ -242,7 +242,7 @@ function useFeature(maybeRef) {
 }
 ```
 
-If your composable creates reactive effects when the input is a ref, make sure to either explicitly watch the ref with `watch()`, or call `unref()` inside a `watchEffect()` so that it is properly tracked.
+Wenn Ihr Composable reaktive Effekte erzeugt, wenn die Eingabe ein ref ist, stellen Sie sicher, dass Sie den ref entweder explizit mit `watch()` beobachten oder `unref()` innerhalb eines `watchEffect()` aufrufen, damit er richtig verfolgt wird.
 
 ### Return Values {#return-values}
 
