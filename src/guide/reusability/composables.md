@@ -244,7 +244,7 @@ function useFeature(maybeRef) {
 
 Wenn Ihr Composable reaktive Effekte erzeugt, wenn die Eingabe ein ref ist, stellen Sie sicher, dass Sie den ref entweder explizit mit `watch()` beobachten oder `unref()` innerhalb eines `watchEffect()` aufrufen, damit er richtig verfolgt wird.
 
-### Return Values {#return-values}
+### Rückgabewerte {#return-values}
 
 You have probably noticed that we have been exclusively using `ref()` instead of `reactive()` in composables. The recommended convention is for composables to always return a plain, non-reactive object containing multiple refs. This allows it to be destructured in components while retaining reactivity:
 
