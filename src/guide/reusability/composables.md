@@ -246,7 +246,7 @@ Wenn Ihr Composable reaktive Effekte erzeugt, wenn die Eingabe ein ref ist, stel
 
 ### Rückgabewerte {#return-values}
 
-You have probably noticed that we have been exclusively using `ref()` instead of `reactive()` in composables. The recommended convention is for composables to always return a plain, non-reactive object containing multiple refs. This allows it to be destructured in components while retaining reactivity:
+Sie haben wahrscheinlich bemerkt, dass wir in Composables ausschließlich `ref()` anstelle von `reactive()` verwendet haben. Die empfohlene Konvention ist, dass Composables immer ein einfaches, nicht reaktives Objekt zurückgeben, das mehrere Refs enthält. Dadurch kann es in Komponenten destrukturiert werden, während die Reaktivität erhalten bleibt:
 
 ```js
 // x and y are refs
