@@ -249,7 +249,7 @@ Wenn Ihr Composable reaktive Effekte erzeugt, wenn die Eingabe ein ref ist, stel
 Sie haben wahrscheinlich bemerkt, dass wir in Composables ausschließlich `ref()` anstelle von `reactive()` verwendet haben. Die empfohlene Konvention ist, dass Composables immer ein einfaches, nicht reaktives Objekt zurückgeben, das mehrere Refs enthält. Dadurch kann es in Komponenten destrukturiert werden, während die Reaktivität erhalten bleibt:
 
 ```js
-// x and y are refs
+// x und y sind Referenzwerte
 const { x, y } = useMouse()
 ```
 
