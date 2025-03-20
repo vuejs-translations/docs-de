@@ -253,7 +253,7 @@ Sie haben wahrscheinlich bemerkt, dass wir in Composables ausschließlich `ref()
 const { x, y } = useMouse()
 ```
 
-Returning a reactive object from a composable will cause such destructures to lose the reactivity connection to the state inside the composable, while the refs will retain that connection.
+Die Rückgabe eines reaktiven Objekts aus einem zusammensetzbaren Objekt führt dazu, dass solche Destrukturen die Verbindung zwischen Reaktivität und dem Zustand innerhalb des zusammensetzbaren Objekts verlieren, während die Referenzobjekte diese Verbindung beibehalten.
 
 If you prefer to use returned state from composables as object properties, you can wrap the returned object with `reactive()` so that the refs are unwrapped. For example:
 
