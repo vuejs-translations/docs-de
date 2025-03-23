@@ -269,7 +269,7 @@ Mouse position is at: {{ mouse.x }}, {{ mouse.y }}
 
 ### Nebenwirkungen {#side-effects}
 
-It is OK to perform side effects (e.g. adding DOM event listeners or fetching data) in composables, but pay attention to the following rules:
+Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listenern oder das Abrufen von Daten) in Composables durchzuführen, aber beachten Sie die folgenden Regeln:
 
 - If you are working on an application that uses [Server-Side Rendering](/guide/scaling-up/ssr.html) (SSR), make sure to perform DOM-specific side effects in post-mount lifecycle hooks, e.g. `onMounted()`. These hooks are only called in the browser, so you can be sure that code inside them has access to the DOM.
 
