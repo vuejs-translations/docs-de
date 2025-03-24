@@ -271,7 +271,7 @@ Mouse position is at: {{ mouse.x }}, {{ mouse.y }}
 
 Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listenern oder das Abrufen von Daten) in Composables durchzuführen, aber beachten Sie die folgenden Regeln:
 
-- If you are working on an application that uses [Server-Side Rendering](/guide/scaling-up/ssr.html) (SSR), make sure to perform DOM-specific side effects in post-mount lifecycle hooks, e.g. `onMounted()`. These hooks are only called in the browser, so you can be sure that code inside them has access to the DOM.
+- Wenn Sie an einer Anwendung arbeiten, die [Server-Side Rendering](/guide/scaling-up/ssr.html) (SSR) verwendet, stellen Sie sicher, dass Sie DOM-spezifische Seiteneffekte in Post-Mount-Lifecycle-Hooks ausführen, z. B. `onMounted()`. Diese Hooks werden nur im Browser aufgerufen, so dass Sie sicher sein können, dass der darin enthaltene Code Zugriff auf das DOM hat.
 
 - Remember to clean up side effects in `onUnmounted()`. For example, if a composable sets up a DOM event listener, it should remove that listener in `onUnmounted()` as we have seen in the `useMouse()` example. It can be a good idea to use a composable that automatically does this for you, like the `useEventListener()` example.
 
