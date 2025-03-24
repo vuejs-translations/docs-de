@@ -273,7 +273,7 @@ Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listene
 
 - Wenn Sie an einer Anwendung arbeiten, die [Server-Side Rendering](/guide/scaling-up/ssr.html) (SSR) verwendet, stellen Sie sicher, dass Sie DOM-spezifische Seiteneffekte in Post-Mount-Lifecycle-Hooks ausführen, z. B. `onMounted()`. Diese Hooks werden nur im Browser aufgerufen, so dass Sie sicher sein können, dass der darin enthaltene Code Zugriff auf das DOM hat.
 
-- Remember to clean up side effects in `onUnmounted()`. For example, if a composable sets up a DOM event listener, it should remove that listener in `onUnmounted()` as we have seen in the `useMouse()` example. It can be a good idea to use a composable that automatically does this for you, like the `useEventListener()` example.
+- Denken Sie daran, Seiteneffekte in `onUnmounted()` zu bereinigen. Wenn zum Beispiel ein Composable einen DOM-Ereignis-Listener einrichtet, sollte es diesen Listener in `onUnmounted()` entfernen, wie wir im Beispiel `useMouse()` gesehen haben. Es kann eine gute Idee sein, ein Composable zu verwenden, das dies automatisch für Sie tut, wie das Beispiel `useEventListener()`.
 
 ### Usage Restrictions {#usage-restrictions}
 
