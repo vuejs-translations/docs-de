@@ -275,7 +275,7 @@ Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listene
 
 - Denken Sie daran, Seiteneffekte in `onUnmounted()` zu bereinigen. Wenn zum Beispiel ein Composable einen DOM-Ereignis-Listener einrichtet, sollte es diesen Listener in `onUnmounted()` entfernen, wie wir im Beispiel `useMouse()` gesehen haben. Es kann eine gute Idee sein, ein Composable zu verwenden, das dies automatisch für Sie tut, wie das Beispiel `useEventListener()`.
 
-### Usage Restrictions {#usage-restrictions}
+### Verwendungsbeschränkungen {#usage-restrictions}
 
 Composables should only be called **synchronously** in `<script setup>` or the `setup()` hook. In some cases, you can also call them in lifecycle hooks like `onMounted()`.
 
