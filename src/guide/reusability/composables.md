@@ -277,7 +277,7 @@ Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listene
 
 ### Verwendungsbeschränkungen {#usage-restrictions}
 
-Composables should only be called **synchronously** in `<script setup>` or the `setup()` hook. In some cases, you can also call them in lifecycle hooks like `onMounted()`.
+Composables sollten nur **synchron** in `<script setup>` oder dem `setup()`-Hook aufgerufen werden. In einigen Fällen können Sie sie auch in Lebenszyklus-Hooks wie `onMounted()` aufrufen.
 
 These are the contexts where Vue is able to determine the current active component instance. Access to an active component instance is necessary so that:
 
