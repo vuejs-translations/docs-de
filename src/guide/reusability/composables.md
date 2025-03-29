@@ -279,7 +279,7 @@ Es ist in Ordnung, Seiteneffekte (z. B. das Hinzufügen von DOM-Ereignis-Listene
 
 Composables sollten nur **synchron** in `<script setup>` oder dem `setup()`-Hook aufgerufen werden. In einigen Fällen können Sie sie auch in Lebenszyklus-Hooks wie `onMounted()` aufrufen.
 
-These are the contexts where Vue is able to determine the current active component instance. Access to an active component instance is necessary so that:
+Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Komponenteninstanz zu bestimmen. Der Zugriff auf eine aktive Komponenteninstanz ist notwendig, damit:
 
 1. Lifecycle hooks can be registered to it.
 
