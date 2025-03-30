@@ -281,7 +281,7 @@ Composables sollten nur **synchron** in `<script setup>` oder dem `setup()`-Hook
 
 Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Komponenteninstanz zu bestimmen. Der Zugriff auf eine aktive Komponenteninstanz ist notwendig, damit:
 
-1. Lifecycle hooks can be registered to it.
+1. Lebenszyklus-Haken können für sie registriert werden.
 
 2. Computed properties and watchers can be linked to it, so that they can be disposed when the instance is unmounted to prevent memory leaks.
 
