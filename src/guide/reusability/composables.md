@@ -286,7 +286,7 @@ Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Kompon
 2. Berechnete Eigenschaften und Beobachter können mit ihr verknüpft werden, so dass sie entsorgt werden können, wenn die Instanz ausgehängt wird, um Speicherlecks zu vermeiden.
 
 :::tip
-`<script setup>` is the only place where you can call composables **after** using `await`. The compiler automatically restores the active instance context for you after the async operation.
+`<script setup>` ist die einzige Stelle, an der Sie Composables **nach** der Verwendung von `await` aufrufen können. Der Compiler stellt nach der asynchronen Operation automatisch den aktiven Instanzkontext für Sie wieder her.
 :::
 
 ## Extracting Composables for Code Organization {#extracting-composables-for-code-organization}
