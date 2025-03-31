@@ -283,7 +283,7 @@ Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Kompon
 
 1. Lebenszyklus-Haken können für sie registriert werden.
 
-2. Computed properties and watchers can be linked to it, so that they can be disposed when the instance is unmounted to prevent memory leaks.
+2. Berechnete Eigenschaften und Beobachter können mit ihr verknüpft werden, so dass sie entsorgt werden können, wenn die Instanz ausgehängt wird, um Speicherlecks zu vermeiden.
 
 :::tip
 `<script setup>` is the only place where you can call composables **after** using `await`. The compiler automatically restores the active instance context for you after the async operation.
