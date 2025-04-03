@@ -289,7 +289,7 @@ Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Kompon
 `<script setup>` ist die einzige Stelle, an der Sie Composables **nach** der Verwendung von `await` aufrufen können. Der Compiler stellt nach der asynchronen Operation automatisch den aktiven Instanzkontext für Sie wieder her.
 :::
 
-## Extracting Composables for Code Organization {#extracting-composables-for-code-organization}
+## Extrahieren von Composables für die Codeorganisation {#extracting-composables-for-code-organization}
 
 Composables can be extracted not only for reuse, but also for code organization. As the complexity of your components grow, you may end up with components that are too large to navigate and reason about. Composition API gives you the full flexibility to organize your component code into smaller functions based on logical concerns:
 
