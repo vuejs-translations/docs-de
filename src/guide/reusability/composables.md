@@ -291,7 +291,7 @@ Dies sind die Kontexte, in denen Vue in der Lage ist, die aktuelle aktive Kompon
 
 ## Extrahieren von Composables für die Codeorganisation {#extracting-composables-for-code-organization}
 
-Composables can be extracted not only for reuse, but also for code organization. As the complexity of your components grow, you may end up with components that are too large to navigate and reason about. Composition API gives you the full flexibility to organize your component code into smaller functions based on logical concerns:
+Composables können nicht nur für die Wiederverwendung, sondern auch für die Codeorganisation extrahiert werden. Wenn die Komplexität Ihrer Komponenten zunimmt, kann es passieren, dass Sie Komponenten haben, die zu groß sind, um darin zu navigieren und zu denken. Mit der Composition API haben Sie die volle Flexibilität, Ihren Komponentencode nach logischen Gesichtspunkten in kleinere Funktionen aufzuteilen:
 
 ```vue
 <script setup>
