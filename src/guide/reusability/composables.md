@@ -305,7 +305,7 @@ const { qux } = useFeatureC(baz)
 </script>
 ```
 
-To some extent, you can think of these extracted composables as component-scoped services that can talk to one another.
+In gewisser Weise können Sie sich diese extrahierten Composables als komponentenspezifische Dienste vorstellen, die miteinander kommunizieren können.
 
 ## Using Composables in Options API {#using-composables-in-options-api}
 
