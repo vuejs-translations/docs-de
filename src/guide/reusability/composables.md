@@ -307,7 +307,7 @@ const { qux } = useFeatureC(baz)
 
 In gewisser Weise können Sie sich diese extrahierten Composables als komponentenspezifische Dienste vorstellen, die miteinander kommunizieren können.
 
-## Using Composables in Options API {#using-composables-in-options-api}
+## Verwendung von Composables in der Options-API {#using-composables-in-options-api}
 
 If you are using Options API, composables must be called inside `setup()`, and the returned bindings must be returned from `setup()` so that they are exposed to `this` and the template:
 
