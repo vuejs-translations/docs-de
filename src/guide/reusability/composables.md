@@ -309,7 +309,7 @@ In gewisser Weise können Sie sich diese extrahierten Composables als komponente
 
 ## Verwendung von Composables in der Options-API {#using-composables-in-options-api}
 
-If you are using Options API, composables must be called inside `setup()`, and the returned bindings must be returned from `setup()` so that they are exposed to `this` and the template:
+Wenn Sie die Options-API verwenden, müssen Composables innerhalb von `setup()` aufgerufen werden, und die zurückgegebenen Bindungen müssen von `setup()` zurückgegeben werden, damit sie für `this` und die Vorlage sichtbar sind:
 
 ```js
 import { useMouse } from './mouse.js'
