@@ -329,7 +329,7 @@ export default {
 }
 ```
 
-## Comparisons with Other Techniques {#comparisons-with-other-techniques}
+## Vergleiche mit anderen Techniken {#comparisons-with-other-techniques}
 
 ### vs. Mixins {#vs-mixins}
 
