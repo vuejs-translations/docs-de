@@ -333,7 +333,7 @@ export default {
 
 ### vs. Mixins {#vs-mixins}
 
-Users coming from Vue 2 may be familiar with the [mixins](/api/options-composition.html#mixins) option, which also allows us to extract component logic into reusable units. There are three primary drawbacks to mixins:
+Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/options-composition.html#mixins) vertraut, die uns ebenfalls erlaubt, Komponentenlogik in wiederverwendbare Einheiten zu extrahieren. Es gibt drei Hauptnachteile von Mixins:
 
 1. **Unclear source of properties**: when using many mixins, it becomes unclear which instance property is injected by which mixin, making it difficult to trace the implementation and understand the component's behavior. This is also why we recommend using the refs + destructure pattern for composables: it makes the property source clear in consuming components.
 
