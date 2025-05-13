@@ -335,7 +335,7 @@ export default {
 
 Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/options-composition.html#mixins) vertraut, die uns ebenfalls erlaubt, Komponentenlogik in wiederverwendbare Einheiten zu extrahieren. Es gibt drei Hauptnachteile von Mixins:
 
-1. **Unclear source of properties**: when using many mixins, it becomes unclear which instance property is injected by which mixin, making it difficult to trace the implementation and understand the component's behavior. This is also why we recommend using the refs + destructure pattern for composables: it makes the property source clear in consuming components.
+1. **Unklare Quelle der Eigenschaften**: Bei der Verwendung vieler Mixins wird unklar, welche Instanzeigenschaft von welchem Mixin injiziert wird, was es schwierig macht, die Implementierung nachzuvollziehen und das Verhalten der Komponente zu verstehen. Dies ist auch der Grund, warum wir die Verwendung des refs + destructure-Musters für Composables empfehlen: Es macht die Eigenschaftsquelle in konsumierenden Komponenten klar.
 
 2. **Namespace collisions**: multiple mixins from different authors can potentially register the same property keys, causing namespace collisions. With composables, you can rename the destructured variables if there are conflicting keys from different composables.
 
