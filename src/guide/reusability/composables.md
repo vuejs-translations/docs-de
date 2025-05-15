@@ -337,7 +337,7 @@ Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/opt
 
 1. **Unklare Quelle der Eigenschaften**: Bei der Verwendung vieler Mixins wird unklar, welche Instanzeigenschaft von welchem Mixin injiziert wird, was es schwierig macht, die Implementierung nachzuvollziehen und das Verhalten der Komponente zu verstehen. Dies ist auch der Grund, warum wir die Verwendung des refs + destructure-Musters für Composables empfehlen: Es macht die Eigenschaftsquelle in konsumierenden Komponenten klar.
 
-2. **Namespace collisions**: multiple mixins from different authors can potentially register the same property keys, causing namespace collisions. With composables, you can rename the destructured variables if there are conflicting keys from different composables.
+2. **Namensraumkollisionen**: Mehrere Mixins von verschiedenen Autoren können potenziell dieselben Eigenschaftsschlüssel registrieren, was zu Namensraumkollisionen führt. Bei Composables können Sie die destrukturierten Variablen umbenennen, wenn es widersprüchliche Schlüssel von verschiedenen Composables gibt.
 
 3. **Implicit cross-mixin communication**: multiple mixins that need to interact with one another have to rely on shared property keys, making them implicitly coupled. With composables, values returned from one composable can be passed into another as arguments, just like normal functions.
 
