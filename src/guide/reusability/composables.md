@@ -339,7 +339,7 @@ Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/opt
 
 2. **Namensraumkollisionen**: Mehrere Mixins von verschiedenen Autoren können potenziell dieselben Eigenschaftsschlüssel registrieren, was zu Namensraumkollisionen führt. Bei Composables können Sie die destrukturierten Variablen umbenennen, wenn es widersprüchliche Schlüssel von verschiedenen Composables gibt.
 
-3. **Implicit cross-mixin communication**: multiple mixins that need to interact with one another have to rely on shared property keys, making them implicitly coupled. With composables, values returned from one composable can be passed into another as arguments, just like normal functions.
+3. **Implizite Mixin-übergreifende Kommunikation**: Mehrere Mixins, die miteinander interagieren müssen, sind auf gemeinsame Eigenschaftsschlüssel angewiesen, wodurch sie implizit gekoppelt sind. Mit Composables können Werte, die von einem Composable zurückgegeben werden, als Argumente an ein anderes übergeben werden, genau wie normale Funktionen.
 
 For the above reasons, we no longer recommend using mixins in Vue 3. The feature is kept only for migration and familiarity reasons.
 
