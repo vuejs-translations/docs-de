@@ -341,7 +341,7 @@ Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/opt
 
 3. **Implizite Mixin-übergreifende Kommunikation**: Mehrere Mixins, die miteinander interagieren müssen, sind auf gemeinsame Eigenschaftsschlüssel angewiesen, wodurch sie implizit gekoppelt sind. Mit Composables können Werte, die von einem Composable zurückgegeben werden, als Argumente an ein anderes übergeben werden, genau wie normale Funktionen.
 
-For the above reasons, we no longer recommend using mixins in Vue 3. The feature is kept only for migration and familiarity reasons.
+Aus den oben genannten Gründen empfehlen wir die Verwendung von Mixins in Vue 3 nicht mehr. Das Feature wird nur aus Gründen der Migration und Vertrautheit beibehalten.
 
 ### vs. Renderless Components {#vs-renderless-components}
 
