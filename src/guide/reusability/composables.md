@@ -343,7 +343,7 @@ Benutzer, die von Vue 2 kommen, sind vielleicht mit der Option [mixins](/api/opt
 
 Aus den oben genannten Gründen empfehlen wir die Verwendung von Mixins in Vue 3 nicht mehr. Das Feature wird nur aus Gründen der Migration und Vertrautheit beibehalten.
 
-### vs. Renderless Components {#vs-renderless-components}
+### vs. Komponenten ohne Rendering {#vs-renderless-components}
 
 In the component slots chapter, we discussed the [Renderless Component](/guide/components/slots.html#renderless-components) pattern based on scoped slots. We even implemented the same mouse tracking demo using renderless components.
 
