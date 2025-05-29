@@ -347,7 +347,7 @@ Aus den oben genannten Gründen empfehlen wir die Verwendung von Mixins in Vue 3
 
 Im Kapitel über Komponentenslots haben wir das Muster [Renderless Component](/guide/components/slots.html#renderless-components) besprochen, das auf skalierten Slots basiert. Wir haben sogar die gleiche Mausverfolgungsdemo mit Hilfe von Renderless-Komponenten implementiert.
 
-The main advantage of composables over renderless components is that composables do not incur the extra component instance overhead. When used across an entire application, the amount of extra component instances created by the renderless component pattern can become a noticeable performance overhead.
+Der Hauptvorteil von Composables gegenüber Komponenten ohne Rendering besteht darin, dass Composables keinen zusätzlichen Overhead durch Komponenteninstanzen verursachen. Wenn sie in einer gesamten Anwendung verwendet werden, kann die Menge der zusätzlichen Komponenteninstanzen, die durch das Renderless-Component-Pattern erzeugt werden, zu einem spürbaren Leistungs-Overhead werden.
 
 The recommendation is to use composables when reusing pure logic, and use components when reusing both logic and visual layout.
 
