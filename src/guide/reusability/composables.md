@@ -351,7 +351,7 @@ Der Hauptvorteil von Composables gegenüber Komponenten ohne Rendering besteht d
 
 Die Empfehlung lautet, Composables zu verwenden, wenn reine Logik wiederverwendet wird, und Komponenten zu verwenden, wenn sowohl Logik als auch visuelles Layout wiederverwendet werden.
 
-### vs. React Hooks {#vs-react-hooks}
+### vs. React-Haken {#vs-react-hooks}
 
 If you have experience with React, you may notice that this looks very similar to custom React hooks. Composition API was in part inspired by React hooks, and Vue composables are indeed similar to React hooks in terms of logic composition capabilities. However, Vue composables are based on Vue's fine-grained reactivity system, which is fundamentally different from React hooks' execution model. This is discussed in more detail in the [Composition API FAQ](/guide/extras/composition-api-faq#comparison-with-react-hooks).
 
