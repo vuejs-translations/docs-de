@@ -349,7 +349,7 @@ Im Kapitel über Komponentenslots haben wir das Muster [Renderless Component](/g
 
 Der Hauptvorteil von Composables gegenüber Komponenten ohne Rendering besteht darin, dass Composables keinen zusätzlichen Overhead durch Komponenteninstanzen verursachen. Wenn sie in einer gesamten Anwendung verwendet werden, kann die Menge der zusätzlichen Komponenteninstanzen, die durch das Renderless-Component-Pattern erzeugt werden, zu einem spürbaren Leistungs-Overhead werden.
 
-The recommendation is to use composables when reusing pure logic, and use components when reusing both logic and visual layout.
+Die Empfehlung lautet, Composables zu verwenden, wenn reine Logik wiederverwendet wird, und Komponenten zu verwenden, wenn sowohl Logik als auch visuelles Layout wiederverwendet werden.
 
 ### vs. React Hooks {#vs-react-hooks}
 
