@@ -1,4 +1,4 @@
-# Composable {#composables}
+# Zusammensetzbar {#composables}
 
 <script setup>
 import { useMouse } from './mouse'
