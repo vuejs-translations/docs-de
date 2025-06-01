@@ -1,4 +1,4 @@
-# Custom Directives {#custom-directives}
+# Benutzerdefinierte Direktiven {#custom-directives}
 
 <script setup>
 const vFocus = {
