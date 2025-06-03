@@ -1,4 +1,4 @@
-# Composable {#composables}
+# Zusammensetzbar {#composables}
 
 <script setup>
 import { useMouse } from './mouse'
@@ -355,9 +355,9 @@ Die Empfehlung lautet, Composables zu verwenden, wenn reine Logik wiederverwende
 
 Wenn Sie Erfahrung mit React haben, werden Sie feststellen, dass dies den benutzerdefinierten React Hooks sehr ähnlich sieht. Die Composition API wurde zum Teil von React Hooks inspiriert, und Vue Composables sind in der Tat ähnlich wie React Hooks, was die logischen Kompositionsfähigkeiten angeht. Allerdings basieren Vue Composables auf dem feinkörnigen Reaktivitätssystem von Vue, das sich grundlegend vom Ausführungsmodell der React Hooks unterscheidet. Dies wird im Detail in der [Composition API FAQ](/guide/extras/composition-api-faq#comparison-with-react-hooks) diskutiert.
 
-## Further Reading {#further-reading}
+## Weitere Lektüre {#further-reading}
 
-- [Reactivity In Depth](/guide/extras/reactivity-in-depth.html): for a low-level understanding of how Vue's reactivity system works.
-- [State Management](/guide/scaling-up/state-management.html): for patterns of managing state shared by multiple components.
-- [Testing Composables](/guide/scaling-up/testing.html#testing-composables): tips on unit testing composables.
-- [VueUse](https://vueuse.org/): an ever-growing collection of Vue composables. The source code is also a great learning resource.
+- [Reactivity In Depth](/guide/extras/reactivity-in-depth.html): für ein grundlegendes Verständnis der Funktionsweise von Vue's Reaktivitätssystem.
+- [State Management](/guide/scaling-up/state-management.html): für Muster der Verwaltung von Zuständen, die von mehreren Komponenten gemeinsam genutzt werden.
+- [Testing Composables](/guide/scaling-up/testing.html#testing-composables): Tipps zum Unit-Test von Composables.
+- [VueUse](https://vueuse.org/): eine ständig wachsende Sammlung von Vue Composables. Der Quellcode ist auch eine großartige Lernressource.
