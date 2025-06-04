@@ -8,7 +8,7 @@ const vFocus = {
 }
 </script>
 
-## Introduction {#introduction}
+## Einführung {#introduction}
 
 In addition to the default set of directives shipped in core (like `v-model` or `v-show`), Vue also allows you to register your own custom directives.
 
