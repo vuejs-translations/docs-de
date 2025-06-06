@@ -12,7 +12,7 @@ const vFocus = {
 
 Zusätzlich zu den Standard-Direktiven, die im Kern ausgeliefert werden (wie `v-model` oder `v-show`), erlaubt es Vue auch, eigene Direktiven zu registrieren.
 
-We have introduced two forms of code reuse in Vue: [components](/guide/essentials/component-basics.html) and [composables](./composables). Components are the main building blocks, while composables are focused on reusing stateful logic. Custom directives, on the other hand, are mainly intended for reusing logic that involves low-level DOM access on plain elements.
+Wir haben zwei Formen der Wiederverwendung von Code in Vue eingeführt: [components](/guide/essentials/component-basics.html) und [composables](./composables). Komponenten sind die Hauptbausteine, während Composables sich auf die Wiederverwendung von zustandsbehafteter Logik konzentrieren. Benutzerdefinierte Direktiven hingegen sind hauptsächlich für die Wiederverwendung von Logik gedacht, die einen Low-Level-DOM-Zugriff auf einfache Elemente beinhaltet.
 
 A custom directive is defined as an object containing lifecycle hooks similar to those of a component. The hooks receive the element the directive is bound to. Here is an example of a directive that focuses an input when the element is inserted into the DOM by Vue:
 
