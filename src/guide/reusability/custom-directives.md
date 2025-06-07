@@ -14,7 +14,7 @@ Zusätzlich zu den Standard-Direktiven, die im Kern ausgeliefert werden (wie `v-
 
 Wir haben zwei Formen der Wiederverwendung von Code in Vue eingeführt: [components](/guide/essentials/component-basics.html) und [composables](./composables). Komponenten sind die Hauptbausteine, während Composables sich auf die Wiederverwendung von zustandsbehafteter Logik konzentrieren. Benutzerdefinierte Direktiven hingegen sind hauptsächlich für die Wiederverwendung von Logik gedacht, die einen Low-Level-DOM-Zugriff auf einfache Elemente beinhaltet.
 
-A custom directive is defined as an object containing lifecycle hooks similar to those of a component. The hooks receive the element the directive is bound to. Here is an example of a directive that focuses an input when the element is inserted into the DOM by Vue:
+Eine benutzerdefinierte Richtlinie ist als Objekt definiert, das Lebenszyklus-Hooks enthält, die denen einer Komponente ähneln. Die Hooks erhalten das Element, an das die Direktive gebunden ist. Hier ist ein Beispiel für eine Direktive, die eine Eingabe fokussiert, wenn das Element in das DOM von Vue eingefügt wird:
 
 <div class="composition-api">
 
