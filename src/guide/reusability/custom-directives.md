@@ -58,7 +58,7 @@ export default {
   <input v-focus placeholder="This should be focused" />
 </div>
 
-Assuming you haven't clicked elsewhere on the page, the input above should be auto-focused. This directive is more useful than the `autofocus` attribute because it works not just on page load - it also works when the element is dynamically inserted by Vue.
+Angenommen, Sie haben nicht an anderer Stelle auf der Seite geklickt, sollte die obige Eingabe automatisch fokussiert werden. Diese Direktive ist nützlicher als das `autofocus`-Attribut, weil sie nicht nur beim Laden der Seite funktioniert - sie funktioniert auch, wenn das Element dynamisch von Vue eingefügt wird.
 
 <div class="composition-api">
 
