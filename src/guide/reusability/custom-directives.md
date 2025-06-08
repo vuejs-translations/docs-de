@@ -62,7 +62,7 @@ Angenommen, Sie haben nicht an anderer Stelle auf der Seite geklickt, sollte die
 
 <div class="composition-api">
 
-In `<script setup>`, any camelCase variable that starts with the `v` prefix can be used as a custom directive. In the example above, `vFocus` can be used in the template as `v-focus`.
+In `<script setup>` kann jede camelCase-Variable, die mit dem Präfix `v` beginnt, als eigene Direktive verwendet werden. Im obigen Beispiel kann „vFocus“ in der Vorlage als „v-focus“ verwendet werden.
 
 If not using `<script setup>`, custom directives can be registered using the `directives` option:
 
