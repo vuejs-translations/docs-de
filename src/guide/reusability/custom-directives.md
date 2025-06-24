@@ -64,7 +64,7 @@ Angenommen, Sie haben nicht an anderer Stelle auf der Seite geklickt, sollte die
 
 In `<script setup>` kann jede camelCase-Variable, die mit dem Präfix `v` beginnt, als eigene Direktive verwendet werden. Im obigen Beispiel kann „vFocus“ in der Vorlage als „v-focus“ verwendet werden.
 
-If not using `<script setup>`, custom directives can be registered using the `directives` option:
+Wenn `<script setup>` nicht verwendet wird, können benutzerdefinierte Anweisungen mit der Option `directives` registriert werden:
 
 ```js
 export default {
