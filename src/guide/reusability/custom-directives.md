@@ -84,7 +84,7 @@ export default {
 
 <div class="options-api">
 
-Similar to components, custom directives must be registered so that they can be used in templates. In the example above, we are using local registration via the `directives` option.
+Ähnlich wie Komponenten müssen benutzerdefinierte Direktiven registriert werden, damit sie in Vorlagen verwendet werden können. Im obigen Beispiel verwenden wir die lokale Registrierung über die Option `Direktiven`.
 
 </div>
 
