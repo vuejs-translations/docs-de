@@ -88,7 +88,7 @@ export default {
 
 </div>
 
-It is also common to globally register custom directives at the app level:
+Es ist auch üblich, benutzerdefinierte Anweisungen global auf App-Ebene zu registrieren:
 
 ```js
 const app = createApp({})
