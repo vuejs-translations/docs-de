@@ -100,7 +100,7 @@ app.directive('focus', {
 ```
 
 :::tip
-Custom directives should only be used when the desired functionality can only be achieved via direct DOM manipulation. Prefer declarative templating using built-in directives such as `v-bind` when possible because they are more efficient and server-rendering friendly.
+Benutzerdefinierte Direktiven sollten nur verwendet werden, wenn die gewünschte Funktionalität nur durch direkte DOM-Manipulation erreicht werden kann. Bevorzugen Sie nach Möglichkeit deklaratives Template-Design mit integrierten Direktiven wie „v-bind“, da diese effizienter und serverfreundlicher sind.
 :::
 
 ## Directive Hooks {#directive-hooks}
