@@ -103,7 +103,7 @@ app.directive('focus', {
 Benutzerdefinierte Direktiven sollten nur verwendet werden, wenn die gewünschte Funktionalität nur durch direkte DOM-Manipulation erreicht werden kann. Bevorzugen Sie nach Möglichkeit deklaratives Template-Design mit integrierten Direktiven wie „v-bind“, da diese effizienter und serverfreundlicher sind.
 :::
 
-## Directive Hooks {#directive-hooks}
+## Direktive Hooks {#directive-hooks}
 
 A directive definition object can provide several hook functions (all optional):
 
