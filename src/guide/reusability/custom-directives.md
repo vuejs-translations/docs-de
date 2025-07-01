@@ -105,7 +105,7 @@ Benutzerdefinierte Direktiven sollten nur verwendet werden, wenn die gewünschte
 
 ## Direktive Hooks {#directive-hooks}
 
-A directive definition object can provide several hook functions (all optional):
+Ein Direktivendefinitionsobjekt kann mehrere Hook-Funktionen bereitstellen (alle optional):
 
 ```js
 const myDirective = {
