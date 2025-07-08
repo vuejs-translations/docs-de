@@ -131,7 +131,7 @@ const myDirective = {
 }
 ```
 
-### Hook Arguments {#hook-arguments}
+### Hook-Argumente {#hook-arguments}
 
 Directive hooks are passed these arguments:
 
