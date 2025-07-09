@@ -133,7 +133,7 @@ const myDirective = {
 
 ### Hook-Argumente {#hook-arguments}
 
-Directive hooks are passed these arguments:
+An Direktiven-Hooks werden diese Argumente übergeben:
 
 - `el`: the element the directive is bound to. This can be used to directly manipulate the DOM.
 
