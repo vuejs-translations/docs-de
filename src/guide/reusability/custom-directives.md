@@ -135,7 +135,7 @@ const myDirective = {
 
 An Direktiven-Hooks werden diese Argumente übergeben:
 
-- `el`: the element the directive is bound to. This can be used to directly manipulate the DOM.
+- `el`: das Element, an das die Direktive gebunden ist. Dies kann verwendet werden, um das DOM direkt zu manipulieren.
 
 - `binding`: an object containing the following properties.
 
