@@ -137,7 +137,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
 
 - `el`: das Element, an das die Direktive gebunden ist. Dies kann verwendet werden, um das DOM direkt zu manipulieren.
 
-- `binding`: an object containing the following properties.
+- `binding`: ein Objekt mit den folgenden Eigenschaften.
 
   - `value`: The value passed to the directive. For example in `v-my-directive="1 + 1"`, the value would be `2`.
   - `oldValue`: The previous value, only available in `beforeUpdate` and `updated`. It is available whether or not the value has changed.
