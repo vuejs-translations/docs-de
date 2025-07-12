@@ -139,7 +139,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
 
 - `binding`: ein Objekt mit den folgenden Eigenschaften.
 
-  - `value`: The value passed to the directive. For example in `v-my-directive="1 + 1"`, the value would be `2`.
+  - `value`: Der an die Direktive übergebene Wert. Beispielsweise wäre in `v-my-directive="1 + 1"` der Wert `2`.
   - `oldValue`: The previous value, only available in `beforeUpdate` and `updated`. It is available whether or not the value has changed.
   - `arg`: The argument passed to the directive, if any. For example in `v-my-directive:foo`, the arg would be `"foo"`.
   - `modifiers`: An object containing modifiers, if any. For example in `v-my-directive.foo.bar`, the modifiers object would be `{ foo: true, bar: true }`.
