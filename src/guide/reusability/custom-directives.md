@@ -144,7 +144,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
   - `arg`: Das an die Direktive übergebene Argument, sofern vorhanden. Beispielsweise wäre in `v-my-directive:foo` das Argument `"foo"`.
   - `modifiers`: Ein Objekt, das Modifikatoren enthält, falls vorhanden. Beispielsweise wäre in `v-my-directive.foo.bar` das Modifikatorobjekt `{ foo: true, bar: true }`.
   - `instance`: Die Instanz der Komponente, in der die Direktive verwendet wird.
-  - `dir`: the directive definition object.
+  - `dir`: das Direktivendefinitionsobjekt.
 
 - `vnode`: the underlying VNode representing the bound element.
 - `prevNode`: the VNode representing the bound element from the previous render. Only available in the `beforeUpdate` and `updated` hooks.
