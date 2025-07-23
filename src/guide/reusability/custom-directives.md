@@ -143,7 +143,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
   - `oldValue`: Der vorherige Wert, nur in `beforeUpdate` und „updated“ verfügbar. Er ist verfügbar, unabhängig davon, ob sich der Wert geändert hat oder nicht.
   - `arg`: Das an die Direktive übergebene Argument, sofern vorhanden. Beispielsweise wäre in `v-my-directive:foo` das Argument `"foo"`.
   - `modifiers`: Ein Objekt, das Modifikatoren enthält, falls vorhanden. Beispielsweise wäre in `v-my-directive.foo.bar` das Modifikatorobjekt `{ foo: true, bar: true }`.
-  - `instance`: The instance of the component where the directive is used.
+  - `instance`: Die Instanz der Komponente, in der die Direktive verwendet wird.
   - `dir`: the directive definition object.
 
 - `vnode`: the underlying VNode representing the bound element.
