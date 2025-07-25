@@ -146,7 +146,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
   - `instance`: Die Instanz der Komponente, in der die Direktive verwendet wird.
   - `dir`: das Direktivendefinitionsobjekt.
 
-- `vnode`: the underlying VNode representing the bound element.
+- `vnode`: der zugrunde liegende VNode, der das gebundene Element darstellt.
 - `prevNode`: the VNode representing the bound element from the previous render. Only available in the `beforeUpdate` and `updated` hooks.
 
 As an example, consider the following directive usage:
