@@ -149,7 +149,7 @@ An Direktiven-Hooks werden diese Argumente übergeben:
 - `vnode`: der zugrunde liegende VNode, der das gebundene Element darstellt.
 - `prevNode`: Der VNode, der das gebundene Element aus dem vorherigen Render darstellt. Nur in den Hooks `beforeUpdate` und `updated` verfügbar.
 
-As an example, consider the following directive usage:
+Betrachten Sie als Beispiel die folgende Verwendung der Direktive:
 
 ```vue-html
 <div v-example:foo.bar="baz">
