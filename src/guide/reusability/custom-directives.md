@@ -155,7 +155,7 @@ Betrachten Sie als Beispiel die folgende Verwendung der Direktive:
 <div v-example:foo.bar="baz">
 ```
 
-The `binding` argument would be an object in the shape of:
+Das Argument „Bindung“ wäre ein Objekt in der Form:
 
 ```js
 {
