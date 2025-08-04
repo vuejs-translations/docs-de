@@ -172,7 +172,7 @@ Das Argument „Bindung“ wäre ein Objekt in der Form:
 <div v-example:[arg]="value"></div>
 ```
 
-Here the directive argument will be reactively updated based on `arg` property in our component state.
+Hier wird das Direktiveargument basierend auf der Eigenschaft „arg“ in unserem Komponentenstatus reaktiv aktualisiert.
 
 :::tip Note
 Apart from `el`, you should treat these arguments as read-only and never modify them. If you need to share information across hooks, it is recommended to do so through element's [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
