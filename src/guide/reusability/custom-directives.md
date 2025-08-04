@@ -166,7 +166,7 @@ Das Argument „Bindung“ wäre ein Objekt in der Form:
 }
 ```
 
-Similar to built-in directives, custom directive arguments can be dynamic. For example:
+Ähnlich wie integrierte Direktiven können benutzerdefinierte Direktivenargumente dynamisch sein. Beispiel:
 
 ```vue-html
 <div v-example:[arg]="value"></div>
