@@ -175,7 +175,7 @@ Das Argument „Bindung“ wäre ein Objekt in der Form:
 Hier wird das Direktiveargument basierend auf der Eigenschaft „arg“ in unserem Komponentenstatus reaktiv aktualisiert.
 
 :::tip Note
-Apart from `el`, you should treat these arguments as read-only and never modify them. If you need to share information across hooks, it is recommended to do so through element's [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
+Mit Ausnahme von `el` sollten Sie diese Argumente als schreibgeschützt behandeln und niemals ändern. Wenn Sie Informationen über Hooks hinweg austauschen müssen, wird empfohlen, dies über den [Datensatz](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) des Elements zu tun.
 :::
 
 ## Function Shorthand {#function-shorthand}
