@@ -178,7 +178,7 @@ Hier wird das Direktiveargument basierend auf der Eigenschaft „arg“ in unser
 Mit Ausnahme von `el` sollten Sie diese Argumente als schreibgeschützt behandeln und niemals ändern. Wenn Sie Informationen über Hooks hinweg austauschen müssen, wird empfohlen, dies über den [Datensatz](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) des Elements zu tun.
 :::
 
-## Function Shorthand {#function-shorthand}
+## Funktionskürzel {#function-shorthand}
 
 It's common for a custom directive to have the same behavior for `mounted` and `updated`, with no need for the other hooks. In such cases we can define the directive as a function:
 
