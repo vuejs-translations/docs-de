@@ -193,7 +193,7 @@ app.directive('color', (el, binding) => {
 })
 ```
 
-## Object Literals {#object-literals}
+## Objektliterale {#object-literals}
 
 If your directive needs multiple values, you can also pass in a JavaScript object literal. Remember, directives can take any valid JavaScript expression.
 
