@@ -180,7 +180,7 @@ Mit Ausnahme von `el` sollten Sie diese Argumente als schreibgeschützt behandel
 
 ## Funktionskürzel {#function-shorthand}
 
-It's common for a custom directive to have the same behavior for `mounted` and `updated`, with no need for the other hooks. In such cases we can define the directive as a function:
+Es ist üblich, dass eine benutzerdefinierte Direktive für „mounted“ und „updated“ dasselbe Verhalten aufweist, ohne dass die anderen Hooks erforderlich sind. In solchen Fällen können wir die Direktive als Funktion definieren:
 
 ```vue-html
 <div v-color="color"></div>
