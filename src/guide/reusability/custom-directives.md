@@ -195,7 +195,7 @@ app.directive('color', (el, binding) => {
 
 ## Objektliterale {#object-literals}
 
-If your directive needs multiple values, you can also pass in a JavaScript object literal. Remember, directives can take any valid JavaScript expression.
+Wenn Ihre Direktive mehrere Werte benötigt, können Sie auch ein JavaScript-Objektliteral übergeben. Denken Sie daran, dass Direktiven jeden gültigen JavaScript-Ausdruck annehmen können.
 
 ```vue-html
 <div v-demo="{ color: 'white', text: 'hello!' }"></div>
