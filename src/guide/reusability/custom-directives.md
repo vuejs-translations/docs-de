@@ -208,7 +208,7 @@ app.directive('demo', (el, binding) => {
 })
 ```
 
-## Usage on Components {#usage-on-components}
+## Verwendung auf Komponenten {#usage-on-components}
 
 When used on components, custom directives will always apply to a component's root node, similar to [Fallthrough Attributes](/guide/components/attrs.html).
 
