@@ -210,7 +210,7 @@ app.directive('demo', (el, binding) => {
 
 ## Verwendung auf Komponenten {#usage-on-components}
 
-When used on components, custom directives will always apply to a component's root node, similar to [Fallthrough Attributes](/guide/components/attrs.html).
+Bei Verwendung auf Komponenten werden benutzerdefinierte Anweisungen immer auf den Stammknoten einer Komponente angewendet, ähnlich wie [Fallthrough-Attribute](/guide/components/attrs.html).
 
 ```vue-html
 <MyComponent v-demo="test" />
