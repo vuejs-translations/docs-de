@@ -224,4 +224,4 @@ Bei Verwendung auf Komponenten werden benutzerdefinierte Anweisungen immer auf d
 </div>
 ```
 
-Note that components can potentially have more than one root node. When applied to a multi-root component, a directive will be ignored and a warning will be thrown. Unlike attributes, directives can't be passed to a different element with `v-bind="$attrs"`. In general, it is **not** recommended to use custom directives on components.
+Beachten Sie, dass Komponenten möglicherweise mehr als einen Stammknoten haben können. Bei Anwendung auf eine Komponente mit mehreren Stammknoten wird eine Direktive ignoriert und eine Warnung ausgegeben. Im Gegensatz zu Attributen können Direktiven nicht mit `v-bind="$attrs"` an ein anderes Element übergeben werden. Im Allgemeinen wird **nicht** empfohlen, benutzerdefinierte Direktiven für Komponenten zu verwenden.
