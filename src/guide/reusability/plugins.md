@@ -24,7 +24,7 @@ const myPlugin = {
 }
 ```
 
-There is no strictly defined scope for a plugin, but common scenarios where plugins are useful include:
+Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängige Szenarien, in denen Plugins nützlich sind, sind unter anderem:
 
 1. Register one or more global components or custom directives with [`app.component()`](/api/application.html#app-component) and [`app.directive()`](/api/application.html#app-directive).
 
