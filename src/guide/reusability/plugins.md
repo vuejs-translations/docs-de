@@ -14,7 +14,7 @@ app.use(myPlugin, {
 })
 ```
 
-A plugin is defined as either an object that exposes an `install()` method, or simply a function that acts as the install function itself. The install function receives the [app instance](/api/application.html) along with additional options passed to `app.use()`, if any:
+Ein Plugin ist entweder ein Objekt, das eine `install()`-Methode bereitstellt, oder eine Funktion, die selbst als Installationsfunktion fungiert. Die Installationsfunktion empfängt die [App-Instanz](/api/application.html) zusammen mit zusätzlichen Optionen, die gegebenenfalls an `app.use()` übergeben werden:
 
 ```js
 const myPlugin = {
