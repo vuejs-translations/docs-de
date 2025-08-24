@@ -26,7 +26,7 @@ const myPlugin = {
 
 Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängige Szenarien, in denen Plugins nützlich sind, sind unter anderem:
 
-1. Register one or more global components or custom directives with [`app.component()`](/api/application.html#app-component) and [`app.directive()`](/api/application.html#app-directive).
+1. Registrieren Sie eine oder mehrere globale Komponenten oder benutzerdefinierte Anweisungen mit [`app.component()`](/api/application.html#app-component) und [`app.directive()`](/api/application.html#app-directive).
 
 2. Make a resource [injectable](/guide/components/provide-inject.html) throughout the app by calling [`app.provide()`](/api/application.html#app-provide).
 
