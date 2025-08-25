@@ -28,7 +28,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 1. Registrieren Sie eine oder mehrere globale Komponenten oder benutzerdefinierte Anweisungen mit [`app.component()`](/api/application.html#app-component) und [`app.directive()`](/api/application.html#app-directive).
 
-2. Make a resource [injectable](/guide/components/provide-inject.html) throughout the app by calling [`app.provide()`](/api/application.html#app-provide).
+2. Machen Sie eine Ressource [injizierbar](/guide/components/provide-inject.html) in der gesamten App durch Anrufen [`app.provide()`](/api/application.html#app-provide).
 
 3. Add some global instance properties or methods by attaching them to [`app.config.globalProperties`](/api/application.html#app-config-globalproperties).
 
