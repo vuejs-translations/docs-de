@@ -32,7 +32,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 3. Fügen Sie einige globale Instanzeigenschaften oder Methoden hinzu, indem Sie sie anhängen an [`app.config.globalProperties`](/api/application.html#app-config-globalproperties).
 
-4. A library that needs to perform some combination of the above (e.g. [vue-router](https://github.com/vuejs/vue-router-next)).
+4. Eine Bibliothek, die eine Kombination der oben genannten Aufgaben ausführen muss (z. B. [vue-router](https://github.com/vuejs/vue-router-next)).
 
 ## Writing a Plugin {#writing-a-plugin}
 
