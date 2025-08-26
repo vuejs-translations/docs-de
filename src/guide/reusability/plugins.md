@@ -30,7 +30,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 2. Machen Sie eine Ressource [injizierbar](/guide/components/provide-inject.html) in der gesamten App durch Anrufen [`app.provide()`](/api/application.html#app-provide).
 
-3. Add some global instance properties or methods by attaching them to [`app.config.globalProperties`](/api/application.html#app-config-globalproperties).
+3. Fügen Sie einige globale Instanzeigenschaften oder Methoden hinzu, indem Sie sie anhängen an [`app.config.globalProperties`](/api/application.html#app-config-globalproperties).
 
 4. A library that needs to perform some combination of the above (e.g. [vue-router](https://github.com/vuejs/vue-router-next)).
 
