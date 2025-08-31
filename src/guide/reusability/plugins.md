@@ -36,7 +36,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 ## Ein Plugin schreiben {#writing-a-plugin}
 
-Um besser zu verstehen, wie Sie Ihre eigenen Vue.js-Plugins erstellen, erstellen wir eine sehr vereinfachte Version eines Plugins, das „i18n“-Strings (kurz für [Internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)) anzeigt.
+Um besser zu verstehen, wie Sie Ihre eigenen Vue.js-Plugins erstellen, erstellen wir eine sehr vereinfachte Version eines Plugins, das `i18n`-Strings (kurz für [Internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)) anzeigt.
 
 Let's begin by setting up the plugin object. It is recommended to create it in a separate file and export it, as shown below to keep the logic contained and separate.
 
