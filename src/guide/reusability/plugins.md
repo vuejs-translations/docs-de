@@ -34,7 +34,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 4. Eine Bibliothek, die eine Kombination der oben genannten Aufgaben ausführen muss (z. B. [vue-router](https://github.com/vuejs/vue-router-next)).
 
-## Writing a Plugin {#writing-a-plugin}
+## Ein Plugin schreiben {#writing-a-plugin}
 
 In order to better understand how to create your own Vue.js plugins, we will create a very simplified version of a plugin that displays `i18n` (short for [Internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)) strings.
 
