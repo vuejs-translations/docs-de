@@ -38,7 +38,7 @@ Es gibt keinen streng definierten Anwendungsbereich für ein Plugin, aber gängi
 
 Um besser zu verstehen, wie Sie Ihre eigenen Vue.js-Plugins erstellen, erstellen wir eine sehr vereinfachte Version eines Plugins, das `i18n`-Strings (kurz für [Internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization)) anzeigt.
 
-Let's begin by setting up the plugin object. It is recommended to create it in a separate file and export it, as shown below to keep the logic contained and separate.
+Beginnen wir mit der Einrichtung des Plugin-Objekts. Es wird empfohlen, es in einer separaten Datei zu erstellen und wie unten gezeigt zu exportieren, um die Logik in sich geschlossen und getrennt zu halten.
 
 ```js
 // plugins/i18n.js
