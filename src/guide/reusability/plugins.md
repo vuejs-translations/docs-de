@@ -49,7 +49,7 @@ export default {
 }
 ```
 
-We want to create a translation function. This function will receive a dot-delimited `key` string, which we will use to look up the translated string in the user-provided options. This is the intended usage in templates:
+Wir möchten eine Übersetzungsfunktion erstellen. Diese Funktion erhält einen durch Punkte getrennten Schlüsselstring, mit dem wir den übersetzten String in den benutzerdefinierten Optionen suchen. Dies ist die vorgesehene Verwendung in Vorlagen:
 
 ```vue-html
 <h1>{{ $translate('greetings.hello') }}</h1>
