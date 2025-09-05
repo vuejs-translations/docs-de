@@ -55,7 +55,7 @@ Wir möchten eine Übersetzungsfunktion erstellen. Diese Funktion erhält einen 
 <h1>{{ $translate('greetings.hello') }}</h1>
 ```
 
-Since this function should be globally available in all templates, we will make it so by attaching it to `app.config.globalProperties` in our plugin:
+Da diese Funktion global in allen Vorlagen verfügbar sein sollte, machen wir das so, indem wir sie in unserem Plugin an `app.config.globalProperties` anhängen:
 
 ```js{4-11}
 // plugins/i18n.js
