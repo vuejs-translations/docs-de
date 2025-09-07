@@ -73,7 +73,7 @@ export default {
 }
 ```
 
-Unsere Funktion `$translate` nimmt eine Zeichenfolge wie „greetings.hello“, sieht sich die vom Benutzer bereitgestellte Konfiguration an und gibt den übersetzten Wert zurück.
+Unsere Funktion `$translate` nimmt eine Zeichenfolge wie `greetings.hello`, sieht sich die vom Benutzer bereitgestellte Konfiguration an und gibt den übersetzten Wert zurück.
 
 The object containing the translated keys should be passed to the plugin during installation via additional parameters to `app.use()`:
 
