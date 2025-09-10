@@ -87,7 +87,7 @@ app.use(i18nPlugin, {
 })
 ```
 
-Now, our initial expression `$translate('greetings.hello')` will be replaced by `Bonjour!` at runtime.
+Nun wird unser ursprünglicher Ausdruck `$translate(‚greetings.hello‘)` zur Laufzeit durch `Bonjour!` ersetzt.
 
 See also: [Augmenting Global Properties](/guide/typescript/options-api.html#augmenting-global-properties) <sup class="vt-badge ts" />
 
