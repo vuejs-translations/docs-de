@@ -92,7 +92,7 @@ Nun wird unser ursprünglicher Ausdruck `$translate(‚greetings.hello‘)` zur 
 Siehe auch: [Erweiterung globaler Eigenschaften](/guide/typescript/options-api.html#augmenting-global-properties) <sup class="vt-badge ts" />
 
 :::tip
-Use global properties scarcely, since it can quickly become confusing if too many global properties injected by different plugins are used throughout an app.
+Verwenden Sie globale Eigenschaften nur sparsam, da es schnell zu Verwirrung kommen kann, wenn zu viele globale Eigenschaften, die von verschiedenen Plugins eingefügt wurden, in einer App verwendet werden.
 :::
 
 ### Provide / Inject with Plugins {#provide-inject-with-plugins}
