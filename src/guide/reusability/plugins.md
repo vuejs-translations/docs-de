@@ -95,7 +95,7 @@ Siehe auch: [Erweiterung globaler Eigenschaften](/guide/typescript/options-api.h
 Verwenden Sie globale Eigenschaften nur sparsam, da es schnell zu Verwirrung kommen kann, wenn zu viele globale Eigenschaften, die von verschiedenen Plugins eingefügt wurden, in einer App verwendet werden.
 :::
 
-### Provide / Inject with Plugins {#provide-inject-with-plugins}
+### Bereitstellen/Einfügen mit Plugins {#provide-inject-with-plugins}
 
 Plugins also allow us to use `inject` to provide a function or attribute to the plugin's users. For example, we can allow the application to have access to the `options` parameter to be able to use the translations object.
 
