@@ -97,7 +97,7 @@ Verwenden Sie globale Eigenschaften nur sparsam, da es schnell zu Verwirrung kom
 
 ### Bereitstellen/Einfügen mit Plugins {#provide-inject-with-plugins}
 
-Plugins also allow us to use `inject` to provide a function or attribute to the plugin's users. For example, we can allow the application to have access to the `options` parameter to be able to use the translations object.
+Plugins ermöglichen es uns auch, mit `inject` den Benutzern des Plugins eine Funktion oder ein Attribut zur Verfügung zu stellen. So können wir beispielsweise der Anwendung Zugriff auf den Parameter „options“ gewähren, damit sie das Übersetzungsobjekt verwenden kann.
 
 ```js{10}
 // plugins/i18n.js
