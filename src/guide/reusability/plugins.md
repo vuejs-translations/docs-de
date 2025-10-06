@@ -114,7 +114,7 @@ export default {
 }
 ```
 
-Plugin users will now be able to inject the plugin options into their components using the `i18n` key:
+Plugin-Benutzer können nun die Plugin-Optionen mithilfe des Schlüssels `i18n` in ihre Komponenten einfügen:
 
 <div class="composition-api">
 
