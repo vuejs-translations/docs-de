@@ -6,7 +6,7 @@ Routing auf der Serverseite bedeutet, dass der Server eine Antwort basierend auf
 
 In einer [Single-Page-Anwendung](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (SPA) kann das clientseitige JavaScript jedoch die Navigation abfangen, dynamisch neue Daten abrufen und die aktuelle Seite aktualisieren, ohne dass die gesamte Seite neu geladen werden muss. Dies führt in der Regel zu einer flüssigeren Benutzererfahrung, insbesondere bei Anwendungsfällen, die eher tatsächlichen „Anwendungen” ähneln, bei denen vom Benutzer über einen längeren Zeitraum hinweg viele Interaktionen erwartet werden.
 
-In such SPAs, the "routing" is done on the client side, in the browser. A client-side router is responsible for managing the application's rendered view using browser APIs such as [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) or the [`hashchange` event](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event).
+In solchen SPAs erfolgt das „Routing“ auf der Client-Seite, im Browser. Ein clientseitiger Router ist für die Verwaltung der gerenderten Ansicht der Anwendung mithilfe von Browser-APIs wie der [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) oder dem [`hashchange`-Ereignis](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) verantwortlich.
 
 ## Official Router {#official-router}
 
