@@ -4,7 +4,7 @@
 
 Routing auf der Serverseite bedeutet, dass der Server eine Antwort basierend auf dem URL-Pfad sendet, den der Benutzer besucht. Wenn wir in einer herkömmlichen, vom Server gerenderten Webanwendung auf einen Link klicken, erhält der Browser eine HTML-Antwort vom Server und lädt die gesamte Seite mit dem neuen HTML neu.
 
-In a [Single-Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (SPA), however, the client-side JavaScript can intercept the navigation, dynamically fetch new data, and update the current page without full page reloads. This typically results in a more snappy user experience, especially for use cases that are more like actual "applications", where the user is expected to perform many interactions over a long period of time.
+In einer [Single-Page-Anwendung](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (SPA) kann das clientseitige JavaScript jedoch die Navigation abfangen, dynamisch neue Daten abrufen und die aktuelle Seite aktualisieren, ohne dass die gesamte Seite neu geladen werden muss. Dies führt in der Regel zu einer flüssigeren Benutzererfahrung, insbesondere bei Anwendungsfällen, die eher tatsächlichen „Anwendungen” ähneln, bei denen vom Benutzer über einen längeren Zeitraum hinweg viele Interaktionen erwartet werden.
 
 In such SPAs, the "routing" is done on the client side, in the browser. A client-side router is responsible for managing the application's rendered view using browser APIs such as [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) or the [`hashchange` event](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event).
 
