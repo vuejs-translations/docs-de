@@ -8,7 +8,7 @@ In einer [Single-Page-Anwendung](https://developer.mozilla.org/en-US/docs/Glossa
 
 In solchen SPAs erfolgt das „Routing“ auf der Client-Seite, im Browser. Ein clientseitiger Router ist für die Verwaltung der gerenderten Ansicht der Anwendung mithilfe von Browser-APIs wie der [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) oder dem [`hashchange`-Ereignis](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) verantwortlich.
 
-## Official Router {#official-router}
+## Offizieller Router {#official-router}
 
 <!-- TODO update links -->
 <div>
