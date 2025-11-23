@@ -19,7 +19,7 @@ In solchen SPAs erfolgt das „Routing“ auf der Client-Seite, im Browser. Ein 
 
 Vue eignet sich gut für die Erstellung von SPAs. Für die meisten SPAs wird empfohlen, die offiziell unterstützte [Vue Router-Bibliothek](https://github.com/vuejs/router) zu verwenden. Weitere Informationen finden Sie in der [Dokumentation](https://router.vuejs.org/) zu Vue Router.
 
-## Simple Routing from Scratch {#simple-routing-from-scratch}
+## Einfaches Routing von Grund auf {#simple-routing-from-scratch}
 
 If you only need very simple routing and do not wish to involve a full-featured router library, you can do so with [Dynamic Components](/guide/essentials/component-basics#dynamic-components) and update the current component state by listening to browser [`hashchange` events](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) or using the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History).
 
