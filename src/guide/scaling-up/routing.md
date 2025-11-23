@@ -17,7 +17,7 @@ In solchen SPAs erfolgt das „Routing“ auf der Client-Seite, im Browser. Ein 
   </VueSchoolLink>
 </div>
 
-Vue is well-suited for building SPAs. For most SPAs, it's recommended to use the officially-supported [Vue Router library](https://github.com/vuejs/router). For more details, see Vue Router's [documentation](https://router.vuejs.org/).
+Vue eignet sich gut für die Erstellung von SPAs. Für die meisten SPAs wird empfohlen, die offiziell unterstützte [Vue Router-Bibliothek](https://github.com/vuejs/router) zu verwenden. Weitere Informationen finden Sie in der [Dokumentation](https://router.vuejs.org/) zu Vue Router.
 
 ## Simple Routing from Scratch {#simple-routing-from-scratch}
 
