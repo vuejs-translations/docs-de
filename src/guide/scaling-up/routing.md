@@ -23,7 +23,7 @@ Vue eignet sich gut für die Erstellung von SPAs. Für die meisten SPAs wird emp
 
 Wenn Sie nur sehr einfache Routing-Funktionen benötigen und keine voll ausgestattete Router-Bibliothek verwenden möchten, können Sie dies mit [Dynamic Components](/guide/essentials/component-basics# dynamic-components) und den aktuellen Komponentenstatus aktualisieren, indem Sie auf [`hashchange`-Ereignisse](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) im Browser achten oder die [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) verwenden.
 
-Here's a bare-bone example:
+Hier ist ein einfaches Beispiel:
 
 <div class="composition-api">
 
