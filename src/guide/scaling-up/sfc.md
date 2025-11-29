@@ -1,4 +1,4 @@
-# Single-File Components {#single-file-components}
+# Einzelne Dateikomponenten {#single-file-components}
 
 ## Introduction {#introduction}
 
