@@ -55,7 +55,7 @@ const greeting = ref('Hello World!')
 
 Wie wir sehen können, ist Vue SFC eine natürliche Erweiterung des klassischen Trios aus HTML, CSS und JavaScript. Die Blöcke `<template>`, `<script>` und `<style>` kapseln die Ansicht, Logik und das Styling einer Komponente und vereinen sie in derselben Datei. Die vollständige Syntax ist in der [SFC-Syntaxspezifikation](/api/sfc-spec) definiert.
 
-## Why SFC {#why-sfc}
+## Warum SFC {#why-sfc}
 
 While SFCs require a build step, there are numerous benefits in return:
 
