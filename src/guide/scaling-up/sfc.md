@@ -57,7 +57,7 @@ Wie wir sehen können, ist Vue SFC eine natürliche Erweiterung des klassischen 
 
 ## Warum SFC {#why-sfc}
 
-While SFCs require a build step, there are numerous benefits in return:
+SFCs erfordern zwar einen Build-Schritt, bieten dafür aber zahlreiche Vorteile:
 
 - Author modularized components using familiar HTML, CSS and JavaScript syntax
 - [Colocation of inherently coupled concerns](#what-about-separation-of-concerns)
