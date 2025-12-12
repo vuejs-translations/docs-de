@@ -60,7 +60,7 @@ Wie wir sehen können, ist Vue SFC eine natürliche Erweiterung des klassischen 
 SFCs erfordern zwar einen Build-Schritt, bieten dafür aber zahlreiche Vorteile:
 
 - Autor modulare Komponenten unter Verwendung vertrauter HTML-, CSS- und JavaScript-Syntax
-- [Colocation of inherently coupled concerns](#what-about-separation-of-concerns)
+- [Kollokation von inhärent gekoppelten Anliegen](#what-about-separation-of-concerns)
 - Pre-compiled templates without runtime compilation cost
 - [Component-scoped CSS](/api/sfc-css-features)
 - [More ergonomic syntax when working with Composition API](/api/sfc-script-setup)
