@@ -63,7 +63,7 @@ SFCs erfordern zwar einen Build-Schritt, bieten dafür aber zahlreiche Vorteile:
 - [Kollokation von inhärent gekoppelten Anliegen](#what-about-separation-of-concerns)
 - Vorkompilierte Vorlagen ohne Laufzeitkompilierungskosten
 - [Komponentenbezogenes CSS](/api/sfc-css-features)
-- [More ergonomic syntax when working with Composition API](/api/sfc-script-setup)
+- [Ergonomischere Syntax bei der Arbeit mit der Composition API](/api/sfc-script-setup)
 - More compile-time optimizations by cross-analyzing template and script
 - [IDE support](/guide/scaling-up/tooling#ide-support) with auto-completion and type-checking for template expressions
 - Out-of-the-box Hot-Module Replacement (HMR) support
