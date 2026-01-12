@@ -66,7 +66,7 @@ SFCs erfordern zwar einen Build-Schritt, bieten dafür aber zahlreiche Vorteile:
 - [Ergonomischere Syntax bei der Arbeit mit der Composition API](/api/sfc-script-setup)
 - Weitere Optimierungen zur Kompilierungszeit durch die gegenseitige Analyse von Vorlagen und Skripten
 - [IDE-Unterstützung](/guide/scaling-up/tooling#ide-support) mit Autovervollständigung und Typprüfung für Template-Ausdrücke
-- Out-of-the-box Hot-Module Replacement (HMR) support
+- Sofort einsatzbereite Unterstützung für Hot-Module Replacement (HMR)
 
 SFC is a defining feature of Vue as a framework, and is the recommended approach for using Vue in the following scenarios:
 
