@@ -70,7 +70,7 @@ SFCs erfordern zwar einen Build-Schritt, bieten dafür aber zahlreiche Vorteile:
 
 SFC ist ein charakteristisches Merkmal von Vue als Framework und wird für die Verwendung von Vue in den folgenden Szenarien empfohlen:
 
-- Single-Page Applications (SPA)
+- Single-Page-Anwendungen (SPA)
 - Static Site Generation (SSG)
 - Any non-trivial frontend where a build step can be justified for better development experience (DX).
 
