@@ -76,7 +76,7 @@ SFC ist ein charakteristisches Merkmal von Vue als Framework und wird für die V
 
 Allerdings sind wir uns bewusst, dass es Szenarien gibt, in denen SFCs übertrieben wirken können. Aus diesem Grund kann Vue weiterhin ohne Build-Schritt über einfaches JavaScript verwendet werden. Wenn Sie lediglich weitgehend statisches HTML mit leichten Interaktionen verbessern möchten, können Sie sich auch [petite-vue](https://github.com/vuejs/petite-vue) ansehen, eine 6 kB große Teilmenge von Vue, die für progressive Verbesserungen optimiert ist.
 
-## How It Works {#how-it-works}
+## So funktioniert es {#how-it-works}
 
 Vue SFC is a framework-specific file format and must be pre-compiled by [@vue/compiler-sfc](https://github.com/vuejs/core/tree/main/packages/compiler-sfc) into standard JavaScript and CSS. A compiled SFC is a standard JavaScript (ES) module - which means with proper build setup you can import an SFC like a module:
 
