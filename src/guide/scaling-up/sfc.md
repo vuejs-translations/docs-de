@@ -78,7 +78,7 @@ Allerdings sind wir uns bewusst, dass es Szenarien gibt, in denen SFCs übertrie
 
 ## So funktioniert es {#how-it-works}
 
-Vue SFC is a framework-specific file format and must be pre-compiled by [@vue/compiler-sfc](https://github.com/vuejs/core/tree/main/packages/compiler-sfc) into standard JavaScript and CSS. A compiled SFC is a standard JavaScript (ES) module - which means with proper build setup you can import an SFC like a module:
+Vue SFC ist ein frameworkspezifisches Dateiformat und muss von [@vue/compiler-sfc](https://github.com/vuejs/core/tree/main/packages/compiler-sfc) in Standard-JavaScript und CSS vorkompiliert werden. Ein kompiliertes SFC ist ein Standard-JavaScript-Modul (ES) – das bedeutet, dass Sie mit einer geeigneten Build-Konfiguration ein SFC wie ein Modul importieren können:
 
 ```js
 import MyComponent from './MyComponent.vue'
