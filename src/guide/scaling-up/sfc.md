@@ -90,7 +90,7 @@ export default {
 }
 ```
 
-`<style>` tags inside SFCs are typically injected as native `<style>` tags during development to support hot updates. For production they can be extracted and merged into a single CSS file.
+`<style>`-Tags innerhalb von SFCs werden während der Entwicklung in der Regel als native `<style>`-Tags eingefügt, um Hot Updates zu unterstützen. Für die Produktion können sie extrahiert und in einer einzigen CSS-Datei zusammengeführt werden.
 
 You can play with SFCs and explore how they are compiled in the [Vue SFC Playground](https://play.vuejs.org/).
 
