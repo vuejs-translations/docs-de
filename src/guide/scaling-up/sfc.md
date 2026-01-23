@@ -92,7 +92,7 @@ export default {
 
 `<style>`-Tags innerhalb von SFCs werden während der Entwicklung in der Regel als native `<style>`-Tags eingefügt, um Hot Updates zu unterstützen. Für die Produktion können sie extrahiert und in einer einzigen CSS-Datei zusammengeführt werden.
 
-You can play with SFCs and explore how they are compiled in the [Vue SFC Playground](https://play.vuejs.org/).
+Sie können mit SFCs experimentieren und herausfinden, wie sie im [Vue SFC Playground](https://play.vuejs.org/) kompiliert werden.
 
 In actual projects, we typically integrate the SFC compiler with a build tool such as [Vite](https://vitejs.dev/) or [Vue CLI](http://cli.vuejs.org/) (which is based on [webpack](https://webpack.js.org/)), and Vue provides official scaffolding tools to get you started with SFCs as fast as possible. Check out more details in the [SFC Tooling](/guide/scaling-up/tooling) section.
 
