@@ -94,7 +94,7 @@ export default {
 
 Sie können mit SFCs experimentieren und herausfinden, wie sie im [Vue SFC Playground](https://play.vuejs.org/) kompiliert werden.
 
-In actual projects, we typically integrate the SFC compiler with a build tool such as [Vite](https://vitejs.dev/) or [Vue CLI](http://cli.vuejs.org/) (which is based on [webpack](https://webpack.js.org/)), and Vue provides official scaffolding tools to get you started with SFCs as fast as possible. Check out more details in the [SFC Tooling](/guide/scaling-up/tooling) section.
+In realen Projekten integrieren wir den SFC-Compiler üblicherweise in ein Build-Tool wie [Vite](https://vitejs.dev/) oder [Vue CLI](http://cli.vuejs.org/) (das auf [webpack](https://webpack.js.org/) basiert). Vue bietet offizielle Scaffolding-Tools, um Ihnen den Einstieg in SFCs zu erleichtern. Weitere Details finden Sie im Abschnitt [SFC-Tools](/guide/scaling-up/tooling).
 
 ## What About Separation of Concerns? {#what-about-separation-of-concerns}
 
