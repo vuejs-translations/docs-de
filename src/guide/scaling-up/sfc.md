@@ -96,7 +96,7 @@ Sie können mit SFCs experimentieren und herausfinden, wie sie im [Vue SFC Playg
 
 In realen Projekten integrieren wir den SFC-Compiler üblicherweise in ein Build-Tool wie [Vite](https://vitejs.dev/) oder [Vue CLI](http://cli.vuejs.org/) (das auf [webpack](https://webpack.js.org/) basiert). Vue bietet offizielle Scaffolding-Tools, um Ihnen den Einstieg in SFCs zu erleichtern. Weitere Details finden Sie im Abschnitt [SFC-Tools](/guide/scaling-up/tooling).
 
-## What About Separation of Concerns? {#what-about-separation-of-concerns}
+## Wie steht es mit der Trennung der Belange? {#what-about-separation-of-concerns}
 
 Some users coming from a traditional web development background may have the concern that SFCs are mixing different concerns in the same place - which HTML/CSS/JS were supposed to separate!
 
