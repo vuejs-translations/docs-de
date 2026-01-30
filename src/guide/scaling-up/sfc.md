@@ -98,7 +98,7 @@ In realen Projekten integrieren wir den SFC-Compiler üblicherweise in ein Build
 
 ## Wie steht es mit der Trennung der Belange? {#what-about-separation-of-concerns}
 
-Some users coming from a traditional web development background may have the concern that SFCs are mixing different concerns in the same place - which HTML/CSS/JS were supposed to separate!
+Manche Nutzer mit einem traditionellen Webentwicklungshintergrund könnten die Befürchtung haben, dass SFCs verschiedene Belange an einem Ort vermischen – etwas, das HTML/CSS/JS eigentlich trennen sollten!
 
 To answer this question, it is important for us to agree that **separation of concerns is not equal to the separation of file types**. The ultimate goal of engineering principles is to improve the maintainability of codebases. Separation of concerns, when applied dogmatically as separation of file types, does not help us reach that goal in the context of increasingly complex frontend applications.
 
