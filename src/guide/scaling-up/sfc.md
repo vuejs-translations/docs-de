@@ -102,6 +102,6 @@ Manche Nutzer mit einem traditionellen Webentwicklungshintergrund könnten die B
 
 Um diese Frage zu beantworten, ist es wichtig, dass wir uns darüber einig sind, dass **Trennung von Belangen nicht gleichzusetzen ist mit der Trennung von Dateitypen**. Das oberste Ziel von Entwicklungsprinzipien ist die Verbesserung der Wartbarkeit von Codebasen. Eine dogmatische Anwendung der Trennung von Belangen als Trennung von Dateitypen trägt im Kontext zunehmend komplexer Frontend-Anwendungen nicht dazu bei, dieses Ziel zu erreichen.
 
-In modern UI development, we have found that instead of dividing the codebase into three huge layers that interweave with one another, it makes much more sense to divide them into loosely-coupled components and compose them. Inside a component, its template, logic, and styles are inherently coupled, and colocating them actually makes the component more cohesive and maintainable.
+In der modernen UI-Entwicklung hat sich gezeigt, dass es sinnvoller ist, den Code in lose gekoppelte Komponenten zu unterteilen und diese zusammenzusetzen, anstatt ihn in drei große, miteinander verwobene Schichten zu unterteilen. Innerhalb einer Komponente sind Template, Logik und Stile naturgemäß miteinander verbunden, und ihre räumliche Nähe macht die Komponente kohärenter und wartungsfreundlicher.
 
 Note even if you don't like the idea of Single-File Components, you can still leverage its hot-reloading and pre-compilation features by separating your JavaScript and CSS into separate files using [Src Imports](/api/sfc-spec#src-imports).
