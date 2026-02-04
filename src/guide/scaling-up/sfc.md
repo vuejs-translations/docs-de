@@ -104,4 +104,4 @@ Um diese Frage zu beantworten, ist es wichtig, dass wir uns darüber einig sind,
 
 In der modernen UI-Entwicklung hat sich gezeigt, dass es sinnvoller ist, den Code in lose gekoppelte Komponenten zu unterteilen und diese zusammenzusetzen, anstatt ihn in drei große, miteinander verwobene Schichten zu unterteilen. Innerhalb einer Komponente sind Template, Logik und Stile naturgemäß miteinander verbunden, und ihre räumliche Nähe macht die Komponente kohärenter und wartungsfreundlicher.
 
-Note even if you don't like the idea of Single-File Components, you can still leverage its hot-reloading and pre-compilation features by separating your JavaScript and CSS into separate files using [Src Imports](/api/sfc-spec#src-imports).
+Beachten Sie, dass Sie auch dann, wenn Ihnen das Konzept der Single-File Components nicht gefällt, deren Hot-Reloading- und Vorkompilierungsfunktionen nutzen können, indem Sie Ihr JavaScript und CSS mithilfe von [Src Imports](/api/sfc-spec#src-imports) in separate Dateien aufteilen.
