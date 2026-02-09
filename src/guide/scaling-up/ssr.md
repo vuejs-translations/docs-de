@@ -4,7 +4,7 @@ outline: deep
 
 # Serverseitiges Rendering (SSR) {#server-side-rendering-ssr}
 
-## Overview {#overview}
+## Überblick {#overview}
 
 ### What is SSR? {#what-is-ssr}
 
