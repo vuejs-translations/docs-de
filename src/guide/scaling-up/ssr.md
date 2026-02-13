@@ -8,7 +8,7 @@ outline: deep
 
 ### Was ist SSR? {#what-is-ssr}
 
-Vue.js is a framework for building client-side applications. By default, Vue components produce and manipulate DOM in the browser as output. However, it is also possible to render the same components into HTML strings on the server, send them directly to the browser, and finally "hydrate" the static markup into a fully interactive app on the client.
+Vue.js ist ein Framework zur Entwicklung clientseitiger Anwendungen. Standardmäßig erzeugen und manipulieren Vue-Komponenten das DOM im Browser. Es ist jedoch auch möglich, dieselben Komponenten serverseitig in HTML-Strings zu rendern, diese direkt an den Browser zu senden und das statische Markup schließlich clientseitig in eine interaktive Anwendung umzuwandeln.
 
 A server-rendered Vue.js app can also be considered "isomorphic" or "universal", in the sense that the majority of your app's code runs on both the server **and** the client.
 
