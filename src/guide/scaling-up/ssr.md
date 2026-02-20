@@ -10,7 +10,7 @@ outline: deep
 
 Vue.js ist ein Framework zur Entwicklung clientseitiger Anwendungen. Standardmäßig erzeugen und manipulieren Vue-Komponenten das DOM im Browser. Es ist jedoch auch möglich, dieselben Komponenten serverseitig in HTML-Strings zu rendern, diese direkt an den Browser zu senden und das statische Markup schließlich clientseitig in eine interaktive Anwendung umzuwandeln.
 
-A server-rendered Vue.js app can also be considered "isomorphic" or "universal", in the sense that the majority of your app's code runs on both the server **and** the client.
+Eine serverseitig gerenderte Vue.js-App kann auch als „isomorph“ oder „universell“ betrachtet werden, da der Großteil des App-Codes sowohl auf dem Server **als auch** auf dem Client ausgeführt wird.
 
 ### Why SSR? {#why-ssr}
 
