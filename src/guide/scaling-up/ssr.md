@@ -12,7 +12,7 @@ Vue.js ist ein Framework zur Entwicklung clientseitiger Anwendungen. Standardmä
 
 Eine serverseitig gerenderte Vue.js-App kann auch als „isomorph“ oder „universell“ betrachtet werden, da der Großteil des App-Codes sowohl auf dem Server **als auch** auf dem Client ausgeführt wird.
 
-### Why SSR? {#why-ssr}
+### Warum SSR? {#why-ssr}
 
 Compared to a client-side Single-Page Application (SPA), the advantage of SSR primarily lies in:
 
