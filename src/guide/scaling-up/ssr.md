@@ -14,7 +14,7 @@ Eine serverseitig gerenderte Vue.js-App kann auch als „isomorph“ oder „uni
 
 ### Warum SSR? {#why-ssr}
 
-Compared to a client-side Single-Page Application (SPA), the advantage of SSR primarily lies in:
+Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorteil von SSR vor allem in Folgendem:
 
 - **Faster time-to-content**: this is more prominent on slow internet or slow devices. Server-rendered markup doesn't need to wait until all JavaScript has been downloaded and executed to be displayed, so your user will see a fully-rendered page sooner. In addition, data fetching is done on the server-side for the initial visit, which likely has a faster connection to your database than the client. This generally results in improved [Core Web Vitals](https://web.dev/vitals/) metrics, better user experience, and can be critical for applications where time-to-content is directly associated with conversion rate.
 
