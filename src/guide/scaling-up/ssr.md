@@ -18,7 +18,7 @@ Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorte
 
 - **Schnellere Ladezeit:** Dies macht sich besonders bei langsamen Internetverbindungen oder Geräten mit geringer Leistung bemerkbar. Serverseitig gerendertes Markup muss nicht warten, bis der gesamte JavaScript-Code heruntergeladen und ausgeführt wurde, sodass Ihre Nutzer die vollständig gerenderte Seite schneller sehen. Zudem erfolgt das Abrufen der Daten beim ersten Besuch serverseitig, wodurch in der Regel eine schnellere Verbindung zu Ihrer Datenbank besteht als beim Client. Dies führt im Allgemeinen zu verbesserten [Core Web Vitals](https://web.dev/vitals/)-Werten, einer besseren Nutzererfahrung und kann für Anwendungen, bei denen die Ladezeit direkt mit der Konversionsrate zusammenhängt, entscheidend sein.
 
-- **Unified mental model**: you get to use the same language and the same declarative, component-oriented mental model for developing your entire app, instead of jumping back and forth between a backend templating system and a frontend framework.
+- **Einheitliches Denkmodell**: Sie können für die Entwicklung Ihrer gesamten App dieselbe Sprache und dasselbe deklarative, komponentenorientierte Denkmodell verwenden, anstatt zwischen einem Backend-Templating-System und einem Frontend-Framework hin und her zu wechseln.
 
 - **Better SEO**: the search engine crawlers will directly see the fully rendered page.
 
