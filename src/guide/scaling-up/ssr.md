@@ -20,7 +20,7 @@ Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorte
 
 - **Einheitliches Denkmodell**: Sie können für die Entwicklung Ihrer gesamten App dieselbe Sprache und dasselbe deklarative, komponentenorientierte Denkmodell verwenden, anstatt zwischen einem Backend-Templating-System und einem Frontend-Framework hin und her zu wechseln.
 
-- **Better SEO**: the search engine crawlers will directly see the fully rendered page.
+- **Bessere Suchmaschinenoptimierung**: Die Suchmaschinen-Crawler sehen direkt die vollständig gerenderte Seite.
 
   :::tip
   As of now, Google and Bing can index synchronous JavaScript applications just fine. Synchronous being the key word there. If your app starts with a loading spinner, then fetches content via Ajax, the crawler will not wait for you to finish. This means if you have content fetched asynchronously on pages where SEO is important, SSR might be necessary.
