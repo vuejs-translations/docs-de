@@ -23,7 +23,7 @@ Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorte
 - **Bessere Suchmaschinenoptimierung**: Die Suchmaschinen-Crawler sehen direkt die vollständig gerenderte Seite.
 
   :::tip
-  As of now, Google and Bing can index synchronous JavaScript applications just fine. Synchronous being the key word there. If your app starts with a loading spinner, then fetches content via Ajax, the crawler will not wait for you to finish. This means if you have content fetched asynchronously on pages where SEO is important, SSR might be necessary.
+  Aktuell können Google und Bing synchrone JavaScript-Anwendungen problemlos indexieren. Synchronität ist hierbei der entscheidende Punkt. Wenn Ihre Anwendung mit einem Ladeindikator beginnt und anschließend Inhalte per Ajax abruft, wartet der Crawler nicht auf den Abschluss des Vorgangs. Das bedeutet: Wenn Sie auf SEO-relevanten Seiten Inhalte asynchron laden, kann serverseitiges Rendering (SSR) erforderlich sein.
   :::
 
 There are also some trade-offs to consider when using SSR:
