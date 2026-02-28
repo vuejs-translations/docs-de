@@ -26,7 +26,7 @@ Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorte
   Aktuell können Google und Bing synchrone JavaScript-Anwendungen problemlos indexieren. Synchronität ist hierbei der entscheidende Punkt. Wenn Ihre Anwendung mit einem Ladeindikator beginnt und anschließend Inhalte per Ajax abruft, wartet der Crawler nicht auf den Abschluss des Vorgangs. Das bedeutet: Wenn Sie auf SEO-relevanten Seiten Inhalte asynchron laden, kann serverseitiges Rendering (SSR) erforderlich sein.
   :::
 
-There are also some trade-offs to consider when using SSR:
+Bei der Verwendung von SSR müssen auch einige Kompromisse berücksichtigt werden:
 
 - Development constraints. Browser-specific code can only be used inside certain lifecycle hooks; some external libraries may need special treatment to be able to run in a server-rendered app.
 
