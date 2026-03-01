@@ -28,7 +28,7 @@ Im Vergleich zu einer clientseitigen Single-Page-Anwendung (SPA) liegt der Vorte
 
 Bei der Verwendung von SSR müssen auch einige Kompromisse berücksichtigt werden:
 
-- Development constraints. Browser-specific code can only be used inside certain lifecycle hooks; some external libraries may need special treatment to be able to run in a server-rendered app.
+- Entwicklungsbeschränkungen. Browserspezifischer Code kann nur innerhalb bestimmter Lebenszyklus-Hooks verwendet werden; einige externe Bibliotheken benötigen möglicherweise eine spezielle Behandlung, um in einer serverseitig gerenderten Anwendung ausgeführt werden zu können.
 
 - More involved build setup and deployment requirements. Unlike a fully static SPA that can be deployed on any static file server, a server-rendered app requires an environment where a Node.js server can run.
 
