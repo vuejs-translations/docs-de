@@ -30,7 +30,7 @@ Bei der Verwendung von SSR müssen auch einige Kompromisse berücksichtigt werde
 
 - Entwicklungsbeschränkungen. Browserspezifischer Code kann nur innerhalb bestimmter Lebenszyklus-Hooks verwendet werden; einige externe Bibliotheken benötigen möglicherweise eine spezielle Behandlung, um in einer serverseitig gerenderten Anwendung ausgeführt werden zu können.
 
-- More involved build setup and deployment requirements. Unlike a fully static SPA that can be deployed on any static file server, a server-rendered app requires an environment where a Node.js server can run.
+- Aufwändigere Einrichtung und Bereitstellungsanforderungen. Im Gegensatz zu einer vollständig statischen Single-Page-Anwendung (SPA), die auf jedem beliebigen statischen Dateiserver bereitgestellt werden kann, benötigt eine serverseitig gerenderte Anwendung eine Umgebung, in der ein Node.js-Server ausgeführt werden kann.
 
 - More server-side load. Rendering a full app in Node.js is going to be more CPU-intensive than just serving static files, so if you expect high traffic, be prepared for corresponding server load and wisely employ caching strategies.
 
