@@ -32,7 +32,7 @@ Bei der Verwendung von SSR müssen auch einige Kompromisse berücksichtigt werde
 
 - Aufwändigere Einrichtung und Bereitstellungsanforderungen. Im Gegensatz zu einer vollständig statischen Single-Page-Anwendung (SPA), die auf jedem beliebigen statischen Dateiserver bereitgestellt werden kann, benötigt eine serverseitig gerenderte Anwendung eine Umgebung, in der ein Node.js-Server ausgeführt werden kann.
 
-- More server-side load. Rendering a full app in Node.js is going to be more CPU-intensive than just serving static files, so if you expect high traffic, be prepared for corresponding server load and wisely employ caching strategies.
+- Höhere serverseitige Last. Das Rendern einer vollständigen Anwendung in Node.js ist CPU-intensiver als das Ausliefern statischer Dateien. Wenn Sie also mit hohem Traffic rechnen, sollten Sie sich auf eine entsprechende Serverlast einstellen und Caching-Strategien sinnvoll einsetzen.
 
 Before using SSR for your app, the first question you should ask is whether you actually need it. It mostly depends on how important time-to-content is for your app. For example, if you are building an internal dashboard where an extra few hundred milliseconds on initial load doesn't matter that much, SSR would be an overkill. However, in cases where time-to-content is absolutely critical, SSR can help you achieve the best possible initial load performance.
 
