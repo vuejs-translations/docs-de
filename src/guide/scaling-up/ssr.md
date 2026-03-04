@@ -34,7 +34,7 @@ Bei der Verwendung von SSR müssen auch einige Kompromisse berücksichtigt werde
 
 - Höhere serverseitige Last. Das Rendern einer vollständigen Anwendung in Node.js ist CPU-intensiver als das Ausliefern statischer Dateien. Wenn Sie also mit hohem Traffic rechnen, sollten Sie sich auf eine entsprechende Serverlast einstellen und Caching-Strategien sinnvoll einsetzen.
 
-Before using SSR for your app, the first question you should ask is whether you actually need it. It mostly depends on how important time-to-content is for your app. For example, if you are building an internal dashboard where an extra few hundred milliseconds on initial load doesn't matter that much, SSR would be an overkill. However, in cases where time-to-content is absolutely critical, SSR can help you achieve the best possible initial load performance.
+Bevor Sie serverseitiges Rendering (SSR) für Ihre App einsetzen, sollten Sie sich zunächst fragen, ob Sie es überhaupt benötigen. Das hängt hauptsächlich davon ab, wie wichtig die Ladezeit für Ihre App ist. Wenn Sie beispielsweise ein internes Dashboard entwickeln, bei dem ein paar hundert Millisekunden beim ersten Laden keine große Rolle spielen, wäre SSR übertrieben. Ist die Ladezeit jedoch absolut entscheidend, kann SSR Ihnen helfen, die bestmögliche Performance beim ersten Laden zu erzielen.
 
 ### SSR vs. SSG {#ssr-vs-ssg}
 
