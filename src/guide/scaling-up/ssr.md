@@ -44,7 +44,7 @@ SSG bietet dieselben Leistungsmerkmale wie SSR-Anwendungen: Es sorgt für eine h
 
 Wenn Sie sich nur mit SSR beschäftigen, um die SEO einer Handvoll Marketing-Seiten (z. B. `/`, `/about`, `/contact` usw.) zu verbessern, dann ist SSG wahrscheinlich die bessere Wahl als SSR. SSG eignet sich auch hervorragend für inhaltsorientierte Websites wie Dokumentationsseiten oder Blogs. Tatsächlich wird diese Website, die Sie gerade lesen, statisch mit [VitePress](https://vitepress.dev/) generiert, einem Vue-basierten Static-Site-Generator.
 
-## Basic Tutorial {#basic-tutorial}
+## Einführungsanleitung {#basic-tutorial}
 
 ### Rendering an App {#rendering-an-app}
 
