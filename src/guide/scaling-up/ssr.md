@@ -42,7 +42,7 @@ Bevor Sie serverseitiges Rendering (SSR) für Ihre App einsetzen, sollten Sie si
 
 SSG bietet dieselben Leistungsmerkmale wie SSR-Anwendungen: Es sorgt für eine hervorragende Geschwindigkeit bei der Bereitstellung von Inhalten. Gleichzeitig ist es kostengünstiger und einfacher zu implementieren als SSR-Anwendungen, da die Ausgabe aus statischem HTML und Assets besteht. Das Schlüsselwort hierbei ist **statisch**: SSG kann nur auf Seiten angewendet werden, die statische Daten bereitstellen, d. h. Daten, die zum Zeitpunkt der Erstellung bekannt sind und sich zwischen den Anfragen nicht ändern können. Jedes Mal, wenn sich die Daten ändern, ist eine neue Bereitstellung erforderlich.
 
-If you're only investigating SSR to improve the SEO of a handful of marketing pages (e.g. `/`, `/about`, `/contact`, etc.), then you probably want SSG instead of SSR. SSG is also great for content-based websites such as documentation sites or blogs. In fact, this website you are reading right now is statically generated using [VitePress](https://vitepress.dev/), a Vue-powered static site generator.
+Wenn Sie sich nur mit SSR beschäftigen, um die SEO einer Handvoll Marketing-Seiten (z. B. `/`, `/about`, `/contact` usw.) zu verbessern, dann ist SSG wahrscheinlich die bessere Wahl als SSR. SSG eignet sich auch hervorragend für inhaltsorientierte Websites wie Dokumentationsseiten oder Blogs. Tatsächlich wird diese Website, die Sie gerade lesen, statisch mit [VitePress](https://vitepress.dev/) generiert, einem Vue-basierten Static-Site-Generator.
 
 ## Basic Tutorial {#basic-tutorial}
 
