@@ -46,7 +46,7 @@ Wenn Sie sich nur mit SSR beschäftigen, um die SEO einer Handvoll Marketing-Sei
 
 ## Einführungsanleitung {#basic-tutorial}
 
-### Rendering an App {#rendering-an-app}
+### Eine App rendern {#rendering-an-app}
 
 Let's take a look at the most bare-bones example of Vue SSR in action.
 
