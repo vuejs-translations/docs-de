@@ -48,7 +48,7 @@ Wenn Sie sich nur mit SSR beschäftigen, um die SEO einer Handvoll Marketing-Sei
 
 ### Eine App rendern {#rendering-an-app}
 
-Let's take a look at the most bare-bones example of Vue SSR in action.
+Schauen wir uns einmal das einfachste Beispiel für Vue-SSR in der Praxis an.
 
 1. Create a new directory and `cd` into it
 2. Run `npm init -y`
