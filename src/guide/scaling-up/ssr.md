@@ -50,11 +50,11 @@ Wenn Sie sich nur mit SSR beschäftigen, um die SEO einer Handvoll Marketing-Sei
 
 Schauen wir uns einmal das einfachste Beispiel für Vue-SSR in der Praxis an.
 
-1. Create a new directory and `cd` into it
-2. Run `npm init -y`
-3. Add `"type": "module"` in `package.json` so that Node.js runs in [ES modules mode](https://nodejs.org/api/esm.html#modules-ecmascript-modules).
-4. Run `npm install vue`
-5. Create an `example.js` file:
+1. Erstelle ein neues Verzeichnis und wechsle mit `cd` dorthin.
+2. Führe `npm init -y` aus.
+3. Füge `„type“: „module“` in `package.json` ein, damit Node.js im [ES-Module-Modus](https://nodejs.org/api/esm.html#modules-ecmascript-modules) läuft.
+4. Führen Sie `npm install vue` aus.
+5. Erstellen Sie eine Datei `example.js`:
 
 ```js
 // this runs in Node.js on the server.
