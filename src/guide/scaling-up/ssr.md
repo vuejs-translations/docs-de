@@ -57,7 +57,7 @@ Schauen wir uns einmal das einfachste Beispiel für Vue-SSR in der Praxis an.
 5. Erstellen Sie eine Datei `example.js`:
 
 ```js
-// this runs in Node.js on the server.
+// Das läuft unter Node.js auf dem Server.
 import { createSSRApp } from 'vue'
 // Vue's server-rendering API is exposed under `vue/server-renderer`.
 import { renderToString } from 'vue/server-renderer'
