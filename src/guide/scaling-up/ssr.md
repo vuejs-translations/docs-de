@@ -72,7 +72,7 @@ renderToString(app).then((html) => {
 })
 ```
 
-Then run:
+Führe dann Folgendes aus:
 
 ```sh
 > node example.js
