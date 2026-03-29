@@ -86,7 +86,7 @@ Es sollte Folgendes in die Befehlszeile ausgeben:
 
 [`renderToString()`](/api/ssr#rendertostring) nimmt eine Vue-App-Instanz entgegen und gibt ein Promise zurück, das den gerenderten HTML-Code der App liefert. Es ist auch möglich, das Rendern mithilfe der [Node.js Stream API](https://nodejs.org/api/stream.html) oder der [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) zu streamen. Ausführliche Informationen findest du in der [SSR-API-Referenz](/api/ssr).
 
-We can then move the Vue SSR code into a server request handler, which wraps the application markup with the full page HTML. We will be using [`express`](https://expressjs.com/) for the next steps:
+Anschließend können wir den Vue-SSR-Code in einen Server-Request-Handler verschieben, der das Anwendungs-Markup mit dem vollständigen HTML-Code der Seite umschließt. Für die nächsten Schritte werden wir [`express`](https://expressjs.com/) verwenden:
 
 - Run `npm install express`
 - Create the following `server.js` file:
