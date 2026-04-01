@@ -89,7 +89,7 @@ Es sollte Folgendes in die Befehlszeile ausgeben:
 Anschließend können wir den Vue-SSR-Code in einen Server-Request-Handler verschieben, der das Anwendungs-Markup mit dem vollständigen HTML-Code der Seite umschließt. Für die nächsten Schritte werden wir [`express`](https://expressjs.com/) verwenden:
 
 - Führe `npm install express` aus
-- Create the following `server.js` file:
+- Erstellen Sie die folgende Datei `server.js`:
 
 ```js
 import express from 'express'
