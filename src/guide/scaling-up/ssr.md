@@ -124,7 +124,7 @@ server.listen(3000, () => {
 })
 ```
 
-Finally, run `node server.js` and visit `http://localhost:3000`. You should see the page working with the button.
+Führe abschließend `node server.js` aus und rufe `http://localhost:3000` auf. Die Seite sollte nun mit der Schaltfläche funktionieren.
 
 [Try it on StackBlitz](https://stackblitz.com/fork/vue-ssr-example-basic?file=index.js)
 
