@@ -126,7 +126,7 @@ server.listen(3000, () => {
 
 Führe abschließend `node server.js` aus und rufe `http://localhost:3000` auf. Die Seite sollte nun mit der Schaltfläche funktionieren.
 
-[Try it on StackBlitz](https://stackblitz.com/fork/vue-ssr-example-basic?file=index.js)
+[Probier es auf StackBlitz aus](https://stackblitz.com/fork/vue-ssr-example-basic?file=index.js)
 
 ### Client Hydration {#client-hydration}
 
