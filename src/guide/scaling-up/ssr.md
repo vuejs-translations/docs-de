@@ -128,7 +128,7 @@ Führe abschließend `node server.js` aus und rufe `http://localhost:3000` auf. 
 
 [Probier es auf StackBlitz aus](https://stackblitz.com/fork/vue-ssr-example-basic?file=index.js)
 
-### Client Hydration {#client-hydration}
+### Flüssigkeitszufuhr für Patienten {#client-hydration}
 
 If you click the button, you'll notice the number doesn't change. The HTML is completely static on the client since we are not loading Vue in the browser.
 
