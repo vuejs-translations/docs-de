@@ -130,7 +130,7 @@ Führe abschließend `node server.js` aus und rufe `http://localhost:3000` auf. 
 
 ### Flüssigkeitszufuhr für Patienten {#client-hydration}
 
-If you click the button, you'll notice the number doesn't change. The HTML is completely static on the client since we are not loading Vue in the browser.
+Wenn du auf die Schaltfläche klickst, wirst du feststellen, dass sich die Zahl nicht ändert. Der HTML-Code ist auf dem Client vollständig statisch, da wir Vue nicht im Browser laden.
 
 To make the client-side app interactive, Vue needs to perform the **hydration** step. During hydration, it creates the same Vue application that was run on the server, matches each component to the DOM nodes it should control, and attaches DOM event listeners.
 
