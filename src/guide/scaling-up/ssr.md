@@ -132,7 +132,7 @@ Führe abschließend `node server.js` aus und rufe `http://localhost:3000` auf. 
 
 Wenn du auf die Schaltfläche klickst, wirst du feststellen, dass sich die Zahl nicht ändert. Der HTML-Code ist auf dem Client vollständig statisch, da wir Vue nicht im Browser laden.
 
-To make the client-side app interactive, Vue needs to perform the **hydration** step. During hydration, it creates the same Vue application that was run on the server, matches each component to the DOM nodes it should control, and attaches DOM event listeners.
+Um die clientseitige App interaktiv zu machen, muss Vue den Schritt der **Hydration** durchführen. Während der Hydration erstellt Vue dieselbe Vue-Anwendung, die auf dem Server ausgeführt wurde, ordnet jede Komponente den DOM-Knoten zu, die sie steuern soll, und fügt DOM-Ereignis-Listener hinzu.
 
 To mount an app in hydration mode, we need to use [`createSSRApp()`](/api/application#createssrapp) instead of `createApp()`:
 
