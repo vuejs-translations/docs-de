@@ -134,7 +134,7 @@ Wenn du auf die Schaltfläche klickst, wirst du feststellen, dass sich die Zahl 
 
 Um die clientseitige App interaktiv zu machen, muss Vue den Schritt der **Hydration** durchführen. Während der Hydration erstellt Vue dieselbe Vue-Anwendung, die auf dem Server ausgeführt wurde, ordnet jede Komponente den DOM-Knoten zu, die sie steuern soll, und fügt DOM-Ereignis-Listener hinzu.
 
-To mount an app in hydration mode, we need to use [`createSSRApp()`](/api/application#createssrapp) instead of `createApp()`:
+Um eine App im Hydration-Modus zu mounten, müssen wir [`createSSRApp()`](/api/application#createssrapp) anstelle von `createApp()` verwenden:
 
 ```js{2}
 // this runs in the browser.
