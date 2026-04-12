@@ -145,7 +145,7 @@ const app = createSSRApp({
 })
 
 // Das Einbinden einer SSR-Anwendung auf dem Client setzt Folgendes voraus
-// the HTML was pre-rendered and will perform
+// Das HTML wurde vorgerendert und wird funktionieren
 // hydration instead of mounting new DOM nodes.
 app.mount('#app')
 ```
