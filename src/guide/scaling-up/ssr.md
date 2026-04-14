@@ -150,7 +150,7 @@ const app = createSSRApp({
 app.mount('#app')
 ```
 
-### Code Structure {#code-structure}
+### Codestruktur {#code-structure}
 
 Notice how we need to reuse the same app implementation as on the server. This is where we need to start thinking about code structure in an SSR app - how do we share the same application code between the server and the client?
 
