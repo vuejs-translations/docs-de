@@ -146,7 +146,7 @@ const app = createSSRApp({
 
 // Das Einbinden einer SSR-Anwendung auf dem Client setzt Folgendes voraus
 // Das HTML wurde vorgerendert und wird funktionieren
-// hydration instead of mounting new DOM nodes.
+// Hydratisierung statt der Einbindung neuer DOM-Knoten
 app.mount('#app')
 ```
 
