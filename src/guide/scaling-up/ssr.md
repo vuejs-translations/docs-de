@@ -154,7 +154,7 @@ app.mount('#app')
 
 Beachten Sie, dass wir dieselbe Anwendungsimplementierung wie auf dem Server wiederverwenden müssen. An diesem Punkt müssen wir uns Gedanken über die Codestruktur in einer SSR-Anwendung machen – wie können wir denselben Anwendungscode zwischen Server und Client teilen?
 
-Here we will demonstrate the most bare-bones setup. First, let's split the app creation logic into a dedicated file, `app.js`:
+Hier demonstrieren wir die einfachste Konfiguration. Zunächst lagern wir die Logik zur App-Erstellung in eine separate Datei, `app.js`, aus:
 
 ```js
 // app.js (shared between server and client)
