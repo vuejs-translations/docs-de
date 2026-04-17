@@ -152,7 +152,7 @@ app.mount('#app')
 
 ### Codestruktur {#code-structure}
 
-Notice how we need to reuse the same app implementation as on the server. This is where we need to start thinking about code structure in an SSR app - how do we share the same application code between the server and the client?
+Beachten Sie, dass wir dieselbe Anwendungsimplementierung wie auf dem Server wiederverwenden müssen. An diesem Punkt müssen wir uns Gedanken über die Codestruktur in einer SSR-Anwendung machen – wie können wir denselben Anwendungscode zwischen Server und Client teilen?
 
 Here we will demonstrate the most bare-bones setup. First, let's split the app creation logic into a dedicated file, `app.js`:
 
