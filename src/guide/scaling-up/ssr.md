@@ -168,7 +168,7 @@ export function createApp() {
 }
 ```
 
-This file and its dependencies are shared between the server and the client - we call them **universal code**. There are a number of things you need to pay attention to when writing universal code, as we will [discuss below](#writing-ssr-friendly-code).
+Diese Datei und ihre Abhängigkeiten werden zwischen Server und Client geteilt – wir nennen sie **universellen Code**. Beim Schreiben von universellem Code gibt es einiges zu beachten, wie wir [unten](#writing-ssr-friendly-code) erläutern werden.
 
 Our client entry imports the universal code, creates the app, and performs the mount:
 
