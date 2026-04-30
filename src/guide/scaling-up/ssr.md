@@ -179,7 +179,7 @@ import { createApp } from './app.js'
 createApp().mount('#app')
 ```
 
-And the server uses the same app creation logic in the request handler:
+Und der Server verwendet im Request-Handler dieselbe Logik zur App-Erstellung:
 
 ```js{2,5}
 // server.js (irrelevant code omitted)
