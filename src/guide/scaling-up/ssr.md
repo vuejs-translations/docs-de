@@ -193,7 +193,7 @@ server.get('/', (req, res) => {
 })
 ```
 
-In addition, in order to load the client files in the browser, we also need to:
+Um die Client-Dateien im Browser zu laden, müssen wir außerdem Folgendes tun:
 
 1. Serve client files by adding `server.use(express.static('.'))` in `server.js`.
 2. Load the client entry by adding `<script type="module" src="/client.js"></script>` to the HTML shell.
