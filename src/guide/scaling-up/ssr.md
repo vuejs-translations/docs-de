@@ -196,7 +196,7 @@ server.get('/', (req, res) => {
 Um die Client-Dateien im Browser zu laden, müssen wir außerdem Folgendes tun:
 
 1. Um Client-Dateien bereitzustellen, fügen Sie in der Datei `server.js` die Zeile `server.use(express.static('.'))` ein.
-2. Load the client entry by adding `<script type="module" src="/client.js"></script>` to the HTML shell.
+2. Laden Sie den Client-Eintrag, indem Sie `<script type="module" src="/client.js"></script>` in die HTML-Shell einfügen.
 3. Support usage like `import * from 'vue'` in the browser by adding an [Import Map](https://github.com/WICG/import-maps) to the HTML shell.
 
 [Try the completed example on StackBlitz](https://stackblitz.com/fork/vue-ssr-example?file=index.js). The button is now interactive!
