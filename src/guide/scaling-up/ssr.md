@@ -198,8 +198,7 @@ Um die Client-Dateien im Browser zu laden, müssen wir außerdem Folgendes tun:
 1. Um Client-Dateien bereitzustellen, fügen Sie in der Datei `server.js` die Zeile `server.use(express.static('.'))` ein.
 2. Laden Sie den Client-Eintrag, indem Sie `<script type="module" src="/client.js"></script>` in die HTML-Shell einfügen.
 3. Unterstützung für die Verwendung von Befehlen wie `import * from 'vue'` im Browser durch Hinzufügen einer [Import Map](https://github.com/WICG/import-maps) zum HTML-Shell.
-[Try the completed example on StackBlitz](https://stackblitz.com/fork/vue-ssr-example?file=index.js). The button is now interactive!
-
+[Probieren Sie das vollständige Beispiel auf StackBlitz aus](https://stackblitz.com/fork/vue-ssr-example?file=index.js). Der Button ist jetzt interaktiv!
 ## Higher Level Solutions {#higher-level-solutions}
 
 Moving from the example to a production-ready SSR app involves a lot more. We will need to:
