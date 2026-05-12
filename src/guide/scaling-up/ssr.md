@@ -201,7 +201,7 @@ Um die Client-Dateien im Browser zu laden, müssen wir außerdem Folgendes tun:
 [Probieren Sie das vollständige Beispiel auf StackBlitz aus](https://stackblitz.com/fork/vue-ssr-example?file=index.js). Der Button ist jetzt interaktiv!
 ## Lösungen auf höherer Ebene {#higher-level-solutions}
 
-Moving from the example to a production-ready SSR app involves a lot more. We will need to:
+Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst noch weitaus mehr. Wir werden Folgendes tun müssen:
 
 - Support Vue SFCs and other build step requirements. In fact, we will need to coordinate two builds for the same app: one for the client, and one for the server.
 
