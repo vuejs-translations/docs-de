@@ -203,7 +203,7 @@ Um die Client-Dateien im Browser zu laden, müssen wir außerdem Folgendes tun:
 
 Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst noch weitaus mehr. Wir werden Folgendes tun müssen:
 
-- Support Vue SFCs and other build step requirements. In fact, we will need to coordinate two builds for the same app: one for the client, and one for the server.
+- Unterstützung von Vue-SFCs und anderen Anforderungen an den Build-Prozess. Tatsächlich müssen wir zwei Builds für dieselbe App koordinieren: einen für den Client und einen für den Server.
 
   :::tip
   Vue components are compiled differently when used for SSR - templates are compiled into string concatenations instead of Virtual DOM render functions for more efficient rendering performance.
