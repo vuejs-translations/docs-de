@@ -206,7 +206,7 @@ Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst no
 - Unterstützung von Vue-SFCs und anderen Anforderungen an den Build-Prozess. Tatsächlich müssen wir zwei Builds für dieselbe App koordinieren: einen für den Client und einen für den Server.
 
   :::tip
-  Vue components are compiled differently when used for SSR - templates are compiled into string concatenations instead of Virtual DOM render functions for more efficient rendering performance.
+  Vue-Komponenten werden bei der Verwendung für SSR anders kompiliert – Vorlagen werden zu Zeichenfolgenverkettungen statt zu Virtual-DOM-Rendering-Funktionen kompiliert, um eine effizientere Rendering-Leistung zu erzielen.
   :::
 
 - In the server request handler, render the HTML with the correct client-side asset links and optimal resource hints. We may also need to switch between SSR and SSG mode, or even mix both in the same app.
