@@ -211,7 +211,7 @@ Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst no
 
 - Im Server-Request-Handler wird der HTML-Code mit den korrekten Links zu den clientseitigen Assets und optimalen Ressourcenhinweisen gerendert. Möglicherweise müssen wir auch zwischen SSR- und SSG-Modus wechseln oder sogar beide in derselben App kombinieren.
 
-- Manage routing, data fetching, and state management stores in a universal manner.
+- Routing, Datenabruf und Speicher für die Zustandsverwaltung einheitlich verwalten.
 
 A complete implementation would be quite complex and depends on the build toolchain you have chosen to work with. Therefore, we highly recommend going with a higher-level, opinionated solution that abstracts away the complexity for you. Below we will introduce a few recommended SSR solutions in the Vue ecosystem.
 
