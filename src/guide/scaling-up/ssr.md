@@ -209,7 +209,7 @@ Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst no
   Vue-Komponenten werden bei der Verwendung für SSR anders kompiliert – Vorlagen werden zu Zeichenfolgenverkettungen statt zu Virtual-DOM-Rendering-Funktionen kompiliert, um eine effizientere Rendering-Leistung zu erzielen.
   :::
 
-- In the server request handler, render the HTML with the correct client-side asset links and optimal resource hints. We may also need to switch between SSR and SSG mode, or even mix both in the same app.
+- Im Server-Request-Handler wird der HTML-Code mit den korrekten Links zu den clientseitigen Assets und optimalen Ressourcenhinweisen gerendert. Möglicherweise müssen wir auch zwischen SSR- und SSG-Modus wechseln oder sogar beide in derselben App kombinieren.
 
 - Manage routing, data fetching, and state management stores in a universal manner.
 
