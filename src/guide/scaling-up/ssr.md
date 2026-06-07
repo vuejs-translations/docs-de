@@ -213,7 +213,7 @@ Der Schritt vom Beispiel hin zu einer produktionsreifen SSR-Anwendung umfasst no
 
 - Routing, Datenabruf und Speicher für die Zustandsverwaltung einheitlich verwalten.
 
-A complete implementation would be quite complex and depends on the build toolchain you have chosen to work with. Therefore, we highly recommend going with a higher-level, opinionated solution that abstracts away the complexity for you. Below we will introduce a few recommended SSR solutions in the Vue ecosystem.
+Eine vollständige Implementierung wäre recht komplex und hängt von der von Ihnen gewählten Build-Toolchain ab. Daher empfehlen wir Ihnen dringend, sich für eine übergeordnete, vorgefertigte Lösung zu entscheiden, die diese Komplexität für Sie abstrahiert. Im Folgenden stellen wir Ihnen einige empfohlene SSR-Lösungen aus dem Vue-Ökosystem vor.
 
 ### Nuxt {#nuxt}
 
