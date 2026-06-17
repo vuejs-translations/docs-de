@@ -648,8 +648,10 @@ export default defineConfigWithTheme<ThemeConfig>({
   themeConfig: {
     nav,
     sidebar,
+    i18n: {
+      search: 'Suchen'
+    },
     // Placeholder of the i18n config for @vuejs-translations.
-    // i18n,
 
     localeLinks: [
       {

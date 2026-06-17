@@ -86,8 +86,8 @@ onMounted(load)
     <div class="vt-box">
       <h2>Zugänglich</h2>
       <p>
-        Builds on top of standard HTML, CSS and JavaScript with intuitive
-        API and world-class documentation.
+        Baut auf Standard-HTML, CSS und JavaScript auf, mit einer intuitiven
+        API und erstklassiger Dokumentation.
       </p>
     </div>
     <div class="vt-box">
