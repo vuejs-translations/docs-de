@@ -8,7 +8,7 @@ import { headerPlugin } from './headerMdPlugin'
 
 const nav: ThemeConfig['nav'] = [
   {
-    text: 'Docs',
+    text: 'Doku',
     activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
     items: [
       { text: 'Guide', link: '/guide/introduction' },
@@ -38,7 +38,7 @@ const nav: ThemeConfig['nav'] = [
     link: 'https://play.vuejs.org'
   },
   {
-    text: 'Ecosystem',
+    text: 'Ökosystem',
     activeMatch: `^/ecosystem/`,
     items: [
       {
@@ -103,7 +103,7 @@ const nav: ThemeConfig['nav'] = [
     ]
   },
   {
-    text: 'About',
+    text: 'Über uns',
     activeMatch: `^/about/`,
     items: [
       { text: 'FAQ', link: '/about/faq' },
@@ -126,7 +126,7 @@ const nav: ThemeConfig['nav'] = [
     link: '/sponsor/'
   },
   {
-    text: 'Experts',
+    text: 'Experten',
     badge: { text: 'NEW' },
     activeMatch: `^/(partners|developers)/`,
     items: [
@@ -663,6 +663,11 @@ export default defineConfigWithTheme<ThemeConfig>({
         repo: 'https://github.com/vuejs-translations/docs-ja'
       },
       {
+        link: 'https://de.vuejs.org',
+        text: 'Deutsch',
+        repo: 'https://github.com/vuejs-translations/docs-de'
+      },
+      {
         link: 'https://ua.vuejs.org',
         text: 'Українська',
         repo: 'https://github.com/vuejs-translations/docs-uk'
@@ -723,6 +728,13 @@ export default defineConfigWithTheme<ThemeConfig>({
       indexName: 'vuejs',
       appId: 'ML0LEBN7FQ',
       apiKey: '21cf9df0734770a2448a9da64a700c22',
+      placeholder: 'Suchen',
+      translations: {
+        button: {
+          buttonText: 'Suchen',
+          buttonAriaLabel: 'Suchen'
+        }
+      },
       searchParameters: {
         facetFilters: ['version:v3']
       }
