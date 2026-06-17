@@ -8,7 +8,7 @@ import { headerPlugin } from './headerMdPlugin'
 
 const nav: ThemeConfig['nav'] = [
   {
-    text: 'Docs',
+    text: 'Doku',
     activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
     items: [
       { text: 'Guide', link: '/guide/introduction' },
@@ -38,7 +38,7 @@ const nav: ThemeConfig['nav'] = [
     link: 'https://play.vuejs.org'
   },
   {
-    text: 'Ecosystem',
+    text: 'Ökosystem',
     activeMatch: `^/ecosystem/`,
     items: [
       {
@@ -103,7 +103,7 @@ const nav: ThemeConfig['nav'] = [
     ]
   },
   {
-    text: 'About',
+    text: 'Über uns',
     activeMatch: `^/about/`,
     items: [
       { text: 'FAQ', link: '/about/faq' },
@@ -126,7 +126,7 @@ const nav: ThemeConfig['nav'] = [
     link: '/sponsor/'
   },
   {
-    text: 'Experts',
+    text: 'Experten',
     badge: { text: 'NEW' },
     activeMatch: `^/(partners|developers)/`,
     items: [
