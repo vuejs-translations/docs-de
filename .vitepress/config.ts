@@ -648,8 +648,10 @@ export default defineConfigWithTheme<ThemeConfig>({
   themeConfig: {
     nav,
     sidebar,
+    i18n: {
+      search: 'Suchen'
+    },
     // Placeholder of the i18n config for @vuejs-translations.
-    // i18n,
 
     localeLinks: [
       {
@@ -723,6 +725,13 @@ export default defineConfigWithTheme<ThemeConfig>({
       indexName: 'vuejs',
       appId: 'ML0LEBN7FQ',
       apiKey: '21cf9df0734770a2448a9da64a700c22',
+      placeholder: 'Suchen',
+      translations: {
+        button: {
+          buttonText: 'Suchen',
+          buttonAriaLabel: 'Suchen'
+        }
+      },
       searchParameters: {
         facetFilters: ['version:v3']
       }
