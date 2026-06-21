@@ -221,7 +221,7 @@ Eine vollständige Implementierung wäre recht komplex und hängt von der von Ih
 
 ### Quasar {#quasar}
 
-[Quasar](https://quasar.dev) is a complete Vue-based solution that allows you to target SPA, SSR, PWA, mobile app, desktop app, and browser extension all using one codebase. It not only handles the build setup, but also provides a full collection of Material Design compliant UI components.
+[Quasar](https://quasar.dev) ist eine umfassende, auf Vue basierende Lösung, mit der Sie SPA-, SSR-, PWA-, Mobil- und Desktop-Anwendungen sowie Browser-Erweiterungen auf der Basis einer einzigen Codebasis entwickeln können. Sie übernimmt nicht nur die Build-Konfiguration, sondern bietet auch eine vollständige Sammlung von UI-Komponenten, die dem Material-Design-Standard entsprechen.
 
 ### Vite SSR {#vite-ssr}
 
