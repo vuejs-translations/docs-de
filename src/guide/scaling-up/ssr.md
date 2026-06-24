@@ -227,7 +227,7 @@ Eine vollständige Implementierung wäre recht komplex und hängt von der von Ih
 
 Vite bietet integrierte [Unterstützung für serverseitiges Rendering mit Vue](https://vitejs.dev/guide/ssr.html), ist dabei jedoch bewusst auf einer niedrigen Abstraktionsebene angesiedelt. Wenn du direkt mit Vite arbeiten möchtest, schau dir [vite-plugin-ssr](https://vite-plugin-ssr.com/) an – ein Community-Plugin, das dir viele der komplexen Details abnimmt.
 
-You can also find an example Vue + Vite SSR project using manual setup [here](https://github.com/vitejs/vite-plugin-vue/tree/main/playground/ssr-vue), which can serve as a base to build upon. Note this is only recommended if you are experienced with SSR / build tools and really want to have complete control over the higher-level architecture.
+Ein Beispiel für ein Vue- und Vite-SSR-Projekt mit manueller Einrichtung findest du außerdem [hier](https://github.com/vitejs/vite-plugin-vue/tree/main/playground/ssr-vue); es kann als Grundlage für eigene Entwicklungen dienen. Beachte jedoch, dass dieses Vorgehen nur dann empfohlen wird, wenn du bereits Erfahrung mit SSR sowie Build-Tools hast und tatsächlich die volle Kontrolle über die übergeordnete Architektur behalten möchtest.
 
 ## Writing SSR-friendly Code {#writing-ssr-friendly-code}
 
