@@ -233,7 +233,7 @@ Ein Beispiel für ein Vue- und Vite-SSR-Projekt mit manueller Einrichtung findes
 
 Unabhängig von Ihrem Build-Setup oder der Wahl eines übergeordneten Frameworks gibt es einige Prinzipien, die für alle Vue-SSR-Anwendungen gelten.
 
-### Reactivity on the Server {#reactivity-on-the-server}
+### Reaktivität auf dem Server {#reactivity-on-the-server}
 
 During SSR, each request URL maps to a desired state of our application. There is no user interaction and no DOM updates, so reactivity is unnecessary on the server. By default, reactivity is disabled during SSR for better performance.
 
