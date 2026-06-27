@@ -231,7 +231,7 @@ Ein Beispiel für ein Vue- und Vite-SSR-Projekt mit manueller Einrichtung findes
 
 ## Schreiben von SSR-freundlichem Code {#writing-ssr-friendly-code}
 
-Regardless of your build setup or higher-level framework choice, there are some principles that apply in all Vue SSR applications.
+Unabhängig von Ihrem Build-Setup oder der Wahl eines übergeordneten Frameworks gibt es einige Prinzipien, die für alle Vue-SSR-Anwendungen gelten.
 
 ### Reactivity on the Server {#reactivity-on-the-server}
 
