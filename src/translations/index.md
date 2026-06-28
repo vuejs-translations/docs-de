@@ -2,9 +2,9 @@
 aside: false
 ---
 
-# Translations {#translations}
+# Übersetzungen {#translations}
 
-## Available Languages {#available-languages}
+## Verfügbare Sprachen {#available-languages}
 
 - [English](https://vuejs.org/) [[source](https://github.com/vuejs/docs)]
 - [简体中文 / Simplified Chinese](https://cn.vuejs.org/) [[source](https://github.com/vuejs-translations/docs-zh-cn)]
@@ -20,15 +20,15 @@ aside: false
 - [Čeština / Czech](https://cs.vuejs.org/) [[source](https://github.com/vuejs-translations/docs-cs)]
 - [繁體中文 / Traditional Chinese](https://zh-hk.vuejs.org/) [[source](https://github.com/vuejs-translations/docs-zh-hk)]
 
-## Work in Progress Languages {#work-in-progress-languages}
+## Sprachen in Arbeit {#work-in-progress-languages}
 
 - [العربية / Arabic](https://ar.vuejs.org/) [[source](https://github.com/vuejs-translations/docs-ar)]
 
 - [Español / Spanish](https://vue3-spanish-docs.netlify.app/) [[source](https://github.com/icarusgk/vuejs-spanish-docs)]
 - [Deutsch / German](https://de-vue-docs.netlify.app/) [[source](https://github.com/vuejs-translations/docs-de)]
 
-## Starting a new Translation {#starting-a-new-translation}
+## Beginne eine neue Übersetzung {#starting-a-new-translation}
 
-The Vue documentation has recently undergone a major revision, so translations in other languages are still missing or work-in-progress.
+Die Vue-Dokumentation wurde kürzlich einer umfassenden Überarbeitung unterzogen, sodass Übersetzungen in andere Sprachen noch fehlen oder in Arbeit sind.
 
-We welcome community efforts to provide more translations. Translation efforts are managed in the [vuejs-translations](https://github.com/vuejs-translations/) GitHub organization. If you are interested in contributing, please check out the [Translation Guidelines](https://github.com/vuejs-translations/guidelines/blob/main/README.md) to get started.
+Wir begrüßen die Bemühungen der Community, mehr Übersetzungen bereitzustellen. Die Übersetzungsbemühungen werden in der GitHub-Organisation [vuejs-translations](https://github.com/vuejs-translations/) verwaltet. Wenn Sie daran interessiert sind, einen Beitrag zu leisten, schauen Sie sich bitte die [Übersetzungsrichtlinien] (https://github.com/vuejs-translations/guidelines/blob/main/README.md) an, um loszulegen.
