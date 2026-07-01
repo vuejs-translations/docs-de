@@ -235,7 +235,7 @@ Unabhängig von Ihrem Build-Setup oder der Wahl eines übergeordneten Frameworks
 
 ### Reaktivität auf dem Server {#reactivity-on-the-server}
 
-During SSR, each request URL maps to a desired state of our application. There is no user interaction and no DOM updates, so reactivity is unnecessary on the server. By default, reactivity is disabled during SSR for better performance.
+Während des SSR wird jede Anfrage-URL einem gewünschten Zustand unserer Anwendung zugeordnet. Da keine Benutzerinteraktion und keine DOM-Aktualisierungen stattfinden, ist Reaktivität auf dem Server nicht erforderlich. Standardmäßig ist die Reaktivität während des SSR deaktiviert, um die Leistung zu optimieren.
 
 ### Component Lifecycle Hooks {#component-lifecycle-hooks}
 
