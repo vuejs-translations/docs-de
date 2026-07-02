@@ -237,7 +237,7 @@ Unabhängig von Ihrem Build-Setup oder der Wahl eines übergeordneten Frameworks
 
 Während des SSR wird jede Anfrage-URL einem gewünschten Zustand unserer Anwendung zugeordnet. Da keine Benutzerinteraktion und keine DOM-Aktualisierungen stattfinden, ist Reaktivität auf dem Server nicht erforderlich. Standardmäßig ist die Reaktivität während des SSR deaktiviert, um die Leistung zu optimieren.
 
-### Component Lifecycle Hooks {#component-lifecycle-hooks}
+### Komponenten-Lebenszyklus-Hooks {#component-lifecycle-hooks}
 
 Since there are no dynamic updates, lifecycle hooks such as <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span> or <span class="options-api">`updated`</span><span class="composition-api">`onUpdated`</span> will **NOT** be called during SSR and will only be executed on the client.<span class="options-api"> The only hooks that are called during SSR are `beforeCreate` and `created`</span>
 
