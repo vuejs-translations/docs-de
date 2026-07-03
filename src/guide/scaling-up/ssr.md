@@ -243,8 +243,6 @@ Da keine dynamischen Aktualisierungen stattfinden, werden Lifecycle-Hooks wie <s
 
 Sie sollten Code vermeiden, der Nebenwirkungen erzeugt, die in <span class="options-api">`beforeCreate` und `created`</span><span class="composition-api">`setup()` oder im Root-Scope von `<script setup>`</span> bereinigt werden müssen. Ein Beispiel für solche Nebenwirkungen ist das Einrichten von Timern mit `setInterval`. In rein clientseitigem Code können wir einen Timer einrichten und ihn anschließend in <span class="options-api">`beforeUnmount`</span><span class="composition-api">`onBeforeUnmount`</span> oder <span class="options-api">`unmounted`</span><span class="composition-api">`onUnmounted`</span> wieder abbauen. Da die Unmount-Hooks während des SSR jedoch niemals aufgerufen werden, bleiben die Timer für immer bestehen. Um dies zu vermeiden, verschieben Sie Ihren Code mit Nebenwirkungen stattdessen in <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span>.
 
-Übersetzt mit DeepL.com (kostenlose Version)
-
 ### Access to Platform-Specific APIs {#access-to-platform-specific-apis}
 
 Universal code cannot assume access to platform-specific APIs, so if your code directly uses browser-only globals like `window` or `document`, they will throw errors when executed in Node.js, and vice-versa.
