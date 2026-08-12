@@ -247,7 +247,7 @@ Sie sollten Code vermeiden, der Nebenwirkungen erzeugt, die in <span class="opti
 
 Universeller Code kann nicht davon ausgehen, dass plattformspezifische APIs verfügbar sind. Wenn Ihr Code also direkt browser-spezifische globale Variablen wie `window` oder `document` verwendet, führt dies bei der Ausführung in Node.js zu Fehlern – und umgekehrt.
 
-For tasks that are shared between server and client but with different platform APIs, it's recommended to wrap the platform-specific implementations inside a universal API, or use libraries that do this for you. For example, you can use [`node-fetch`](https://github.com/node-fetch/node-fetch) to use the same fetch API on both server and client.
+Bei Aufgaben, die sowohl auf dem Server als auch auf dem Client ausgeführt werden, für die jedoch unterschiedliche Plattform-APIs verwendet werden, empfiehlt es sich, die plattformspezifischen Implementierungen in eine universelle API einzubinden oder Bibliotheken zu verwenden, die dies für Sie übernehmen. Sie können beispielsweise [`node-fetch`](https://github.com/node-fetch/node-fetch) nutzen, um sowohl auf dem Server als auch auf dem Client dieselbe Fetch-API zu verwenden.
 
 For browser-only APIs, the common approach is to lazily access them inside client-only lifecycle hooks such as <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span>.
 
