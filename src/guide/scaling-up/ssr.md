@@ -249,7 +249,7 @@ Universeller Code kann nicht davon ausgehen, dass plattformspezifische APIs verf
 
 Bei Aufgaben, die sowohl auf dem Server als auch auf dem Client ausgeführt werden, für die jedoch unterschiedliche Plattform-APIs verwendet werden, empfiehlt es sich, die plattformspezifischen Implementierungen in eine universelle API einzubinden oder Bibliotheken zu verwenden, die dies für Sie übernehmen. Sie können beispielsweise [`node-fetch`](https://github.com/node-fetch/node-fetch) nutzen, um sowohl auf dem Server als auch auf dem Client dieselbe Fetch-API zu verwenden.
 
-For browser-only APIs, the common approach is to lazily access them inside client-only lifecycle hooks such as <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span>.
+Bei reinen Browser-APIs ist es üblich, innerhalb von rein clientseitigen Lebenszyklus-Hooks wie <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span> verzögert auf diese zuzugreifen.
 
 Note that if a third-party library is not written with universal usage in mind, it could be tricky to integrate it into a server-rendered app. You _might_ be able to get it working by mocking some of the globals, but it would be hacky and may interfere with the environment detection code of other libraries.
 
