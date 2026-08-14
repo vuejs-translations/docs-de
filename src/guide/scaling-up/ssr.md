@@ -251,7 +251,7 @@ Bei Aufgaben, die sowohl auf dem Server als auch auf dem Client ausgeführt werd
 
 Bei reinen Browser-APIs ist es üblich, innerhalb von rein clientseitigen Lebenszyklus-Hooks wie <span class="options-api">`mounted`</span><span class="composition-api">`onMounted`</span> verzögert auf diese zuzugreifen.
 
-Note that if a third-party library is not written with universal usage in mind, it could be tricky to integrate it into a server-rendered app. You _might_ be able to get it working by mocking some of the globals, but it would be hacky and may interfere with the environment detection code of other libraries.
+Beachten Sie, dass es schwierig sein kann, eine Bibliothek eines Drittanbieters in eine servergerenderte App zu integrieren, wenn diese nicht für den universellen Einsatz konzipiert wurde. Sie könnten sie zwar möglicherweise zum Laufen bringen, indem Sie einige der globalen Variablen simulieren, doch dies wäre eine Notlösung und könnte den Code zur Umgebungserkennung anderer Bibliotheken beeinträchtigen.
 
 ### Cross-Request State Pollution {#cross-request-state-pollution}
 
