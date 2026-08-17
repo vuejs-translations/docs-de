@@ -253,7 +253,7 @@ Bei reinen Browser-APIs ist es üblich, innerhalb von rein clientseitigen Lebens
 
 Beachten Sie, dass es schwierig sein kann, eine Bibliothek eines Drittanbieters in eine servergerenderte App zu integrieren, wenn diese nicht für den universellen Einsatz konzipiert wurde. Sie könnten sie zwar möglicherweise zum Laufen bringen, indem Sie einige der globalen Variablen simulieren, doch dies wäre eine Notlösung und könnte den Code zur Umgebungserkennung anderer Bibliotheken beeinträchtigen.
 
-### Cross-Request State Pollution {#cross-request-state-pollution}
+### Grenzüberschreitende Umweltverschmutzung {#cross-request-state-pollution}
 
 In the State Management chapter, we introduced a [simple state management pattern using Reactivity APIs](state-management#simple-state-management-with-reactivity-api). In an SSR context, this pattern requires some additional adjustments.
 
