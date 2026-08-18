@@ -257,7 +257,7 @@ Beachten Sie, dass es schwierig sein kann, eine Bibliothek eines Drittanbieters 
 
 Im Kapitel „Zustandsverwaltung“ haben wir ein [einfaches Muster zur Zustandsverwaltung unter Verwendung von Reactivity-APIs](state-management#simple-state-management-with-reactivity-api) vorgestellt. Im SSR-Kontext erfordert dieses Muster einige zusätzliche Anpassungen.
 
-The pattern declares shared state in a JavaScript module's root scope. This makes them **singletons** - i.e. there is only one instance of the reactive object throughout the entire lifecycle of our application. This works as expected in a pure client-side Vue application, since the modules in our application are initialized fresh for each browser page visit.
+Das Muster deklariert gemeinsam genutzte Zustände im Stamm-Gültigkeitsbereich eines JavaScript-Moduls. Dadurch werden sie zu **Singletons** – das heißt, es gibt während des gesamten Lebenszyklus unserer Anwendung nur eine Instanz des reaktiven Objekts. Dies funktioniert in einer rein clientseitigen Vue-Anwendung wie erwartet, da die Module in unserer Anwendung bei jedem Aufruf einer Browser-Seite neu initialisiert werden.
 
 However, in an SSR context, the application modules are typically initialized only once on the server, when the server boots up. The same module instances will be reused across multiple server requests, and so will our singleton state objects. If we mutate the shared singleton state with data specific to one user, it can be accidentally leaked to a request from another user. We call this **cross-request state pollution.**
 
