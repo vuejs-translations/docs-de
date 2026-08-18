@@ -255,7 +255,7 @@ Beachten Sie, dass es schwierig sein kann, eine Bibliothek eines Drittanbieters 
 
 ### Grenzüberschreitende Umweltverschmutzung {#cross-request-state-pollution}
 
-In the State Management chapter, we introduced a [simple state management pattern using Reactivity APIs](state-management#simple-state-management-with-reactivity-api). In an SSR context, this pattern requires some additional adjustments.
+Im Kapitel „Zustandsverwaltung“ haben wir ein [einfaches Muster zur Zustandsverwaltung unter Verwendung von Reactivity-APIs](state-management#simple-state-management-with-reactivity-api) vorgestellt. Im SSR-Kontext erfordert dieses Muster einige zusätzliche Anpassungen.
 
 The pattern declares shared state in a JavaScript module's root scope. This makes them **singletons** - i.e. there is only one instance of the reactive object throughout the entire lifecycle of our application. This works as expected in a pure client-side Vue application, since the modules in our application are initialized fresh for each browser page visit.
 
