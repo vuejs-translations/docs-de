@@ -261,7 +261,7 @@ Das Muster deklariert gemeinsam genutzte Zustände im Stamm-Gültigkeitsbereich 
 
 Im SSR-Kontext werden die Anwendungsmodule jedoch in der Regel nur einmal auf dem Server initialisiert, nämlich beim Hochfahren des Servers. Dieselben Modulinstanzen werden über mehrere Serveranfragen hinweg wiederverwendet, ebenso wie unsere Singleton-Zustandsobjekte. Wenn wir den gemeinsam genutzten Singleton-Zustand mit datenspezifischen Informationen eines einzelnen Benutzers verändern, können diese versehentlich in eine Anfrage eines anderen Benutzers gelangen. Wir bezeichnen dies als **Cross-Request-State-Pollution**.
 
-We can technically re-initialize all the JavaScript modules on each request, just like we do in browsers. However, initializing JavaScript modules can be costly, so this would significantly affect server performance.
+Technisch gesehen könnten wir alle JavaScript-Module bei jeder Anfrage neu initialisieren, genau wie es in Browsern der Fall ist. Die Initialisierung von JavaScript-Modulen kann jedoch ressourcenintensiv sein, sodass dies die Serverleistung erheblich beeinträchtigen würde.
 
 The recommended solution is to create a new instance of the entire application - including the router and global stores - on each request. Then, instead of directly importing it in our components, we provide the shared state using [app-level provide](/guide/components/provide-inject#app-level-provide) and inject it in components that need it:
 
