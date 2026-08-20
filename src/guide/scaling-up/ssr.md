@@ -259,7 +259,7 @@ Im Kapitel „Zustandsverwaltung“ haben wir ein [einfaches Muster zur Zustands
 
 Das Muster deklariert gemeinsam genutzte Zustände im Stamm-Gültigkeitsbereich eines JavaScript-Moduls. Dadurch werden sie zu **Singletons** – das heißt, es gibt während des gesamten Lebenszyklus unserer Anwendung nur eine Instanz des reaktiven Objekts. Dies funktioniert in einer rein clientseitigen Vue-Anwendung wie erwartet, da die Module in unserer Anwendung bei jedem Aufruf einer Browser-Seite neu initialisiert werden.
 
-However, in an SSR context, the application modules are typically initialized only once on the server, when the server boots up. The same module instances will be reused across multiple server requests, and so will our singleton state objects. If we mutate the shared singleton state with data specific to one user, it can be accidentally leaked to a request from another user. We call this **cross-request state pollution.**
+Im SSR-Kontext werden die Anwendungsmodule jedoch in der Regel nur einmal auf dem Server initialisiert, nämlich beim Hochfahren des Servers. Dieselben Modulinstanzen werden über mehrere Serveranfragen hinweg wiederverwendet, ebenso wie unsere Singleton-Zustandsobjekte. Wenn wir den gemeinsam genutzten Singleton-Zustand mit datenspezifischen Informationen eines einzelnen Benutzers verändern, können diese versehentlich in eine Anfrage eines anderen Benutzers gelangen. Wir bezeichnen dies als **Cross-Request-State-Pollution**.
 
 We can technically re-initialize all the JavaScript modules on each request, just like we do in browsers. However, initializing JavaScript modules can be costly, so this would significantly affect server performance.
 
