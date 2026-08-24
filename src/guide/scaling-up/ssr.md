@@ -282,7 +282,7 @@ export function createApp() {
 }
 ```
 
-State Management libraries like Pinia are designed with this in mind. Consult [Pinia's SSR guide](https://pinia.vuejs.org/ssr/) for more details.
+State-Management-Bibliotheken wie Pinia wurden unter Berücksichtigung dieser Aspekte entwickelt. Weitere Informationen finden Sie im [SSR-Leitfaden von Pinia](https://pinia.vuejs.org/ssr/).
 
 ### Hydration Mismatch {#hydration-mismatch}
 
