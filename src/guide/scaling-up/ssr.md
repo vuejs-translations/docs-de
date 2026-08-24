@@ -263,7 +263,7 @@ Im SSR-Kontext werden die Anwendungsmodule jedoch in der Regel nur einmal auf de
 
 Technisch gesehen könnten wir alle JavaScript-Module bei jeder Anfrage neu initialisieren, genau wie es in Browsern der Fall ist. Die Initialisierung von JavaScript-Modulen kann jedoch ressourcenintensiv sein, sodass dies die Serverleistung erheblich beeinträchtigen würde.
 
-The recommended solution is to create a new instance of the entire application - including the router and global stores - on each request. Then, instead of directly importing it in our components, we provide the shared state using [app-level provide](/guide/components/provide-inject#app-level-provide) and inject it in components that need it:
+Die empfohlene Lösung besteht darin, bei jeder Anfrage eine neue Instanz der gesamten Anwendung – einschließlich des Routers und der globalen Speicher – zu erstellen. Anstatt diese dann direkt in unsere Komponenten zu importieren, stellen wir den gemeinsamen Zustand mithilfe von [app-level provide](/guide/components/provide-inject#app-level-provide) bereit und injizieren ihn in die Komponenten, die ihn benötigen:
 
 ```js
 // app.js (shared between server and client)
