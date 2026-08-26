@@ -286,7 +286,7 @@ State-Management-Bibliotheken wie Pinia wurden unter Berücksichtigung dieser As
 
 ### Flüssigkeitsungleichgewicht {#hydration-mismatch}
 
-If the DOM structure of the pre-rendered HTML does not match the expected output of the client-side app, there will be a hydration mismatch error. Hydration mismatch is most commonly introduced by the following causes:
+Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Ausgabe der clientseitigen Anwendung übereinstimmt, tritt ein Fehler aufgrund einer Hydration-Diskrepanz auf. Eine Hydration-Diskrepanz wird meist durch folgende Ursachen hervorgerufen:
 
 1. The template contains invalid HTML nesting structure, and the rendered HTML got "corrected" by the browser's native HTML parsing behavior. For example, a common gotcha is that [`<div>` cannot be placed inside `<p>`](https://stackoverflow.com/questions/8397852/why-cant-the-p-tag-contain-a-div-tag-inside-it):
 
