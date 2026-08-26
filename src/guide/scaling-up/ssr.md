@@ -284,7 +284,7 @@ export function createApp() {
 
 State-Management-Bibliotheken wie Pinia wurden unter Berücksichtigung dieser Aspekte entwickelt. Weitere Informationen finden Sie im [SSR-Leitfaden von Pinia](https://pinia.vuejs.org/ssr/).
 
-### Hydration Mismatch {#hydration-mismatch}
+### Flüssigkeitsungleichgewicht {#hydration-mismatch}
 
 If the DOM structure of the pre-rendered HTML does not match the expected output of the client-side app, there will be a hydration mismatch error. Hydration mismatch is most commonly introduced by the following causes:
 
