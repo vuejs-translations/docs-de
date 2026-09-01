@@ -288,7 +288,7 @@ State-Management-Bibliotheken wie Pinia wurden unter Berücksichtigung dieser As
 
 Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Ausgabe der clientseitigen Anwendung übereinstimmt, tritt ein Fehler aufgrund einer Hydration-Diskrepanz auf. Eine Hydration-Diskrepanz wird meist durch folgende Ursachen hervorgerufen:
 
-1. The template contains invalid HTML nesting structure, and the rendered HTML got "corrected" by the browser's native HTML parsing behavior. For example, a common gotcha is that [`<div>` cannot be placed inside `<p>`](https://stackoverflow.com/questions/8397852/why-cant-the-p-tag-contain-a-div-tag-inside-it):
+1. Die Vorlage enthält eine ungültige HTML-Verschachtelungsstruktur, und der gerenderte HTML-Code wurde durch das native HTML-Parsing-Verhalten des Browsers „korrigiert“. Ein häufiges Problem ist beispielsweise, dass [`<div>` nicht innerhalb von `<p>` platziert werden kann](https://stackoverflow.com/questions/8397852/why-cant-the-p-tag-contain-a-div-tag-inside-it):
 
    ```html
    <p><div>hi</div></p>
