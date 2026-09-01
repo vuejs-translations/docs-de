@@ -294,7 +294,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
    <p><div>hi</div></p>
    ```
 
-   If we produce this in our server-rendered HTML, the browser will terminate the first `<p>` when `<div>` is encountered and parse it into the following DOM structure:
+   Wenn wir dies in unserem serverseitig gerenderten HTML ausgeben, bricht der Browser die erste `<p>` ab, sobald er auf `<div>` stößt, und wandelt sie in die folgende DOM-Struktur um:
 
    ```html
    <p></p>
