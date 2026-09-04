@@ -302,7 +302,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
    <p></p>
    ```
 
-2. The data used during render contains randomly generated values. Since the same application will run twice - once on the server, and once on the client - the random values are not guaranteed to be the same between the two runs. There are two ways to avoid random-value-induced mismatches:
+2. Die beim Rendern verwendeten Daten enthalten zufällig generierte Werte. Da dieselbe Anwendung zweimal ausgeführt wird – einmal auf dem Server und einmal auf dem Client –, kann nicht garantiert werden, dass die Zufallswerte bei beiden Durchläufen identisch sind. Es gibt zwei Möglichkeiten, durch Zufallswerte verursachte Abweichungen zu vermeiden:
 
    1. Use `v-if` + `onMounted` to render the part that depends on random values only on the client. Your framework may also have built-in features to make this easier, for example the `<ClientOnly>` component in VitePress.
 
