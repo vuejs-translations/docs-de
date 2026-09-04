@@ -304,7 +304,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
 
 2. Die beim Rendern verwendeten Daten enthalten zufällig generierte Werte. Da dieselbe Anwendung zweimal ausgeführt wird – einmal auf dem Server und einmal auf dem Client –, kann nicht garantiert werden, dass die Zufallswerte bei beiden Durchläufen identisch sind. Es gibt zwei Möglichkeiten, durch Zufallswerte verursachte Abweichungen zu vermeiden:
 
-   1. Use `v-if` + `onMounted` to render the part that depends on random values only on the client. Your framework may also have built-in features to make this easier, for example the `<ClientOnly>` component in VitePress.
+   1. Verwenden Sie `v-if` + `onMounted`, um den Teil, der von Zufallswerten abhängt, ausschließlich auf dem Client darzustellen. Möglicherweise verfügt Ihr Framework auch über integrierte Funktionen, die dies vereinfachen, beispielsweise die Komponente `<ClientOnly>` in VitePress.
 
    2. Use a random number generator library that supports generating with seeds, and guarantee the server run and the client run are using the same seed (e.g. by including the seed in serialized state and retrieving it on the client).
 
