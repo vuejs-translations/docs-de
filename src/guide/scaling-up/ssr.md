@@ -306,7 +306,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
 
    1. Verwenden Sie `v-if` + `onMounted`, um den Teil, der von Zufallswerten abhängt, ausschließlich auf dem Client darzustellen. Möglicherweise verfügt Ihr Framework auch über integrierte Funktionen, die dies vereinfachen, beispielsweise die Komponente `<ClientOnly>` in VitePress.
 
-   2. Use a random number generator library that supports generating with seeds, and guarantee the server run and the client run are using the same seed (e.g. by including the seed in serialized state and retrieving it on the client).
+   2. Verwenden Sie eine Zufallszahlengenerator-Bibliothek, die die Erzeugung von Zufallszahlen anhand von Startwerten unterstützt, und stellen Sie sicher, dass sowohl auf dem Server als auch auf dem Client derselbe Startwert verwendet wird (z. B. indem Sie den Startwert in den serialisierten Zustand einfügen und ihn auf dem Client abrufen).
 
 3. The server and the client are in different time zones. Sometimes, we may want to convert a timestamp into the user's local time. However, the timezone during the server run and the timezone during the client run are not always the same, and we may not reliably know the user's timezone during the server run. In such cases, the local time conversion should also be performed as a client-only operation.
 
