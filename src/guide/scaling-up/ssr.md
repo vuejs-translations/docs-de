@@ -308,7 +308,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
 
    2. Verwenden Sie eine Zufallszahlengenerator-Bibliothek, die die Erzeugung von Zufallszahlen anhand von Startwerten unterstützt, und stellen Sie sicher, dass sowohl auf dem Server als auch auf dem Client derselbe Startwert verwendet wird (z. B. indem Sie den Startwert in den serialisierten Zustand einfügen und ihn auf dem Client abrufen).
 
-3. The server and the client are in different time zones. Sometimes, we may want to convert a timestamp into the user's local time. However, the timezone during the server run and the timezone during the client run are not always the same, and we may not reliably know the user's timezone during the server run. In such cases, the local time conversion should also be performed as a client-only operation.
+3. Der Server und der Client befinden sich in unterschiedlichen Zeitzonen. Manchmal möchten wir einen Zeitstempel in die Ortszeit des Benutzers umrechnen. Allerdings stimmen die Zeitzone während der Serverausführung und die Zeitzone während der Clientausführung nicht immer überein, und wir können die Zeitzone des Benutzers während der Serverausführung möglicherweise nicht zuverlässig ermitteln. In solchen Fällen sollte die Umrechnung in die Ortszeit ebenfalls ausschließlich auf dem Client erfolgen.
 
 When Vue encounters a hydration mismatch, it will attempt to automatically recover and adjust the pre-rendered DOM to match the client-side state. This will lead to some rendering performance loss due to incorrect nodes being discarded and new nodes being mounted, but in most cases, the app should continue to work as expected. That said, it is still best to eliminate hydration mismatches during development.
 
