@@ -310,7 +310,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
 
 3. Der Server und der Client befinden sich in unterschiedlichen Zeitzonen. Manchmal möchten wir einen Zeitstempel in die Ortszeit des Benutzers umrechnen. Allerdings stimmen die Zeitzone während der Serverausführung und die Zeitzone während der Clientausführung nicht immer überein, und wir können die Zeitzone des Benutzers während der Serverausführung möglicherweise nicht zuverlässig ermitteln. In solchen Fällen sollte die Umrechnung in die Ortszeit ebenfalls ausschließlich auf dem Client erfolgen.
 
-When Vue encounters a hydration mismatch, it will attempt to automatically recover and adjust the pre-rendered DOM to match the client-side state. This will lead to some rendering performance loss due to incorrect nodes being discarded and new nodes being mounted, but in most cases, the app should continue to work as expected. That said, it is still best to eliminate hydration mismatches during development.
+Wenn Vue auf eine Hydration-Diskrepanz stößt, versucht es, diese automatisch zu beheben und das vorgerenderte DOM so anzupassen, dass es mit dem clientseitigen Zustand übereinstimmt. Dies führt zu gewissen Einbußen bei der Rendering-Leistung, da fehlerhafte Knoten verworfen und neue Knoten eingebunden werden; in den meisten Fällen sollte die App jedoch weiterhin wie erwartet funktionieren. Dennoch ist es ratsam, Hydration-Diskrepanzen bereits während der Entwicklung zu beseitigen.
 
 #### Suppressing Hydration Mismatches <sup class="vt-badge" data-text="3.5+" /> {#suppressing-hydration-mismatches}
 
