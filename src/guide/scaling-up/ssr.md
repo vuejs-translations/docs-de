@@ -312,7 +312,7 @@ Wenn die DOM-Struktur des vorgerenderten HTML-Codes nicht mit der erwarteten Aus
 
 Wenn Vue auf eine Hydration-Diskrepanz stößt, versucht es, diese automatisch zu beheben und das vorgerenderte DOM so anzupassen, dass es mit dem clientseitigen Zustand übereinstimmt. Dies führt zu gewissen Einbußen bei der Rendering-Leistung, da fehlerhafte Knoten verworfen und neue Knoten eingebunden werden; in den meisten Fällen sollte die App jedoch weiterhin wie erwartet funktionieren. Dennoch ist es ratsam, Hydration-Diskrepanzen bereits während der Entwicklung zu beseitigen.
 
-#### Suppressing Hydration Mismatches <sup class="vt-badge" data-text="3.5+" /> {#suppressing-hydration-mismatches}
+#### Vermeidung von Hydratationsfehlanpassungen <sup class="vt-badge" data-text="3.5+" /> {#suppressing-hydration-mismatches}
 
 In Vue 3.5+, it is possible to selectively suppress inevitable hydration mismatches by using the [`data-allow-mismatch`](/api/ssr#data-allow-mismatch) attribute.
 
