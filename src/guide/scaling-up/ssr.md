@@ -314,7 +314,7 @@ Wenn Vue auf eine Hydration-Diskrepanz stößt, versucht es, diese automatisch z
 
 #### Vermeidung von Hydratationsfehlanpassungen <sup class="vt-badge" data-text="3.5+" /> {#suppressing-hydration-mismatches}
 
-In Vue 3.5+, it is possible to selectively suppress inevitable hydration mismatches by using the [`data-allow-mismatch`](/api/ssr#data-allow-mismatch) attribute.
+In Vue 3.5 und höher ist es möglich, unvermeidbare Hydration-Abweichungen mithilfe des Attributs [`data-allow-mismatch`](/api/ssr#data-allow-mismatch) gezielt zu unterdrücken.
 
 ### Custom Directives {#custom-directives}
 
