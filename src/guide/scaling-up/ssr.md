@@ -316,7 +316,7 @@ Wenn Vue auf eine Hydration-Diskrepanz stößt, versucht es, diese automatisch z
 
 In Vue 3.5 und höher ist es möglich, unvermeidbare Hydration-Abweichungen mithilfe des Attributs [`data-allow-mismatch`](/api/ssr#data-allow-mismatch) gezielt zu unterdrücken.
 
-### Custom Directives {#custom-directives}
+### Benutzerdefinierte Anweisungen {#custom-directives}
 
 Since most custom directives involve direct DOM manipulation, they are ignored during SSR. However, if you want to specify how a custom directive should be rendered (i.e. what attributes it should add to the rendered element), you can use the `getSSRProps` directive hook:
 
