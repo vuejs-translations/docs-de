@@ -318,7 +318,7 @@ In Vue 3.5 und höher ist es möglich, unvermeidbare Hydration-Abweichungen mith
 
 ### Benutzerdefinierte Anweisungen {#custom-directives}
 
-Since most custom directives involve direct DOM manipulation, they are ignored during SSR. However, if you want to specify how a custom directive should be rendered (i.e. what attributes it should add to the rendered element), you can use the `getSSRProps` directive hook:
+Da die meisten benutzerdefinierten Direktiven eine direkte DOM-Manipulation beinhalten, werden sie bei der serverseitigen Rendering (SSR) ignoriert. Wenn Sie jedoch festlegen möchten, wie eine benutzerdefinierte Direktive gerendert werden soll (d. h., welche Attribute sie dem gerenderten Element hinzufügen soll), können Sie den Direktiven-Hook `getSSRProps` verwenden:
 
 ```js
 const myDirective = {
