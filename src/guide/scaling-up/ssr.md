@@ -342,7 +342,7 @@ const myDirective = {
 
 Teleports erfordern während des SSR eine besondere Behandlung. Wenn die gerenderte App Teleports enthält, sind die teleportierten Inhalte nicht Teil der gerenderten Zeichenfolge. Eine einfachere Lösung besteht darin, den Teleport beim Laden bedingt zu rendern.
 
-If you do need to hydrate teleported content, they are exposed under the `teleports` property of the ssr context object:
+Falls Sie teleportierte Inhalte mit Daten füllen müssen, stehen diese unter der Eigenschaft `teleports` des SSR-Kontext-Objekts zur Verfügung:
 
 ```js
 const ctx = {}
