@@ -351,7 +351,7 @@ const html = await renderToString(app, ctx)
 console.log(ctx.teleports) // { '#teleported': 'teleported content' }
 ```
 
-You need to inject the teleport markup into the correct location in your final page HTML similar to how you need to inject the main app markup.
+Sie müssen den Teleport-Code an der richtigen Stelle in den HTML-Code Ihrer endgültigen Seite einfügen, ähnlich wie Sie den Hauptcode der App einfügen müssen.
 
 :::tip
 Avoid targeting `body` when using Teleports and SSR together - usually, `<body>` will contain other server-rendered content which makes it impossible for Teleports to determine the correct starting location for hydration.
