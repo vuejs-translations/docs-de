@@ -354,7 +354,7 @@ console.log(ctx.teleports) // { '#teleported': 'teleported content' }
 Sie müssen den Teleport-Code an der richtigen Stelle in den HTML-Code Ihrer endgültigen Seite einfügen, ähnlich wie Sie den Hauptcode der App einfügen müssen.
 
 :::tip
-Avoid targeting `body` when using Teleports and SSR together - usually, `<body>` will contain other server-rendered content which makes it impossible for Teleports to determine the correct starting location for hydration.
+Vermeiden Sie es, bei der gemeinsamen Verwendung von Teleports und SSR auf den `body`-Bereich abzuzielen – in der Regel enthält `<body>` andere vom Server gerenderte Inhalte, wodurch es für Teleports unmöglich ist, den korrekten Startpunkt für die Hydration zu ermitteln.
 
 Instead, prefer a dedicated container, e.g. `<div id="teleported"></div>` which contains only teleported content.
 :::
