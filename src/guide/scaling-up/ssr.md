@@ -356,5 +356,5 @@ Sie müssen den Teleport-Code an der richtigen Stelle in den HTML-Code Ihrer end
 :::tip
 Vermeiden Sie es, bei der gemeinsamen Verwendung von Teleports und SSR auf den `body`-Bereich abzuzielen – in der Regel enthält `<body>` andere vom Server gerenderte Inhalte, wodurch es für Teleports unmöglich ist, den korrekten Startpunkt für die Hydration zu ermitteln.
 
-Instead, prefer a dedicated container, e.g. `<div id="teleported"></div>` which contains only teleported content.
+Verwenden Sie stattdessen lieber einen eigenen Container, z. B. `<div id="teleported"></div>`, der ausschließlich teleportierte Inhalte enthält.
 :::
