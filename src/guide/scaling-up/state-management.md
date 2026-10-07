@@ -1,6 +1,6 @@
 # Zustandsverwaltung {#state-management}
 
-## What is State Management? {#what-is-state-management}
+## Was ist Zustandsverwaltung? {#what-is-state-management}
 
 Technically, every Vue component instance already "manages" its own reactive state. Take a simple counter component as an example:
 
