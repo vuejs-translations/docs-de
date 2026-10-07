@@ -1,4 +1,4 @@
-# State Management {#state-management}
+# Zustandsverwaltung {#state-management}
 
 ## What is State Management? {#what-is-state-management}
 
