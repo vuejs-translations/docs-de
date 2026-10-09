@@ -2,7 +2,7 @@
 
 ## Was ist Zustandsverwaltung? {#what-is-state-management}
 
-Technically, every Vue component instance already "manages" its own reactive state. Take a simple counter component as an example:
+Technisch gesehen „verwaltet“ jede Vue-Komponenteninstanz bereits ihren eigenen reaktiven Zustand. Nehmen wir als Beispiel eine einfache Zählerkomponente:
 
 <div class="composition-api">
 
