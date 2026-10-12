@@ -50,7 +50,7 @@ export default {
 
 </div>
 
-It is a self-contained unit with the following parts:
+Es handelt sich um eine eigenständige Einheit, die aus folgenden Teilen besteht:
 
 - The **state**, the source of truth that drives our app;
 - The **view**, a declarative mapping of the **state**;
