@@ -52,7 +52,7 @@ export default {
 
 Es handelt sich um eine eigenständige Einheit, die aus folgenden Teilen besteht:
 
-- The **state**, the source of truth that drives our app;
+- Der **Zustand**, die Quelle der Wahrheit, die unsere App antreibt;
 - The **view**, a declarative mapping of the **state**;
 - The **actions**, the possible ways the state could change in reaction to user inputs from the **view**.
 
