@@ -53,7 +53,7 @@ export default {
 Es handelt sich um eine eigenständige Einheit, die aus folgenden Teilen besteht:
 
 - Der **Zustand**, die Quelle der Wahrheit, die unsere App antreibt;
-- The **view**, a declarative mapping of the **state**;
+- Die **Ansicht**, eine deklarative Abbildung des **Zustands**;
 - The **actions**, the possible ways the state could change in reaction to user inputs from the **view**.
 
 This is a simple representation of the concept of "one-way data flow":
