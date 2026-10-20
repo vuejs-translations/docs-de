@@ -54,7 +54,7 @@ Es handelt sich um eine eigenständige Einheit, die aus folgenden Teilen besteht
 
 - Der **Zustand**, die Quelle der Wahrheit, die unsere App antreibt;
 - Die **Ansicht**, eine deklarative Abbildung des **Zustands**;
-- The **actions**, the possible ways the state could change in reaction to user inputs from the **view**.
+- Die **Aktionen**, also die möglichen Arten, wie sich der Zustand als Reaktion auf Benutzereingaben aus der **Ansicht** ändern könnte.
 
 This is a simple representation of the concept of "one-way data flow":
 
