@@ -56,7 +56,7 @@ Es handelt sich um eine eigenständige Einheit, die aus folgenden Teilen besteht
 - Die **Ansicht**, eine deklarative Abbildung des **Zustands**;
 - Die **Aktionen**, also die möglichen Arten, wie sich der Zustand als Reaktion auf Benutzereingaben aus der **Ansicht** ändern könnte.
 
-This is a simple representation of the concept of "one-way data flow":
+Dies ist eine einfache Darstellung des Konzepts des „einseitigen Datenflusses“:
 
 <p style="text-align: center">
   <img alt="state flow diagram" src="./images/state-flow.png" width="252px" style="margin: 40px auto">
