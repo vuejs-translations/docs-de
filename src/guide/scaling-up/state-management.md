@@ -62,7 +62,7 @@ Dies ist eine einfache Darstellung des Konzepts des „einseitigen Datenflusses�
   <img alt="state flow diagram" src="./images/state-flow.png" width="252px" style="margin: 40px auto">
 </p>
 
-However, the simplicity starts to break down when we have **multiple components that share a common state**:
+Diese Einfachheit bröckelt jedoch, wenn wir es mit **mehreren Komponenten zu tun haben, die sich einen gemeinsamen Zustand teilen**:
 
 1. Multiple views may depend on the same piece of state.
 2. Actions from different views may need to mutate the same piece of state.
