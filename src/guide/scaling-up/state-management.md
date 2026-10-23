@@ -64,7 +64,7 @@ Dies ist eine einfache Darstellung des Konzepts des „einseitigen Datenflusses�
 
 Diese Einfachheit bröckelt jedoch, wenn wir es mit **mehreren Komponenten zu tun haben, die sich einen gemeinsamen Zustand teilen**:
 
-1. Multiple views may depend on the same piece of state.
+1. Mehrere Ansichten können von demselben Zustandswert abhängen.
 2. Actions from different views may need to mutate the same piece of state.
 
 For case one, a possible workaround is by "lifting" the shared state up to a common ancestor component, and then pass it down as props. However, this quickly gets tedious in component trees with deep hierarchies, leading to another problem known as [Prop Drilling](/guide/components/provide-inject#prop-drilling).
