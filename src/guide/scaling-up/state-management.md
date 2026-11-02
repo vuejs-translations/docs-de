@@ -67,7 +67,7 @@ Diese Einfachheit bröckelt jedoch, wenn wir es mit **mehreren Komponenten zu tu
 1. Mehrere Ansichten können von demselben Zustandswert abhängen.
 2. Aktionen aus verschiedenen Ansichten müssen möglicherweise denselben Zustand ändern.
 
-For case one, a possible workaround is by "lifting" the shared state up to a common ancestor component, and then pass it down as props. However, this quickly gets tedious in component trees with deep hierarchies, leading to another problem known as [Prop Drilling](/guide/components/provide-inject#prop-drilling).
+Im ersten Fall besteht eine mögliche Abhilfe darin, den gemeinsam genutzten Zustand auf eine übergeordnete Komponente zu „heben“ und ihn dann als Props weiterzugeben. In Komponentenbäumen mit tiefen Hierarchien wird dies jedoch schnell mühsam, was zu einem weiteren Problem führt, das als [Prop Drilling](/guide/components/provide-inject#prop-drilling) bekannt ist.
 
 For case two, we often find ourselves resorting to solutions such as reaching for direct parent / child instances via template refs, or trying to mutate and synchronize multiple copies of the state via emitted events. Both of these patterns are brittle and quickly lead to unmaintainable code.
 
