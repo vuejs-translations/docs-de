@@ -69,7 +69,7 @@ Diese Einfachheit bröckelt jedoch, wenn wir es mit **mehreren Komponenten zu tu
 
 Im ersten Fall besteht eine mögliche Abhilfe darin, den gemeinsam genutzten Zustand auf eine übergeordnete Komponente zu „heben“ und ihn dann als Props weiterzugeben. In Komponentenbäumen mit tiefen Hierarchien wird dies jedoch schnell mühsam, was zu einem weiteren Problem führt, das als [Prop Drilling](/guide/components/provide-inject#prop-drilling) bekannt ist.
 
-For case two, we often find ourselves resorting to solutions such as reaching for direct parent / child instances via template refs, or trying to mutate and synchronize multiple copies of the state via emitted events. Both of these patterns are brittle and quickly lead to unmaintainable code.
+Im zweiten Fall greifen wir oft auf Lösungen zurück, wie beispielsweise den Zugriff auf direkte über- und untergeordnete Instanzen über Template-Referenzen oder den Versuch, mehrere Kopien des Zustands über ausgelöste Ereignisse zu ändern und zu synchronisieren. Beide Muster sind anfällig und führen schnell zu nicht wartbarem Code.
 
 A simpler and more straightforward solution is to extract the shared state out of the components, and manage it in a global singleton. With this, our component tree becomes a big "view", and any component can access the state or trigger actions, no matter where they are in the tree!
 
