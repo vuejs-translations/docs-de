@@ -71,7 +71,7 @@ Im ersten Fall besteht eine mögliche Abhilfe darin, den gemeinsam genutzten Zus
 
 Im zweiten Fall greifen wir oft auf Lösungen zurück, wie beispielsweise den Zugriff auf direkte über- und untergeordnete Instanzen über Template-Referenzen oder den Versuch, mehrere Kopien des Zustands über ausgelöste Ereignisse zu ändern und zu synchronisieren. Beide Muster sind anfällig und führen schnell zu nicht wartbarem Code.
 
-A simpler and more straightforward solution is to extract the shared state out of the components, and manage it in a global singleton. With this, our component tree becomes a big "view", and any component can access the state or trigger actions, no matter where they are in the tree!
+Eine einfachere und übersichtlichere Lösung besteht darin, den gemeinsam genutzten Zustand aus den Komponenten herauszulösen und ihn in einem globalen Singleton zu verwalten. Dadurch wird unser Komponentenbaum zu einer großen „Ansicht“, und jede Komponente kann auf den Zustand zugreifen oder Aktionen auslösen, ganz gleich, wo sie sich im Baum befindet!
 
 ## Simple State Management with Reactivity API {#simple-state-management-with-reactivity-api}
 
