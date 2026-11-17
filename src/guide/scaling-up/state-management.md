@@ -73,7 +73,7 @@ Im zweiten Fall greifen wir oft auf Lösungen zurück, wie beispielsweise den Zu
 
 Eine einfachere und übersichtlichere Lösung besteht darin, den gemeinsam genutzten Zustand aus den Komponenten herauszulösen und ihn in einem globalen Singleton zu verwalten. Dadurch wird unser Komponentenbaum zu einer großen „Ansicht“, und jede Komponente kann auf den Zustand zugreifen oder Aktionen auslösen, ganz gleich, wo sie sich im Baum befindet!
 
-## Simple State Management with Reactivity API {#simple-state-management-with-reactivity-api}
+## Einfache Zustandsverwaltung mit der Reactivity-API {#simple-state-management-with-reactivity-api}
 
 <div class="options-api">
 
