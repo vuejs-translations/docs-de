@@ -77,7 +77,7 @@ Eine einfachere und übersichtlichere Lösung besteht darin, den gemeinsam genut
 
 <div class="options-api">
 
-In Options API, reactive data is declared using the `data()` option. Internally, the object returned by `data()` is made reactive via the [`reactive()`](/api/reactivity-core#reactive) function, which is also available as a public API.
+In der Options-API werden reaktive Daten mithilfe der Option `data()` deklariert. Intern wird das von `data()` zurückgegebene Objekt über die Funktion [`reactive()`](/api/reactivity-core#reactive) reaktiv gemacht, die auch als öffentliche API verfügbar ist.
 
 </div>
 
