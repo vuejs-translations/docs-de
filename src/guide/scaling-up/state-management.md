@@ -81,7 +81,7 @@ In der Options-API werden reaktive Daten mithilfe der Option `data()` deklariert
 
 </div>
 
-If you have a piece of state that should be shared by multiple instances, you can use [`reactive()`](/api/reactivity-core#reactive) to create a reactive object, and then import it into multiple components:
+Wenn Sie einen Zustand haben, der von mehreren Instanzen gemeinsam genutzt werden soll, können Sie mit [`reactive()`](/api/reactivity-core#reactive) ein reaktives Objekt erstellen und dieses anschließend in mehrere Komponenten importieren:
 
 ```js
 // store.js
