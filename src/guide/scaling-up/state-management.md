@@ -153,7 +153,7 @@ export default {
 
 Sobald nun das `store`-Objekt geändert wird, aktualisieren sowohl `<ComponentA>` als auch `<ComponentB>` automatisch ihre Ansichten – wir haben nun eine einzige Quelle der Wahrheit.
 
-However, this also means any component importing `store` can mutate it however they want:
+Das bedeutet jedoch auch, dass jede Komponente, die `store` importiert, dieses nach Belieben verändern kann:
 
 ```vue-html{2}
 <template>
