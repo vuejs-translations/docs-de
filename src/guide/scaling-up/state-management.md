@@ -163,7 +163,7 @@ Das bedeutet jedoch auch, dass jede Komponente, die `store` importiert, dieses n
 </template>
 ```
 
-While this works in simple cases, global state that can be arbitrarily mutated by any component is not going to be very maintainable in the long run. To ensure the state-mutating logic is centralized like the state itself, it is recommended to define methods on the store with names that express the intention of the actions:
+Das funktioniert zwar in einfachen Fällen, doch ein globaler Zustand, der von jeder beliebigen Komponente willkürlich verändert werden kann, lässt sich auf lange Sicht nur schwer warten. Um sicherzustellen, dass die Logik zur Änderung des Zustands ebenso zentralisiert ist wie der Zustand selbst, empfiehlt es sich, Methoden im Store zu definieren, deren Namen die Absicht der Aktionen zum Ausdruck bringen:
 
 ```js{6-8}
 // store.js
